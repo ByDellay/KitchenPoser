@@ -15,6 +15,6 @@ public class ButtonSkip : MonoBehaviour
 
     private void OnButtonSkipClick()
     {
-        SceneManager.LoadScene("CortarTutorial");
+        SceneManager.LoadScene("Cortar");
     }
 }
