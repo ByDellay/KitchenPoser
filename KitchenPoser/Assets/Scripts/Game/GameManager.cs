@@ -19,10 +19,12 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    // Método para adicionar um item ao inventário
     public void AddItem(Alimentos.ItemType type)
     {
-        switch (type)
+        switch (type) // a função switch analisa casos e ve oque faz em cada um deles, nesse caso, cada tipo de alimento tem um contador diferente, e a função switch analisa qual tipo de alimento foi adicionado e incrementa o contador correspondente
         {
+            // Esse case representa abacaxi e incrementa o contador correspondente
             case Alimentos.ItemType.Abacaxi:
                 AbacaxiCount++;
                 Debug.Log("Abacaxis: " + AbacaxiCount);
