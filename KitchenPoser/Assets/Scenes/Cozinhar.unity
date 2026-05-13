@@ -427,6 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58485d10e4e8c504aa658b6e2f8f3b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableItem
+  itemType: 0
 --- !u!114 &501426062
 MonoBehaviour:
   m_ObjectHideFlags: 0

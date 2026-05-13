@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Alimentos : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public enum ItemType
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Fish,
+        Abacaxi,
+        Arroz,
+        Carne,
+        Farinha,
+        Feijão,  
+        Frango, 
+        Peixe,
+        Queijo,
+        Tomate,
+        Trash
     }
 }

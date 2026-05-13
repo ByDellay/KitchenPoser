@@ -3,11 +3,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 // Classe responsável por permitir arrastar um item da UI
-public class DraggableItem : MonoBehaviour,
-    IBeginDragHandler,
-    IDragHandler,
-    IEndDragHandler
+public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public Alimentos.ItemType itemType;
+
     // Referência ao RectTransform do objeto
     private RectTransform rectTransform;
 
