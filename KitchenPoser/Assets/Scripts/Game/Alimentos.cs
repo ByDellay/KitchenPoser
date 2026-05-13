@@ -4,7 +4,6 @@ public class Alimentos : MonoBehaviour
 {
     public enum ItemType
     {
-        Fish,
         Abacaxi,
         Arroz,
         Carne,
@@ -14,6 +13,6 @@ public class Alimentos : MonoBehaviour
         Peixe,
         Queijo,
         Tomate,
-        Trash
+        Lixo
     }
 }
