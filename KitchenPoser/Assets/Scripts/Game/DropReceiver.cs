@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class DropReceiver : MonoBehaviour, IDropHandler
 {
-    }
+
     public void OnDrop(PointerEventData eventData)
     {
         DraggableItem item =
