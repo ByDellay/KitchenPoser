@@ -8,7 +8,7 @@ public class Alimentos : MonoBehaviour
         Arroz,
         Carne,
         Farinha,
-        Feijão,  
+        Feijao,  
         Frango, 
         Peixe,
         Queijo,
