@@ -6,25 +6,38 @@ public class IngredientesGrav : MonoBehaviour
     Rigidbody2D RigidBody;
 
     // Força máxima que o objeto pode receber pra subir
-    int MaxForceV = 1500;
+    int MaxForceV = 1100;
     // Força mínima que o objeto pode receber pra subir
-    int MinForceV = 1200;
+    int MinForceV = 800;
 
     // Força máxima que o objeto pode receber pro lado
-    int MaxForceH = 250;
+    int MaxForceH = 150;
     // Força mínima que o objeto pode receber pro lado
-    int MinForceH = -250;
+    int MinForceH = -150;
+
+    // Força máxima que o objeto pode receber pra rotação
+    int MaxForceRotation = 50;
+    // Força mínima que o objeto pode receber pra rotação
+    int MinForceRotation = -50;
 
     // Altura em Y onde o objeto será deletado
     float DeletPos = -100f;
+
+    public Sprite SpriteCortado;
+    SpriteRenderer sr;
 
     void Start()
     {
         // Pega o Rigidbody2D do próprio objeto
         RigidBody = GetComponent<Rigidbody2D>();
 
+        sr = GetComponent<SpriteRenderer>();
+
         // Escolhe uma força vertical aleatória
         float RandomForce = Random.Range(MinForceV, MaxForceV);
+
+        // Escolhe uma força aleatoria para rotacionar
+        float RandomRotation = Random.Range(MinForceRotation, MaxForceRotation);
 
         // Escolhe uma direção horizontal aleatória
         // Negativo = esquerda
@@ -35,9 +48,11 @@ public class IngredientesGrav : MonoBehaviour
         // X = lado
         // Y = altura
         Vector2 force = new Vector2(RandomX, RandomForce);
+        Vector3 Rotation = new Vector3(0, 0, RandomRotation);
 
         // Aplica a força no objeto
         RigidBody.AddForce(force);
+        RigidBody.angularVelocity = RandomRotation;
     }
 
     void Update()
@@ -51,5 +66,23 @@ public class IngredientesGrav : MonoBehaviour
             // Deleta o objeto da cena
             Destroy(gameObject);
         }
+
+        // Verifica se botão esquerdo está segurado
+        if (Input.GetMouseButton(0))
+        {
+            // Pega posição do mouse na tela
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            // Verifica se o mouse encostou no collider
+            Collider2D hit = Physics2D.OverlapPoint(mousePos);
+
+            // Se o collider encontrado for ESTE objeto
+            if (hit != null && hit.gameObject == gameObject)
+            {
+                sr.sprite = SpriteCortado;
+            }
+        }
+
+
     }
 }
