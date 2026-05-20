@@ -1,64 +1,54 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public int AbacaxiCount;
-    public int ArrozCount;
-    public int CarneCount;
-    public int FarinhaCount;
-    public int FeijãoCount;
-    public int FrangoCount;
-    public int PeixeCount;
-    public int QueijoCount;
-    public int TomateCount;
+    // inventário
+    public Dictionary<Alimentos.ItemType, int> inventory =
+        new Dictionary<Alimentos.ItemType, int>();
 
     private void Awake()
     {
-        Instance = this;
-    }
-
-    // Método para adicionar um item ao inventário
-    public void AddItem(Alimentos.ItemType type)
-    {
-        switch (type) // a função switch analisa casos e ve oque faz em cada um deles, nesse caso, cada tipo de alimento tem um contador diferente, e a função switch analisa qual tipo de alimento foi adicionado e incrementa o contador correspondente
+        // singleton
+        if (Instance == null)
         {
-            // Esse case representa abacaxi e incrementa o contador correspondente
-            case Alimentos.ItemType.Abacaxi:
-                AbacaxiCount++;
-                Debug.Log("Abacaxis: " + AbacaxiCount);
-                break;
+            Instance = this;
 
-            case Alimentos.ItemType.Arroz:
-                ArrozCount++;
-                Debug.Log("Arroz: " + ArrozCount);
-                break;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-            case Alimentos.ItemType.Carne:
-                CarneCount++;
-                Debug.Log("Carnes: " + CarneCount);
-                break;
-
-            case Alimentos.ItemType.Frango:
-                FrangoCount++;
-                Debug.Log("Frangos: " + FrangoCount);
-                break;
-
-            case Alimentos.ItemType.Peixe:
-                PeixeCount++;
-                Debug.Log("Peixes: " + PeixeCount);
-                break;
-
-            case Alimentos.ItemType.Queijo:
-                QueijoCount++;
-                Debug.Log("Queijos: " + QueijoCount);
-                break;
-
-            case Alimentos.ItemType.Tomate:
-                TomateCount++;
-                Debug.Log("Tomates: " + TomateCount);
-                break;
+        // inicializa todos alimentos com 0
+        foreach (Alimentos.ItemType item in
+                 System.Enum.GetValues(typeof(Alimentos.ItemType)))
+        {
+            inventory[item] = 0;
         }
     }
+
+    public void AddItem(Alimentos.ItemType type)
+    {
+        inventory[type]++;
+
+        Debug.Log(type + ": " + inventory[type]);
+    }
+
+    public int GetItemCount(Alimentos.ItemType type)
+    {
+        return inventory[type];
+    }
+    // evento para abrir o menu, tem que fazer ainda, por favor faz acabar eu quero morrer
+    /*public void AbriuMenu()
+    {
+        {
+            print("abriu");
+            .Invoke();
+        }
+    }*/
 }
