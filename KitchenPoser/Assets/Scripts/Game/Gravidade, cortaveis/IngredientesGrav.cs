@@ -4,23 +4,24 @@ public class IngredientesGrav : MonoBehaviour
 {
     // Guarda o Rigidbody2D do objeto
     Rigidbody2D RigidBody;
+    bool AlreadyCutted = false;
 
-    // Força máxima que o objeto pode receber pra subir
+    // Forï¿½a mï¿½xima que o objeto pode receber pra subir
     int MaxForceV = 1100;
-    // Força mínima que o objeto pode receber pra subir
+    // Forï¿½a mï¿½nima que o objeto pode receber pra subir
     int MinForceV = 800;
 
-    // Força máxima que o objeto pode receber pro lado
+    // Forï¿½a mï¿½xima que o objeto pode receber pro lado
     int MaxForceH = 150;
-    // Força mínima que o objeto pode receber pro lado
+    // Forï¿½a mï¿½nima que o objeto pode receber pro lado
     int MinForceH = -150;
 
-    // Força máxima que o objeto pode receber pra rotação
+    // Forï¿½a mï¿½xima que o objeto pode receber pra rotaï¿½ï¿½o
     int MaxForceRotation = 50;
-    // Força mínima que o objeto pode receber pra rotação
+    // Forï¿½a mï¿½nima que o objeto pode receber pra rotaï¿½ï¿½o
     int MinForceRotation = -50;
 
-    // Altura em Y onde o objeto será deletado
+    // Altura em Y onde o objeto serï¿½ deletado
     float DeletPos = -100f;
 
     public Sprite SpriteCortado;
@@ -28,29 +29,29 @@ public class IngredientesGrav : MonoBehaviour
 
     void Start()
     {
-        // Pega o Rigidbody2D do próprio objeto
+        // Pega o Rigidbody2D do prï¿½prio objeto
         RigidBody = GetComponent<Rigidbody2D>();
 
         sr = GetComponent<SpriteRenderer>();
 
-        // Escolhe uma força vertical aleatória
+        // Escolhe uma forï¿½a vertical aleatï¿½ria
         float RandomForce = Random.Range(MinForceV, MaxForceV);
 
-        // Escolhe uma força aleatoria para rotacionar
+        // Escolhe uma forï¿½a aleatoria para rotacionar
         float RandomRotation = Random.Range(MinForceRotation, MaxForceRotation);
 
-        // Escolhe uma direção horizontal aleatória
+        // Escolhe uma direï¿½ï¿½o horizontal aleatï¿½ria
         // Negativo = esquerda
         // Positivo = direita
         float RandomX = Random.Range(MinForceH, MaxForceH);
 
-        // Cria um vetor de força:
+        // Cria um vetor de forï¿½a:
         // X = lado
         // Y = altura
         Vector2 force = new Vector2(RandomX, RandomForce);
         Vector3 Rotation = new Vector3(0, 0, RandomRotation);
 
-        // Aplica a força no objeto
+        // Aplica a forï¿½a no objeto
         RigidBody.AddForce(force);
         RigidBody.angularVelocity = RandomRotation;
     }
@@ -67,18 +68,20 @@ public class IngredientesGrav : MonoBehaviour
             Destroy(gameObject);
         }
 
-        // Verifica se botão esquerdo está segurado
+        // Verifica se botï¿½o esquerdo estï¿½ segurado
         if (Input.GetMouseButton(0))
         {
-            // Pega posição do mouse na tela
+            // Pega posiï¿½ï¿½o do mouse na tela
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             // Verifica se o mouse encostou no collider
             Collider2D hit = Physics2D.OverlapPoint(mousePos);
 
             // Se o collider encontrado for ESTE objeto
-            if (hit != null && hit.gameObject == gameObject)
+            if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false)
             {
+                AlreadyCutted = true;
+                GameManager.Instance.AddItem(Alimentos.ItemType.Peixe);
                 sr.sprite = SpriteCortado;
             }
         }
