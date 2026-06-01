@@ -26,9 +26,13 @@ public class IngredientesGrav : MonoBehaviour
 
     public Sprite SpriteCortado;
     SpriteRenderer sr;
+    AudioSource cortarSom;
+    
 
     void Start()
     {
+        cortarSom = GetComponent<AudioSource>();
+
         // Pega o Rigidbody2D do pr�prio objeto
         RigidBody = GetComponent<Rigidbody2D>();
 
@@ -54,6 +58,8 @@ public class IngredientesGrav : MonoBehaviour
         // Aplica a for�a no objeto
         RigidBody.AddForce(force);
         RigidBody.angularVelocity = RandomRotation;
+
+        
     }
 
     void Update()
@@ -80,9 +86,11 @@ public class IngredientesGrav : MonoBehaviour
             // Se o collider encontrado for ESTE objeto
             if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false)
             {
+                
                 AlreadyCutted = true;
                 GameManager.Instance.AddItem(Alimentos.ItemType.Peixe);
                 sr.sprite = SpriteCortado;
+                cortarSom.Play();
             }
         }
     }
