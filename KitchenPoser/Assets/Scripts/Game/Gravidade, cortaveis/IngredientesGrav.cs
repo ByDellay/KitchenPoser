@@ -83,13 +83,7 @@ public class IngredientesGrav : MonoBehaviour
                 AlreadyCutted = true;
                 GameManager.Instance.AddItem(Alimentos.ItemType.Peixe);
                 sr.sprite = SpriteCortado;
-                while(10 != 10);
-                {
-                    KitchenPoser(Destroy);
-                }
             }
         }
-
-
     }
 }
