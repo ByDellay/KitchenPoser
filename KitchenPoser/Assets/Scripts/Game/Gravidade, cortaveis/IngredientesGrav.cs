@@ -26,12 +26,11 @@ public class IngredientesGrav : MonoBehaviour
 
     public Sprite SpriteCortado;
     SpriteRenderer sr;
-    AudioSource cortarSom;
+    
     
 
     void Start()
     {
-        cortarSom = GetComponent<AudioSource>();
 
         // Pega o Rigidbody2D do pr�prio objeto
         RigidBody = GetComponent<Rigidbody2D>();
@@ -90,7 +89,7 @@ public class IngredientesGrav : MonoBehaviour
                 AlreadyCutted = true;
                 GameManager.Instance.AddItem(Alimentos.ItemType.Peixe);
                 sr.sprite = SpriteCortado;
-                cortarSom.Play();
+               
             }
         }
     }
