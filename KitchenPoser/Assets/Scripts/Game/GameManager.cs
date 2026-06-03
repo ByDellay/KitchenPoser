@@ -1,9 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    //score
+    [SerializeField]private TMP_Text ScoreText; //Decide o texto usado para contar na tela a quantidade de pontos Score;
 
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
@@ -11,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
+
         // singleton
         if (Instance == null)
         {
@@ -35,7 +43,7 @@ public class GameManager : MonoBehaviour
     public void AddItem(Alimentos.ItemType type)
     {
         inventory[type]++;
-
+        ScoreText.text = type + ": " + inventory[type];
         Debug.Log(type + ": " + inventory[type]);
     }
 
@@ -43,6 +51,7 @@ public class GameManager : MonoBehaviour
     {
         return inventory[type];
     }
+
     // evento para abrir o menu, tem que fazer ainda, por favor faz acabar eu quero morrer
     /*public void AbriuMenu()
     {
