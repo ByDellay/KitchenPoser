@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -14,6 +16,23 @@ public class GameManager : MonoBehaviour
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
         new Dictionary<Alimentos.ItemType, int>();
+
+    public GameObject storyBoard1;
+    public GameObject storyBoard2;
+
+   /* public void SkipStory()
+    {
+        if(storyBoard1==true)
+        {
+            storyBoard1 = storyBoard1.activeSelf(false);
+            storyBoard2 = true;
+        }
+        else if (storyBoard2 != null) 
+        {
+            storyBoard2 = null;
+            SceneManager.LoadScene("Cortar");
+        }
+    }   */
 
     private void Awake()
     {
