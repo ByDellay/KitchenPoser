@@ -1009,7 +1009,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109d2b064e4310049ba6ab768ddece40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  Ingrediente: {fileID: 5130144375929357662, guid: 7b2ce1243e9feca409393cd1280e5761, type: 3}
+  Alimentos:
+  - {fileID: 5130144375929357662, guid: 7b2ce1243e9feca409393cd1280e5761, type: 3}
+  - {fileID: 3220746514187522637, guid: cde8cba5ae609b64bbfd2f3c6a5d8a58, type: 3}
   SpawnTime: 1
 --- !u!4 &2135021812
 Transform:

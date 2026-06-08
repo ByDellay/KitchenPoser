@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8862c1b14634c4188f6792195f5b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IngredientesGrav
+  Type: 6
   SpriteCortado: {fileID: 5943956609412080102, guid: b22572e9f892be742816046e04fca865, type: 3}
 --- !u!61 &-1220235225184096194
 BoxCollider2D:

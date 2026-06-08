@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7850041743375744886}
   - component: {fileID: -3487876174068038692}
   - component: {fileID: 4374980661905681473}
+  - component: {fileID: 5034984210516167682}
   m_Layer: 0
   m_Name: TomateCortavel
   m_TagString: Untagged
@@ -165,3 +166,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5034984210516167682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3220746514187522637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8862c1b14634c4188f6792195f5b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientesGrav
+  Type: 8
+  SpriteCortado: {fileID: -170058514730257529, guid: de6a0f95caa989545abacb4a6cd49dc4, type: 3}
