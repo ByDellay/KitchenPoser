@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
         int i = Random.Range(0, Alimentos.Length);
 
 
-        Instantiate(Ingrediente[i], pos, Quaternion.identity);
+        Instantiate(Alimentos[i], pos, Quaternion.identity);
 
         // Cria o objeto na posi��o do Spawner
         //Instantiate(Ingrediente, transform.position, Quaternion.identity);
