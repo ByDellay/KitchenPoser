@@ -17,21 +17,9 @@ public class GameManager : MonoBehaviour
     public Dictionary<Alimentos.ItemType, int> inventory =
         new Dictionary<Alimentos.ItemType, int>();
 
-    public GameObject storyBoard1;
-    public GameObject storyBoard2;
+    
 
-   public void SkipStory()
-    {
-        if (storyBoard1.activeSelf)
-        {
-            storyBoard1.SetActive(false);
-            storyBoard2.SetActive(true);
-        }
-        else
-        {
-            SceneManager.LoadScene("Cortar");
-        }
-    }   
+   
 
     private void Awake()
     {
