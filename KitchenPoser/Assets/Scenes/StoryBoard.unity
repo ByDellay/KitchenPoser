@@ -825,6 +825,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonSkip
   ButtonSkip01: {fileID: 394813302}
+  storyBoard1: {fileID: 1382108142}
+  storyBoard2: {fileID: 923328754}
 --- !u!1 &1898872536
 GameObject:
   m_ObjectHideFlags: 0

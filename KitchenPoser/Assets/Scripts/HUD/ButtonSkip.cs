@@ -6,7 +6,8 @@ public class ButtonSkip : MonoBehaviour
 {
 
     [SerializeField] private Button ButtonSkip01;
-
+    public GameObject storyBoard1;
+    public GameObject storyBoard2;
 
     private void Awake()
     {
@@ -15,6 +16,14 @@ public class ButtonSkip : MonoBehaviour
 
     private void OnButtonSkipClick()
     {
-        SceneManager.LoadScene("Cortar");
+        if (storyBoard1.activeSelf)
+        {
+            storyBoard1.SetActive(false);
+            storyBoard2.SetActive(true);
+        }
+        else
+        {
+            SceneManager.LoadScene("Cortar");
+        }
     }
 }

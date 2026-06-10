@@ -20,19 +20,18 @@ public class GameManager : MonoBehaviour
     public GameObject storyBoard1;
     public GameObject storyBoard2;
 
-   /* public void SkipStory()
+   public void SkipStory()
     {
-        if(storyBoard1==true)
+        if (storyBoard1.activeSelf)
         {
-            storyBoard1 = storyBoard1.activeSelf(false);
-            storyBoard2 = true;
+            storyBoard1.SetActive(false);
+            storyBoard2.SetActive(true);
         }
-        else if (storyBoard2 != null) 
+        else
         {
-            storyBoard2 = null;
             SceneManager.LoadScene("Cortar");
         }
-    }   */
+    }   
 
     private void Awake()
     {
