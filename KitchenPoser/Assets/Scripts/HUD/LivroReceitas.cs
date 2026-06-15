@@ -4,19 +4,25 @@ using UnityEngine.SceneManagement;
 
 public class LivroReceitas : MonoBehaviour
 {
+    [Header("UI")]
     public GameObject fundoEscuro;
     public GameObject CookBookClose;
     public GameObject CookBookOpen;
-    public GameObject ButtonOpen;
-    public GameObject ButtonClose;
 
-    //public string[] bookPage = { 0, 1, 2, 3 };
-
+    [Header("Buttons")]
     public GameObject pageChangeLeft;
     public GameObject pageChangeRight;
+
+    [Header("Pages")]
     public GameObject page1;
     public GameObject page2;
     public GameObject page3;
+
+    [Header("Favorite")]
+    public GameObject FavoriteButton;
+    public GameObject receita1Fav;
+    public GameObject receita2Fav;
+    public GameObject receita3Fav;
 
 
 
@@ -84,24 +90,11 @@ public class LivroReceitas : MonoBehaviour
         }
     }
 
-
-
-
-    
-
-    /*public switch BookPage
+    public void OnFavorite()
     {
-    case 1 
-    exibir aprimeira pagina
-    desativar todas as outras
-    break
-
-    case 2
-
-    }*/
 
 
-
+    }
 
 
 }
