@@ -84,13 +84,18 @@ public class IngredientesGrav : MonoBehaviour
             Collider2D hit = Physics2D.OverlapPoint(mousePos);
 
             // Se o collider encontrado for ESTE objeto
-            if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false)
+            if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false  && !CompareTag("ObjetoDuro")) // se não for um objeto duro
             {
                 
                 AlreadyCutted = true;
                 GameManager.Instance.AddItem(Type);
                 sr.sprite = SpriteCortado;
                
+            }
+            else if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false  && CompareTag("ObjetoDuro")) // se for um objeto duro
+            {
+                print("quebrou");
+                //cortar = desabilitado por 3 segundos (tem que criar isso ainda)
             }
         }
     }
