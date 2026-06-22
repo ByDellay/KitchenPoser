@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LivroReceitas : MonoBehaviour
+public class ButtonManager : MonoBehaviour
 {
     [Header("UI")]
     public GameObject fundoEscuro;
@@ -89,6 +89,29 @@ public class LivroReceitas : MonoBehaviour
             pageChangeRight.SetActive(true);
         }
     }
+
+    public GameObject arm1Inventario;
+    public GameObject arm1Outventario;
+    public GameObject arm2Inventario;
+
+
+    public void OnArmario1()
+    {
+        arm1Inventario.SetActive(true);
+        arm1Outventario.SetActive(true);
+    }
+    public void OutArmario1()
+    {
+        arm1Inventario.SetActive(false);
+        arm1Outventario.SetActive(false);
+        arm2Inventario.SetActive(false);
+    }
+    public void OnArmario2()
+    {
+        arm2Inventario.SetActive(true);
+        arm1Outventario.SetActive(true);
+    }
+
 
     public void OnFavorite()
     {
