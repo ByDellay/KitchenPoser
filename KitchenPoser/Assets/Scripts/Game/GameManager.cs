@@ -9,6 +9,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    [Header("Buttons")]
+    //Timer
+    [Min(10f)]public float MaxTime; // Tempo de espera entre cada spawner
+    private float _Timer; // Contador do tempo
+    public GameObject SkipScene;
+
+    [Header("Inventory")]
 
     //score
     [SerializeField]private TMP_Text ScoreText; //Decide o texto usado para contar na tela a quantidade de pontos Score;
@@ -49,6 +56,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        _Timer += Time.deltaTime; // Contador de tempo
+
+        if (_Timer >= MaxTime) // O tempo ja passou o suficiente?
+        {
+           SkipScene.SetActive(true); 
+        }
+
+    }
     public void AddItem(Alimentos.ItemType type)
     {
         inventory[type]++;

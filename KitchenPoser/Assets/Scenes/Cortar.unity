@@ -478,8 +478,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22d801d266ebd54387aabd585bc77fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  MaxTime: 10
+  SkipScene: {fileID: 1881667971}
   ScoreText: {fileID: 945503182}
-  SkipButton: {fileID: 0}
 --- !u!4 &651514248
 Transform:
   m_ObjectHideFlags: 0
@@ -1001,7 +1002,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1881667972
 RectTransform:
   m_ObjectHideFlags: 0
