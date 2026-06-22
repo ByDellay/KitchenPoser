@@ -17,8 +17,11 @@ public class GameManager : MonoBehaviour
     public Dictionary<Alimentos.ItemType, int> inventory =
         new Dictionary<Alimentos.ItemType, int>();
 
-    
+    public void OnSkipTemp()
+    {
+        SceneManager.LoadScene("Cozinhar");
 
+    }
    
 
     private void Awake()
