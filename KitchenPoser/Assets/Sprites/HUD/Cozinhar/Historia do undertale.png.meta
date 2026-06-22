@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 837684751fa9d8142952df9a412f4953
+guid: 7dc3614974026404a9fcccdeabf7ac04
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3538259793408708748
-    second: 10 MIL HORAS (1)_0
+      213: -3434823479639387595
+    second: nanami do mal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 10 MIL HORAS (1)_0
+      name: nanami do mal_0
       rect:
         serializedVersion: 2
-        x: 666
-        y: 273
-        width: 588
-        height: 589
+        x: 0
+        y: 0
+        width: 593
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c805c2d198c6a1130800000000000000
-      internalID: 3538259793408708748
+      spriteID: 5325ce56e3e0550d0800000000000000
+      internalID: -3434823479639387595
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      10 MIL HORAS (1)_0: 3538259793408708748
+      nanami do mal_0: -3434823479639387595
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
