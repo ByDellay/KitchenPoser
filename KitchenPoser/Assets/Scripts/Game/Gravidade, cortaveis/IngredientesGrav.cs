@@ -1,9 +1,11 @@
 using UnityEngine;
+using System.Collections;
 
 public class IngredientesGrav : MonoBehaviour
 {
     // Guarda o Rigidbody2D do objeto
     Rigidbody2D RigidBody;
+    ParticleSystem Particle;
      public Alimentos.ItemType Type;
     bool AlreadyCutted = false;
 
@@ -35,6 +37,7 @@ public class IngredientesGrav : MonoBehaviour
 
         // Pega o Rigidbody2D do pr�prio objeto
         RigidBody = GetComponent<Rigidbody2D>();
+        Particle = GetComponent<ParticleSystem>();
 
         sr = GetComponent<SpriteRenderer>();
 
@@ -84,19 +87,41 @@ public class IngredientesGrav : MonoBehaviour
             Collider2D hit = Physics2D.OverlapPoint(mousePos);
 
             // Se o collider encontrado for ESTE objeto
-            if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false  && !CompareTag("ObjetoDuro")) // se não for um objeto duro
+            if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false && !CompareTag("ObjetoDuro")) // se não for um objeto duro
             {
                 
                 AlreadyCutted = true;
                 GameManager.Instance.AddItem(Type);
                 sr.sprite = SpriteCortado;
+                //Particle.Play()
+
+
+                StartCoroutine(Squish());
                
             }
-            else if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false  && CompareTag("ObjetoDuro")) // se for um objeto duro
+            else if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false && CompareTag("ObjetoDuro")) // se for um objeto duro
             {
                 print("quebrou");
                 //cortar = desabilitado por 3 segundos (tem que criar isso ainda)
             }
         }
+    }
+    IEnumerator Squish()
+    {
+    //Guarda a escala atual do objeto
+    Vector3 original = transform.localScale;
+        
+    // Altera a escala do objeto:
+    transform.localScale = new Vector3(
+        original.x * 1.3f,// aumenta a largura (x)
+        original.y * 0.7f,// diminui a altura (y)
+        original.z// mantém a profundidade (z)
+    );
+
+    //Espera 0,08 segundos antes de continuar.
+    yield return new WaitForSeconds(0.08f);
+
+    //Retorna o objeto para a escala original.
+    transform.localScale = original;
     }
 }
