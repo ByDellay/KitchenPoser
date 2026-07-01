@@ -131,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.89, y: 4.08}
+    oldSize: {x: 2.5933332, y: 2.72}
     newSize: {x: 3.89, y: 4.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -178,5 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8862c1b14634c4188f6792195f5b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IngredientesGrav
+  Particle: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
   Type: 8
   SpriteCortado: {fileID: -170058514730257529, guid: de6a0f95caa989545abacb4a6cd49dc4, type: 3}

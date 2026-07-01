@@ -5,8 +5,8 @@ public class IngredientesGrav : MonoBehaviour
 {
     // Guarda o Rigidbody2D do objeto
     Rigidbody2D RigidBody;
-    ParticleSystem Particle;
-     public Alimentos.ItemType Type;
+    public ParticleSystem Particle;
+    public Alimentos.ItemType Type;
     bool AlreadyCutted = false;
 
     // For�a m�xima que o objeto pode receber pra subir
@@ -93,7 +93,9 @@ public class IngredientesGrav : MonoBehaviour
                 AlreadyCutted = true;
                 GameManager.Instance.AddItem(Type);
                 sr.sprite = SpriteCortado;
-                //Particle.Play()
+                Particle.Play();
+                //Particle.emitting;
+
 
 
                 StartCoroutine(Squish());
