@@ -20,33 +20,24 @@ public class GameManager : MonoBehaviour
     //score
     [SerializeField]private TMP_Text ScoreText; //Decide o texto usado para contar na tela a quantidade de pontos Score;
 
+    [Header("Minigames")]
+    [SerializeField] public GameObject cortar;
+    [SerializeField] public GameObject cozinhar;
+    
+
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
         new Dictionary<Alimentos.ItemType, int>();
 
     public void OnSkipTemp()
     {
-        SceneManager.LoadScene("Cozinhar");
-
+        cortar.SetActive(false);
+        cozinhar.SetActive(true);
     }
    
 
     private void Awake()
     {
-
-
-        // singleton
-        if (Instance == null)
-        {
-            Instance = this;
-
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
 
         // inicializa todos alimentos com 0
         foreach (Alimentos.ItemType item in

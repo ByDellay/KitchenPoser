@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
     // Tempo entre cada spawn
     public float SpawnTime = 1f;
 
+    public Transform meuPai;
+
     void Start()
     {
         // Repete a fun��o Spawnar()
@@ -23,7 +25,8 @@ public class Spawner : MonoBehaviour
         int i = Random.Range(0, Alimentos.Length);
 
 
-        Instantiate(Alimentos[i], pos, Quaternion.identity);
+        GameObject _Instance = Instantiate(Alimentos[i], pos, Quaternion.identity);
+        transform.SetParent(meuPai);
 
         // Cria o objeto na posi��o do Spawner
         //Instantiate(Ingrediente, transform.position, Quaternion.identity);
