@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
         int i = Random.Range(0, Alimentos.Length);
 
 
-        GameObject _Instance = Instantiate(Alimentos[i], pos, Quaternion.identity);
+        Instantiate(Alimentos[i], pos, Quaternion.identity);
         transform.SetParent(meuPai);
 
         // Cria o objeto na posi��o do Spawner

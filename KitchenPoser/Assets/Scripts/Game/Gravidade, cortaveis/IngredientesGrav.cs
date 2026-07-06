@@ -6,8 +6,9 @@ public class IngredientesGrav : MonoBehaviour
     // Guarda o Rigidbody2D do objeto
     Rigidbody2D RigidBody;
     public ParticleSystem Particle;
-     public Alimentos.ItemType Type;
+    public Alimentos.ItemType Type;
     bool AlreadyCutted = false;
+    public Transform meuPai;
 
     // For�a m�xima que o objeto pode receber pra subir
     int MaxForceV = 1100;
@@ -34,6 +35,8 @@ public class IngredientesGrav : MonoBehaviour
 
     void Start()
     {
+
+        transform.SetParent(meuPai);
 
         // Pega o Rigidbody2D do pr�prio objeto
         RigidBody = GetComponent<Rigidbody2D>();
@@ -66,6 +69,7 @@ public class IngredientesGrav : MonoBehaviour
 
     void Update()
     {
+        transform.SetParent(meuPai);
         // Verifica se o objeto caiu abaixo da tela
         if (transform.position.y < DeletPos)
         {
