@@ -3205,7 +3205,7 @@ GameObject:
   - component: {fileID: 2135021811}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3228,8 +3228,9 @@ MonoBehaviour:
   - {fileID: 1345453867863968788, guid: 7effbe4b8d5dc5049a94cb28cf90716f, type: 3}
   - {fileID: 3779533154256410254, guid: d0a8d7e54506a72459cd4bd6a094d723, type: 3}
   - {fileID: 427057064457217514, guid: 77edd411ce475394181ed987e5064498, type: 3}
+  SpawnerObject: {fileID: 2135021810}
   SpawnTime: 1
-  meuPai: {fileID: 0}
+  meuPai: {fileID: 558490340}
 --- !u!4 &2135021812
 Transform:
   m_ObjectHideFlags: 0

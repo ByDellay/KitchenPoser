@@ -8,7 +8,7 @@ public class IngredientesGrav : MonoBehaviour
     public ParticleSystem Particle;
     public Alimentos.ItemType Type;
     bool AlreadyCutted = false;
-    public Transform meuPai;
+
 
     // For�a m�xima que o objeto pode receber pra subir
     int MaxForceV = 1100;
@@ -35,8 +35,11 @@ public class IngredientesGrav : MonoBehaviour
 
     void Start()
     {
-
-        transform.SetParent(meuPai);
+        GameObject Spawner = GameObject.FindWithTag("Spawner");
+        if (Spawner != null)
+        {
+            transform.SetParent(Spawner.transform);
+        } 
 
         // Pega o Rigidbody2D do pr�prio objeto
         RigidBody = GetComponent<Rigidbody2D>();
@@ -69,7 +72,6 @@ public class IngredientesGrav : MonoBehaviour
 
     void Update()
     {
-        transform.SetParent(meuPai);
         // Verifica se o objeto caiu abaixo da tela
         if (transform.position.y < DeletPos)
         {
