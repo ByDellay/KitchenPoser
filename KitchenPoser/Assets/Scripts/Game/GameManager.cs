@@ -35,19 +35,6 @@ public class GameManager : MonoBehaviour
     {
 
 
-        // singleton
-        if (Instance == null)
-        {
-            Instance = this;
-
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
         // inicializa todos alimentos com 0
         foreach (Alimentos.ItemType item in
                  System.Enum.GetValues(typeof(Alimentos.ItemType)))
