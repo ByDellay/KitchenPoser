@@ -30,7 +30,7 @@ public class Spawner : MonoBehaviour
         int i = Random.Range(0, Alimentos.Length);
 
 
-        Instantiate(Alimentos[i], pos, Quaternion.identity);
+        Instantiate(Alimentos[i], transform);
         transform.SetParent(meuPai);
         }
         else 

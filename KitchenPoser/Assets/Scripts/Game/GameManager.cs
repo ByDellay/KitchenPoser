@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-
+        Instance = this;
         // inicializa todos alimentos com 0
         foreach (Alimentos.ItemType item in
                  System.Enum.GetValues(typeof(Alimentos.ItemType)))
