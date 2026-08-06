@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
     [Header("Minigames")]
     [SerializeField] public GameObject cortar;
     [SerializeField] public GameObject cozinhar;
-    
 
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
