@@ -7,39 +7,35 @@ public class Spawner : MonoBehaviour
     public GameObject SpawnerObject;
 
     //spawn
-    public float SpawnTime = 1f;
+    public float SpawnTime = 1f; // Tempo de espera entre cada spawner
+    private float _Timer; // Contador do tempo
     public Transform leftSpawn;
     public Transform rightSpawn;
 
-    public Transform meuPai;
-
-    void Start()
+    void Update()
     {
-        // Repete a fun��o Spawnar()
-        // a cada 1 segundo
+        _Timer += Time.deltaTime; // Contador de tempo
 
-    
-            InvokeRepeating(nameof(Spawnar), 0f, SpawnTime);
+        if (_Timer >= SpawnTime) // O tempo ja passou o suficiente?
+        {
+            Spawnar();
+            _Timer = 0f;
+        }
     }
-
-    
 
     void Spawnar()
     {
-        
-        
-        float randomX = Random.Range(-5f, 5f);
-
-        Vector3 pos = new Vector3(randomX, transform.position.y, 0);
+        SpawnTime = Random.Range(0.2f, 1.2f);
         int i = Random.Range(0, Alimentos.Length);
 
+        //instancia o prefab na cena
+        GameObject Comida = Instantiate(Alimentos[i], transform);
 
-        Instantiate(Alimentos[i], transform);
-        transform.SetParent(meuPai);
-        
+        //gera um valor aleatorio e armazena em uma variavel
+        float newX = Random.Range(leftSpawn.position.x, rightSpawn.position.x);
 
-        // Cria o objeto na posi��o do Spawner
-        //Instantiate(Ingrediente, transform.position, Quaternion.identity);
+        //atribui a nova posição para o inimigo
+        Comida.transform.position = new Vector2(newX, transform.position.y);
     }
 
     /*void Spawnar2()
