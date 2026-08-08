@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryBoard.unity
     guid: d958a3bf24db1fc42886d977f35923df
   - enabled: 1
-    path: Assets/Scenes/Cortar.unity
+    path: Assets/Scenes/Game.unity
     guid: a4c8fc97c60a26449b7a0be986065453
   - enabled: 1
     path: Assets/Scenes/Cozinhar.unity

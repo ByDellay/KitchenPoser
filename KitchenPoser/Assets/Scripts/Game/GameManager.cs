@@ -8,37 +8,37 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager Instance; // Define a instancia (que é ele mesmo)
+
     [Header("Buttons")]
     //Timer
-    [Min(10f)]public float MaxTime; // Tempo de espera entre cada spawner
+    [Min(10f)]public float MaxTime; // Tempo de espera para liberar o skip
     private float _Timer; // Contador do tempo
-    public GameObject SkipScene;
+    [SerializeField]private Button SkipScene; // Botao que pula a "cena"
 
     [Header("Inventory")]
 
     //score
-    [SerializeField]private TMP_Text ScoreText; //Decide o texto usado para contar na tela a quantidade de pontos Score;
+    [SerializeField]private TMP_Text ScoreText; // Decide o texto usado para contar na tela a quantidade de pontos Score;
 
     [Header("Minigames")]
-    [SerializeField] public GameObject cortar;
-    [SerializeField] public GameObject cozinhar;
+    [SerializeField] public GameObject cortar; // "Cena" Cortar
+    private bool OnCortar = true;
+    [SerializeField] public GameObject cozinhar; // "Cena" Cozinhar
+    private bool OnCozinhar = false;
+
+    public bool ChangedScene = false; // Cena trocou?
 
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
         new Dictionary<Alimentos.ItemType, int>();
 
-    public void OnSkipTemp()
-    {
-        cortar.SetActive(false);
-        cozinhar.SetActive(true);
-    }
-   
-
     private void Awake()
     {
+        SkipScene.onClick.AddListener(ChangeScene); // Adiciona o ouvinte
         Instance = this;
-        // inicializa todos alimentos com 0
+
+        // Inicializa todos alimentos com 0
         foreach (Alimentos.ItemType item in
                  System.Enum.GetValues(typeof(Alimentos.ItemType)))
         {
@@ -52,15 +52,35 @@ public class GameManager : MonoBehaviour
 
         if (_Timer >= MaxTime) // O tempo ja passou o suficiente?
         {
-           SkipScene.SetActive(true); 
+           SkipScene.gameObject.SetActive(true); // Ativa o bota de skip
         }
-
     }
-    public void AddItem(Alimentos.ItemType type)
+
+    public void ChangeScene()
     {
-        inventory[type]++;
-        ScoreText.text = type + ": " + inventory[type];
-        Debug.Log(type + ": " + inventory[type]);
+        GameObject.FindWithTag("Spawner").GetComponent<Spawner>().DeleteChildrens(); // Chama o evento que limpa os filhos do spawner
+
+        OnCortar = !OnCortar;
+        cortar.SetActive(OnCortar);
+        OnCozinhar = !OnCozinhar;
+        cozinhar.SetActive(OnCozinhar);
+    }
+
+    public void AddItem(Alimentos.ItemType type) // Adicionador de item
+    {
+        inventory[type]++; // Adiciona 1 
+        ScoreText.text = type + ": " + inventory[type]; // Adiciona ao tipo
+        Debug.Log(type + ": " + inventory[type]); // Printa qual foi o tipo adicionado
+    }
+
+    public void SubtractItem(Alimentos.ItemType type) // Adicionador de item
+    {
+        if (type > 0)
+        {
+            inventory[type]--; // Adiciona 1 
+        }
+        ScoreText.text = type + ": " + inventory[type]; // Adiciona ao tipo
+        Debug.Log(type + ": " + inventory[type]); // Printa qual foi o tipo adicionado
     }
 
     public int GetItemCount(Alimentos.ItemType type)

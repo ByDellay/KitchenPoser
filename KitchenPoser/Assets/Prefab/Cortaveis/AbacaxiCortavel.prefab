@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6686648656026208552}
   m_Layer: 0
   m_Name: AbacaxiCortavel
-  m_TagString: Untagged
+  m_TagString: ObjetoCortavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,5 +180,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientesGrav
   Particle: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
   Type: 0
-  meuPai: {fileID: 0}
   SpriteCortado: {fileID: -6619111317931664985, guid: d46028958f317404da0b57a30f1057e5, type: 3}

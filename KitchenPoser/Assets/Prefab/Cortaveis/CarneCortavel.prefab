@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6755661969955162610}
   m_Layer: 0
   m_Name: CarneCortavel
-  m_TagString: Untagged
+  m_TagString: ObjetoCortavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

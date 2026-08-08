@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5034984210516167682}
   m_Layer: 0
   m_Name: TomateCortavel
-  m_TagString: Untagged
+  m_TagString: ObjetoCortavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
