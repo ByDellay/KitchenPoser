@@ -5,6 +5,9 @@ public class MouseTrail : MonoBehaviour
 
     //ParticleSystem ps;
     TrailRenderer Trail;
+    /*// Poder cortar
+    public bool CanCut = true;*/
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,20 +24,5 @@ public class MouseTrail : MonoBehaviour
 
         transform.position = mousePos;
         Trail.emitting = Input.GetMouseButton(0);
-
-        /*if (Input.GetMouseButton(0))
-        {
-            if (!ps.isPlaying)
-            {
-                ps.Play();
-            }
-        }
-        else
-        {
-            if (ps.isPlaying)
-            {
-                ps.Stop();
-            }
-        }*/
     }
 }

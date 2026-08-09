@@ -75,9 +75,6 @@ public class IngredientesGrav : MonoBehaviour
         // Verifica se o objeto caiu abaixo da tela
         if (transform.position.y < DeletPos)
         {
-            // Mostra mensagem no console
-            Debug.Log("Sumiu");
-
             // Deleta o objeto da cena
             Destroy(gameObject);
         }
@@ -94,15 +91,9 @@ public class IngredientesGrav : MonoBehaviour
             // Se o collider encontrado for ESTE objeto
             if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false && !CompareTag("ObjetoDuro")) // se não for um objeto duro
             {
-                
                 AlreadyCutted = true;
                 GameManager.Instance.AddItem(Type);
                 sr.sprite = SpriteCortado;
-                Debug.Log(Particle);
-                Particle.Clear();
-                Particle.Play();
-
-
 
                 StartCoroutine(Squish());
                
@@ -116,20 +107,20 @@ public class IngredientesGrav : MonoBehaviour
     }
     IEnumerator Squish()
     {
-    //Guarda a escala atual do objeto
+    // Guarda a escala atual do objeto
     Vector3 original = transform.localScale;
         
     // Altera a escala do objeto:
     transform.localScale = new Vector3(
-        original.x * 1.3f,// aumenta a largura (x)
-        original.y * 0.7f,// diminui a altura (y)
-        original.z// mantém a profundidade (z)
+        original.x * 1.3f,// Aumenta a largura (x)
+        original.y * 0.7f,// Diminui a altura (y)
+        original.z// Mantém a profundidade (z)
     );
 
-    //Espera 0,08 segundos antes de continuar.
+    // Espera 0,08 segundos antes de continuar
     yield return new WaitForSeconds(0.08f);
 
-    //Retorna o objeto para a escala original.
+    // Retorna o objeto para a escala original
     transform.localScale = original;
     }
 }
