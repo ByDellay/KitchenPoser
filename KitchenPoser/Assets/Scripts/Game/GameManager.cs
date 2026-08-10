@@ -58,7 +58,12 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene()
     {
-        GameObject.FindWithTag("Spawner").GetComponent<Spawner>().DeleteChildrens(); // Chama o evento que limpa os filhos do spawner
+        if (GameObject.FindWithTag("Spawner") != null)
+        {
+            GameObject.FindWithTag("Spawner").GetComponent<Spawner>().DeleteChildrens(); // Chama o evento que limpa os filhos do spawner
+            GameObject.FindWithTag("Spawner").GetComponent<Spawner>().SpawnTime = 5f;
+            GameObject.FindWithTag("Spawner").GetComponent<Spawner>().CutTime = 35f;
+        }
 
         OnCortar = !OnCortar;
         cortar.SetActive(OnCortar);
