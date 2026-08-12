@@ -30,8 +30,10 @@ public class GameManager : MonoBehaviour
     public bool ChangedScene = false; // Cena trocou?
 
     public GameObject unbreakable;
-    public float unBreakTimer;
-    public float unBreakTimerRemaining;
+    public float unBreakTime = 3f; // Tempo de espera
+    private float _unBreakTimer; // Contador do tempo
+
+    public bool OnBreak = false; // Estado de quebrado (faca)
 
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
@@ -49,10 +51,6 @@ public class GameManager : MonoBehaviour
             inventory[item] = 0;
         }
     }
-    public void Start()
-    {
-        unBreakTimer = 3f;
-    }
 
     public void Update()
     {
@@ -63,22 +61,23 @@ public class GameManager : MonoBehaviour
            SkipScene.gameObject.SetActive(true); // Ativa o bota de skip
         }
 
-        unBreakTimerRemaining += Time.deltaTime; //botar dentro da fuñçao
-
-        if (unbreakable != null)
+        if (OnBreak == true)
         {
-            unbreakable.SetActive(true);
-            if (unBreakTimerRemaining >= unBreakTimer)
-            {
-                unbreakable.SetActive(true);
-                print("desativou");
-            }
+            _unBreakTimer += Time.deltaTime; //botar dentro da fuñçao
+        }
+
+        if (_unBreakTimer >= unBreakTime) // O tempo ja passou o suficiente?
+        {
+            OnBreak = false;
+            _unBreakTimer = 0f;
+            unbreakable.SetActive(OnBreak);
         }
     }
 
     public void NoBreak()
     {
-        print("cortou duro");
+        OnBreak = true;
+        unbreakable.SetActive(OnBreak);
     }
 
     public void ChangeScene()
