@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour
 
     public bool ChangedScene = false; // Cena trocou?
 
+    public GameObject unbreakable;
+    public float unBreakTimer;
+    public float unBreakTimerRemaining;
+
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
         new Dictionary<Alimentos.ItemType, int>();
@@ -45,6 +49,10 @@ public class GameManager : MonoBehaviour
             inventory[item] = 0;
         }
     }
+    public void Start()
+    {
+        unBreakTimer = 3f;
+    }
 
     public void Update()
     {
@@ -54,6 +62,23 @@ public class GameManager : MonoBehaviour
         {
            SkipScene.gameObject.SetActive(true); // Ativa o bota de skip
         }
+
+        unBreakTimerRemaining += Time.deltaTime; //botar dentro da fuñçao
+
+        if (unbreakable != null)
+        {
+            unbreakable.SetActive(true);
+            if (unBreakTimerRemaining >= unBreakTimer)
+            {
+                unbreakable.SetActive(true);
+                print("desativou");
+            }
+        }
+    }
+
+    public void NoBreak()
+    {
+        print("cortou duro");
     }
 
     public void ChangeScene()
