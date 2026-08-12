@@ -195,7 +195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &263911532
 RectTransform:
   m_ObjectHideFlags: 0
@@ -959,6 +959,9 @@ MonoBehaviour:
   cortar: {fileID: 558490339}
   cozinhar: {fileID: 747062805}
   ChangedScene: 0
+  unbreakable: {fileID: 263911531}
+  unBreakTimer: 0
+  unBreakTimerRemaining: 0
 --- !u!4 &651514248
 Transform:
   m_ObjectHideFlags: 0
