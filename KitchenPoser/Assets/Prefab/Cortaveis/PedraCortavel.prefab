@@ -178,5 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8862c1b14634c4188f6792195f5b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IngredientesGrav
+  Particle: {fileID: 0}
   Type: 9
   SpriteCortado: {fileID: 4809433466814646006, guid: 48ab8f5ee77509e4bb0c5b83d76f80f2, type: 3}

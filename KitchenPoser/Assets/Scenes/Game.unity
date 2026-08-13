@@ -453,7 +453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 215ebf9fa5fe77d4ea65a2bca5b6a760, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3fadd053d910e164bbf9d93773611dc3, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -960,8 +960,8 @@ MonoBehaviour:
   cozinhar: {fileID: 747062805}
   ChangedScene: 0
   unbreakable: {fileID: 263911531}
-  unBreakTimer: 0
-  unBreakTimerRemaining: 0
+  unBreakTime: 3
+  OnBreak: 0
 --- !u!4 &651514248
 Transform:
   m_ObjectHideFlags: 0
@@ -2723,6 +2723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca27a58344494014596a57476b512f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseTrail
+  onBreak: 0
 --- !u!1 &1622930066
 GameObject:
   m_ObjectHideFlags: 0

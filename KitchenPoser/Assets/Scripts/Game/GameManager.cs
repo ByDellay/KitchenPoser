@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
 
         if (OnBreak == true)
         {
+            GetComponent<MouseTrail>().onBreak = true;
             _unBreakTimer += Time.deltaTime; //botar dentro da fuñçao
         }
 

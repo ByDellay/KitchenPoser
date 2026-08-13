@@ -8,6 +8,7 @@ public class MouseTrail : MonoBehaviour
     /*// Poder cortar
     public bool CanCut = true;*/
 
+    public bool onBreak = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,10 +20,18 @@ public class MouseTrail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
+        if (onBreak == false)
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.z = 0;
 
-        transform.position = mousePos;
-        Trail.emitting = Input.GetMouseButton(0);
+            transform.position = mousePos;
+            Trail.emitting = Input.GetMouseButton(0);
+
+        }
+        else
+        {
+
+        }
     }
 }
