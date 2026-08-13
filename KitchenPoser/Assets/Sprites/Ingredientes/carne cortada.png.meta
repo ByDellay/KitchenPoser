@@ -1,61 +1,13 @@
 fileFormatVersion: 2
-guid: d4be4dbac134ff94c8c6a0b2f10fb11a
+guid: e362bf30e59064141bf22fd165cf9e26
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3604269584265939936
-    second: carne cortada_0
+      213: 8069140324825224491
+    second: "130 Sem T\xEDtulo_20260813132054_0"
   - first:
-      213: -2252140503335202542
-    second: carne cortada_1
-  - first:
-      213: 7167322264187528346
-    second: carne cortada_2
-  - first:
-      213: -8335560802020794894
-    second: carne cortada_3
-  - first:
-      213: 5871548693905859182
-    second: carne cortada_4
-  - first:
-      213: -8536794341294670592
-    second: carne cortada_5
-  - first:
-      213: -1452670970224230048
-    second: carne cortada_6
-  - first:
-      213: -3014767346177318993
-    second: carne cortada_7
-  - first:
-      213: -81626123489255014
-    second: carne cortada_8
-  - first:
-      213: -7022168958154616604
-    second: carne cortada_9
-  - first:
-      213: 3453020286173227479
-    second: carne cortada_10
-  - first:
-      213: 604482392361976525
-    second: carne cortada_11
-  - first:
-      213: 7914187590873006493
-    second: carne cortada_12
-  - first:
-      213: -4282048311073816401
-    second: carne cortada_13
-  - first:
-      213: 931449959337518954
-    second: carne cortada_14
-  - first:
-      213: -1405626597189012594
-    second: carne cortada_15
-  - first:
-      213: -2075395252964364977
-    second: carne cortada_16
-  - first:
-      213: 7525018603252151638
-    second: carne cortada_17
+      213: 8882172356633865037
+    second: "130 Sem T\xEDtulo_20260813132054_1"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 220
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -190,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: carne cortada_0
+      name: "130 Sem T\xEDtulo_20260813132054_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2500
-        height: 2500
+        width: 536
+        height: 573
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +157,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0eb8ae43710f40230800000000000000
-      internalID: 3604269584265939936
+      spriteID: b25dcff8f585bff60800000000000000
+      internalID: 8069140324825224491
       vertices: []
       indices: 
       edges: []
@@ -215,7 +167,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1aba196ccd211354792e541d9cefbfb3
+    spriteID: 67d8f58191e74994cb77bf49b7a1fdd0
     internalID: 0
     vertices: []
     indices: 
@@ -223,11 +175,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2500.0,"y":2500.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      carne cortada_0: 3604269584265939936
+      "130 Sem T\xEDtulo_20260813132054_0": 8069140324825224491
+      "130 Sem T\xEDtulo_20260813132054_1": 8882172356633865037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

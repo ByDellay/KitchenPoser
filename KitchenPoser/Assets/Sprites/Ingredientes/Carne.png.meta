@@ -1,58 +1,10 @@
 fileFormatVersion: 2
-guid: def35c0346ac17146b0d6978ace95108
+guid: 7c987bd6fbe036f459e551f5a92913c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 877375763575212976
-    second: ananas cortado_0
-  - first:
-      213: -4783531796073162416
-    second: ananas cortado_1
-  - first:
-      213: 1646409940369944737
-    second: ananas cortado_2
-  - first:
-      213: 4506175869290079786
-    second: ananas cortado_3
-  - first:
-      213: -3447935624206500956
-    second: ananas cortado_4
-  - first:
-      213: 6987737215147347069
-    second: ananas cortado_5
-  - first:
-      213: -429601580352469106
-    second: ananas cortado_6
-  - first:
-      213: -2371665528790587830
-    second: ananas cortado_7
-  - first:
-      213: 335874578247909839
-    second: ananas cortado_8
-  - first:
-      213: -7789512298405767533
-    second: ananas cortado_9
-  - first:
-      213: -6998800420196803622
-    second: ananas cortado_10
-  - first:
-      213: -7341746770194802255
-    second: ananas cortado_11
-  - first:
-      213: -3446748708632123077
-    second: ananas cortado_12
-  - first:
-      213: -1625911914545004347
-    second: ananas cortado_13
-  - first:
-      213: -5717769582435850358
-    second: ananas cortado_14
-  - first:
-      213: 9158396105896224850
-    second: ananas cortado_15
-  - first:
-      213: 8693975709204187132
-    second: ananas cortado_16
+      213: 2879533737043008118
+    second: "130 Sem T\xEDtulo_20260813132118_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 220
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -187,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ananas cortado_0
+      name: "130 Sem T\xEDtulo_20260813132118_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 360
-        height: 360
+        width: 472
+        height: 515
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0bb0072cb901d2c00800000000000000
-      internalID: 877375763575212976
+      spriteID: 67a933b6da826f720800000000000000
+      internalID: 2879533737043008118
       vertices: []
       indices: 
       edges: []
@@ -212,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d05e8a71a01c7ef4ca7ce70c56743b78
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -220,11 +172,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":360.0,"y":360.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      ananas cortado_0: 877375763575212976
+      "130 Sem T\xEDtulo_20260813132118_0": 2879533737043008118
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
