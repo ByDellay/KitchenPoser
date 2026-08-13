@@ -27,11 +27,6 @@ public class MouseTrail : MonoBehaviour
 
             transform.position = mousePos;
             Trail.emitting = Input.GetMouseButton(0);
-
-        }
-        else
-        {
-
         }
     }
 }

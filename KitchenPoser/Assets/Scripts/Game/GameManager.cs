@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
     private float _unBreakTimer; // Contador do tempo
 
     public bool OnBreak = false; // Estado de quebrado (faca)
+    //ParticleSystem ps;
+    public TrailRenderer Trail;
+    
 
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
@@ -63,13 +66,14 @@ public class GameManager : MonoBehaviour
 
         if (OnBreak == true)
         {
-            GetComponent<MouseTrail>().onBreak = true;
+            Trail.GetComponent<MouseTrail>().onBreak = true;
             _unBreakTimer += Time.deltaTime; //botar dentro da fuñçao
         }
 
         if (_unBreakTimer >= unBreakTime) // O tempo ja passou o suficiente?
         {
             OnBreak = false;
+            Trail.GetComponent<MouseTrail>().onBreak = false;
             _unBreakTimer = 0f;
             unbreakable.SetActive(OnBreak);
         }
