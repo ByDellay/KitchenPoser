@@ -5,6 +5,7 @@ public class ScreenShake : MonoBehaviour
 {
     public float Duration;
     public AnimationCurve Curve;
+    [SerializeField] private int Vel = 20;
 
     public void DoScreenShake()
     {
@@ -18,11 +19,14 @@ public class ScreenShake : MonoBehaviour
 
         while (CurrentTime < Duration)
         {
-            Vector3 ShakeOffset = (Vector3)Random.insideUnitCircle * Curve.Evaluate((CurrentTime / Duration));
+            Vector3 ShakeOffset = (Vector3)Random.insideUnitCircle * Curve.Evaluate(0.00000000001f);
             transform.position = OriginalPos + ShakeOffset;
 
             CurrentTime += Time.deltaTime;
-            yield return null;
+            for (int i = 0; i < Vel; i ++)
+            {
+                yield return null;
+            } 
         }
 
         transform.position = OriginalPos;
