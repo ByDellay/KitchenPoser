@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 263911532}
   - component: {fileID: 263911533}
   - component: {fileID: 263911534}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Unbreak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,8 +259,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2032283877
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.18867922, g: 0.17888926, b: 0.17888926, a: 0}
@@ -643,7 +643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
       propertyPath: InitialModule.startRotation.scalar
@@ -864,7 +864,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &524533752
 Canvas:
   m_ObjectHideFlags: 0
@@ -874,7 +874,7 @@ Canvas:
   m_GameObject: {fileID: 524533749}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 1894340846}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -885,7 +885,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2032283877
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &524533753
@@ -896,8 +896,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524533749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.022222225, y: 0.022222225, z: 0.022222225}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 377808355}
@@ -909,8 +909,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 799.99994, y: 449.99994}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &558267989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,7 +1355,7 @@ GameObject:
   - component: {fileID: 658811530}
   - component: {fileID: 658811532}
   - component: {fileID: 658811531}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3137,7 +3137,7 @@ GameObject:
   - component: {fileID: 1881667975}
   - component: {fileID: 1881667974}
   - component: {fileID: 1881667973}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: skipScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3258,6 +3258,7 @@ GameObject:
   - component: {fileID: 1894340846}
   - component: {fileID: 1894340845}
   - component: {fileID: 1894340848}
+  - component: {fileID: 1894340849}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3383,6 +3384,79 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1894340849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894340844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a62bb153c25bc4a97b7868e43ee8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenShake
+  Duration: 0.13
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.155813
+      outSlope: 0.155813
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.010038605
+      value: 1.0015641
+      inSlope: -0.035609625
+      outSlope: -0.035609625
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.024167888
+      value: 0.99835634
+      inSlope: -0.023144096
+      outSlope: -0.023144096
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.03592828
+      value: 1.000482
+      inSlope: 0.0567937
+      outSlope: 0.0567937
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.05669243
+      value: 0.9990875
+      inSlope: 0.009305302
+      outSlope: 0.009305302
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.068399
+      value: 1.0000916
+      inSlope: 0.085767254
+      outSlope: 0.085767254
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1917568610
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,7 +3865,7 @@ Transform:
   m_GameObject: {fileID: 2135021810}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.3839006, z: 0}
+  m_LocalPosition: {x: 0, y: -7.3839006, z: 0.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:

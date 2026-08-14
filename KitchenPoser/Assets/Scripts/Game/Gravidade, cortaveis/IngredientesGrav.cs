@@ -101,6 +101,7 @@ public class IngredientesGrav : MonoBehaviour
             else if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false && CompareTag("ObjetoDuro")) // se for um objeto duro
             {
                 AlreadyCutted = true;
+                GameObject.FindWithTag("MainCamera").GetComponent<ScreenShake>().DoScreenShake(); // Chama o evento que treme a tela
                 GameManager.Instance.NoBreak();
                 //cortar = desabilitado por 3 segundos (tem que criar isso ainda)
             }
