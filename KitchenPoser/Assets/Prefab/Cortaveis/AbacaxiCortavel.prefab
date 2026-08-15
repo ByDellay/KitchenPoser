@@ -181,3 +181,4 @@ MonoBehaviour:
   Particle: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
   Type: 0
   SpriteCortado: {fileID: 2709076841682391727, guid: ff64875bf6bb97d47ab275116ab50edd, type: 3}
+  ParticulaCorte: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}

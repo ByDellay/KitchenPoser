@@ -29,6 +29,7 @@ public class IngredientesGrav : MonoBehaviour
     float DeletPos = -100f;
 
     public Sprite SpriteCortado;
+    public ParticleSystem ParticulaCorte;
     SpriteRenderer sr;
     
     
@@ -94,6 +95,7 @@ public class IngredientesGrav : MonoBehaviour
                 AlreadyCutted = true;
                 GameManager.Instance.AddItem(Type);
                 sr.sprite = SpriteCortado;
+                Instantiate(ParticulaCorte, transform.position + new Vector3(0f, 0f, -0.5f), Quaternion.identity); //spawna as particulas levemente a frente do ingrediente quando cortado
 
                 StartCoroutine(Squish());
                

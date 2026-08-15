@@ -135,6 +135,7 @@ MonoBehaviour:
   Particle: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
   Type: 6
   SpriteCortado: {fileID: 5943956609412080102, guid: b22572e9f892be742816046e04fca865, type: 3}
+  ParticulaCorte: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
 --- !u!61 &-1220235225184096194
 BoxCollider2D:
   m_ObjectHideFlags: 0

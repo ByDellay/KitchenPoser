@@ -131,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.19, y: 4.2}
+    oldSize: {x: 2.3590908, y: 1.9090909}
     newSize: {x: 5.19, y: 4.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -181,3 +181,4 @@ MonoBehaviour:
   Particle: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
   Type: 8
   SpriteCortado: {fileID: 2551963416524592045, guid: a65cd3a5cce49b34a81fae900f8bd14a, type: 3}
+  ParticulaCorte: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
