@@ -8,6 +8,8 @@ public class ButtonSkip : MonoBehaviour
     [SerializeField] private Button ButtonSkip01; //Botão que pula pro proximo
     public GameObject storyBoard1; // Pagina 1
     public GameObject storyBoard2; // Pagina 2
+    public GameObject storyBoard3;
+    public GameObject storyBoard4;
 
     private void Awake()
     {
@@ -20,6 +22,16 @@ public class ButtonSkip : MonoBehaviour
         {
             storyBoard1.SetActive(false); // Vai pra proxima
             storyBoard2.SetActive(true); // Proxima
+        }
+        else if (storyBoard2.activeSelf)
+        {
+            storyBoard2.SetActive(false); // Vai pra proxima
+            storyBoard3.SetActive(true); // Proxima
+        }
+        else if (storyBoard3.activeSelf)
+        {
+            storyBoard3.SetActive(false); // Vai pra proxima
+            storyBoard4.SetActive(true); // Proxima
         }
         else
         {
