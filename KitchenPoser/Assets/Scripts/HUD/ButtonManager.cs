@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    [Header("UI")]
+    /*[Header("UI")]
     public GameObject fundoEscuro;
     public GameObject CookBookClose;
     public GameObject CookBookOpen;
@@ -117,7 +117,7 @@ public class ButtonManager : MonoBehaviour
     {
 
 
-    }
+    } */
 
 
 }
