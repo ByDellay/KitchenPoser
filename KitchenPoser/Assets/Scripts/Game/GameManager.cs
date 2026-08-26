@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         _Timer += Time.deltaTime; // Contador de tempo
+        
 
         if (_Timer >= MaxTime) // O tempo ja passou o suficiente?
         {

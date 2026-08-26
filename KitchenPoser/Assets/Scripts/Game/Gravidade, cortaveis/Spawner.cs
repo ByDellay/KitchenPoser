@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -8,15 +9,26 @@ public class Spawner : MonoBehaviour
     //spawn
     public float SpawnTime = 5f; // Tempo de espera entre cada spawner
     private float _SpawnTimer; // Contador do tempo
-    public float CutTime = 35f;
-    private float _CutTimer; // Contador do tempo
+
+    public float CutTime;
+    public float _CutTimer; // Contador do tempo
+    public float _CutTimerText;
+    public TextMeshProUGUI timerShow;
+
     public Transform leftSpawn;
     public Transform rightSpawn;
+
+    private void Awake()
+    {
+        _CutTimerText = CutTime;
+    }
 
     void Update()
     {
         _SpawnTimer += Time.deltaTime; // Contador de tempo
         _CutTimer += Time.deltaTime; // Contador de tempo
+        _CutTimerText -= Time.deltaTime;
+        timerShow.text = _CutTimerText.ToString("F0");
     
         if (_SpawnTimer >= SpawnTime) // O tempo ja passou o suficiente?
         {
