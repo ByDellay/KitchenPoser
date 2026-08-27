@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
     public Dictionary<Alimentos.ItemType, int> inventory =
         new Dictionary<Alimentos.ItemType, int>();
 
+    public int TotalFails = 0;
+
     private void Awake()
     {
         SkipScene.onClick.AddListener(ChangeScene); // Adiciona o ouvinte
@@ -76,6 +78,14 @@ public class GameManager : MonoBehaviour
             Trail.GetComponent<MouseTrail>().onBreak = false;
             _unBreakTimer = 0f;
             unbreakable.SetActive(OnBreak);
+        }
+
+        if (TotalFails >= 3)
+        {
+            TotalFails = 0;
+            ChangeScene();
+            Debug.Log(TotalFails);
+
         }
     }
 
