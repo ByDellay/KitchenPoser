@@ -97,6 +97,8 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene()
     {
+        TotalFails = 0;
+
         if (GameObject.FindWithTag("Spawner") != null)
         {
             GameObject.FindWithTag("Spawner").GetComponent<Spawner>().DeleteChildrens(); // Chama o evento que limpa os filhos do spawner
