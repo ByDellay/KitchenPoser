@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ButtonMenu : MonoBehaviour
 {
-    [Header("Botões")]
+    [Header("Botï¿½es")]
     [SerializeField]private Button ButtonPlay;
     [SerializeField]private Button ButtonCredit;
     [SerializeField]private Button ButtonCreditClose;
@@ -12,6 +12,14 @@ public class ButtonMenu : MonoBehaviour
 
     [Header("outro")]
     [SerializeField] GameObject Creditos;
+    public AudioClip ClickSFX;
+    public AudioSource AudioSource;
+
+
+    public void PlaySound()
+    {
+        AudioSource.PlayOneShot(ClickSFX);
+    }
 
     private void Awake()
     {
@@ -23,10 +31,12 @@ public class ButtonMenu : MonoBehaviour
 
     private void OnButtonPlayClick()
     {
+        AudioSource.PlayOneShot(ClickSFX);
         SceneManager.LoadScene("StoryBoard");
     }
     private void OnButtonCreditClick()
     {
+        AudioSource.PlayOneShot(ClickSFX);
         Debug.Log("Abrindo os creditos");
         Creditos.SetActive(true);
         ButtonCreditClose.gameObject.SetActive(true);
@@ -37,6 +47,7 @@ public class ButtonMenu : MonoBehaviour
     }
     private void OnButtonCreditCloseClick()
     {
+        AudioSource.PlayOneShot(ClickSFX);
         Debug.Log("Fechando os creditos");
         Creditos.SetActive(false);
         ButtonCreditClose.gameObject.SetActive(false);
@@ -48,7 +59,7 @@ public class ButtonMenu : MonoBehaviour
 
     private void OnButtonQuitClick()
     {
-        Debug.Log("Fechando o jogo..."); // Apenas para testar no editor
-        Application.Quit(); // Fecha o executável buildado, não da pra ver direto da unity, mas se voce buildar o executavel >provavelmente funciona<
+        AudioSource.PlayOneShot(ClickSFX);
+        Application.Quit(); // Fecha o executï¿½vel buildado, nï¿½o da pra ver direto da unity, mas se voce buildar o executavel >provavelmente funciona<
     }
 }
