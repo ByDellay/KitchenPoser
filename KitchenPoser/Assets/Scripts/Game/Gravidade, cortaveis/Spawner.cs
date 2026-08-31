@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class Spawner : MonoBehaviour
 {
@@ -8,23 +9,32 @@ public class Spawner : MonoBehaviour
     //spawn
     public float SpawnTime = 5f; // Tempo de espera entre cada spawner
     private float _SpawnTimer; // Contador do tempo
-    public float CutTime = 35f;
-    private float _CutTimer; // Contador do tempo
+    public float CutTime;
+    public float CutTimer; // Contador do tempo
     public Transform leftSpawn;
     public Transform rightSpawn;
 
+    public float _CutTimerText;
+    public TextMeshProUGUI timerShow;
+
+    private void Start()
+    {
+        _CutTimerText = CutTime;
+    }
     void Update()
     {
         _SpawnTimer += Time.deltaTime; // Contador de tempo
-        _CutTimer += Time.deltaTime; // Contador de tempo
-    
+        CutTimer += Time.deltaTime; // Contador de tempo
+        _CutTimerText -= Time.deltaTime;
+        timerShow.text = _CutTimerText.ToString("F0");
+
         if (_SpawnTimer >= SpawnTime) // O tempo ja passou o suficiente?
         {
             Spawnar();
             _SpawnTimer = 0f;
         }
 
-        if (_CutTimer >= CutTime) // O tempo ja passou o suficiente?
+        if (CutTimer >= CutTime) // O tempo ja passou o suficiente?
         {
             GameManager.Instance.ChangeScene(); // Troca de cena
             DeleteChildrens();
