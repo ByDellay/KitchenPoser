@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using System;
 
 
 public class GameManager : MonoBehaviour
@@ -20,6 +21,10 @@ public class GameManager : MonoBehaviour
 
     //score
     [SerializeField]private TMP_Text ScoreText; // Decide o texto usado para contar na tela a quantidade de pontos Score;
+    [SerializeField]private Button FishButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
+    [SerializeField]private Button MeatButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
+    [SerializeField]private Button AbacaxiButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
+    [SerializeField]private Button TomateButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
 
     [Header("Minigames")]
     [SerializeField] public GameObject cortar; // "Cena" Cortar
@@ -36,11 +41,15 @@ public class GameManager : MonoBehaviour
     public bool OnBreak = false; // Estado de quebrado (faca)
     //ParticleSystem ps;
     public TrailRenderer Trail;
-    
 
+    [Header("Inventory")]
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
         new Dictionary<Alimentos.ItemType, int>();
+    public TextMeshProUGUI fishCount;
+    public TextMeshProUGUI meatCount;
+    public TextMeshProUGUI abacaxiCount;
+    public TextMeshProUGUI tomateCount;
 
     public int TotalFails = 0;
 
@@ -110,6 +119,11 @@ public class GameManager : MonoBehaviour
         cortar.SetActive(OnCortar);
         OnCozinhar = !OnCozinhar;
         cozinhar.SetActive(OnCozinhar);
+        UpdateItemCount();
+    }
+    public void UpdateItemCount()
+    {
+        // fishCount.text = inventory[Alimentos.ItemType.Peixe].ToString; // tentar arrumar isso aqui
     }
 
     public void AddItem(Alimentos.ItemType type) // Adicionador de item
