@@ -1141,7 +1141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &558490340
 Transform:
   m_ObjectHideFlags: 0
@@ -1174,7 +1174,7 @@ GameObject:
   - component: {fileID: 565072824}
   - component: {fileID: 565072823}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MeatCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1196,7 +1196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.85, y: -9}
+  m_AnchoredPosition: {x: -6.8500004, y: -9}
   m_SizeDelta: {x: 13.7, y: -18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565072823
@@ -1409,6 +1409,10 @@ MonoBehaviour:
   MaxTime: 10
   SkipScene: {fileID: 1881667973}
   ScoreText: {fileID: 945503182}
+  FishButton: {fileID: 0}
+  MeatButton: {fileID: 0}
+  AbacaxiButton: {fileID: 0}
+  TomateButton: {fileID: 0}
   cortar: {fileID: 558490339}
   cozinhar: {fileID: 747062805}
   ChangedScene: 0
@@ -1416,6 +1420,10 @@ MonoBehaviour:
   unBreakTime: 3
   OnBreak: 0
   Trail: {fileID: 1567022427}
+  fishCount: {fileID: 2125471837}
+  meatCount: {fileID: 565072823}
+  abacaxiCount: {fileID: 930093377}
+  tomateCount: {fileID: 1173318784}
   TotalFails: 0
 --- !u!4 &651514248
 Transform:
@@ -1719,7 +1727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &681381963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1897,7 +1905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &747062806
 Transform:
   m_ObjectHideFlags: 0
@@ -1929,7 +1937,7 @@ GameObject:
   - component: {fileID: 930093378}
   - component: {fileID: 930093377}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: AbacaxiCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2810,7 +2818,7 @@ GameObject:
   - component: {fileID: 1173318785}
   - component: {fileID: 1173318784}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TomatoCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4668,7 +4676,7 @@ GameObject:
   - component: {fileID: 2125471838}
   - component: {fileID: 2125471837}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: FishCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -121,9 +121,12 @@ public class GameManager : MonoBehaviour
         cozinhar.SetActive(OnCozinhar);
         UpdateItemCount();
     }
-    public void UpdateItemCount()
+    public void UpdateItemCount() // Atualiza a qantidade de itens no inventario
     {
-        // fishCount.text = inventory[Alimentos.ItemType.Peixe].ToString; // tentar arrumar isso aqui
+        fishCount.text = inventory[Alimentos.ItemType.Peixe].ToString();
+        meatCount.text = inventory[Alimentos.ItemType.Carne].ToString();
+        abacaxiCount.text = inventory[Alimentos.ItemType.Abacaxi].ToString();
+        tomateCount.text = inventory[Alimentos.ItemType.Tomate].ToString();
     }
 
     public void AddItem(Alimentos.ItemType type) // Adicionador de item
