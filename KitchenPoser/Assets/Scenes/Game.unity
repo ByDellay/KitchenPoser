@@ -4835,6 +4835,7 @@ MonoBehaviour:
   - {fileID: 1345453867863968788, guid: 7effbe4b8d5dc5049a94cb28cf90716f, type: 3}
   - {fileID: 3779533154256410254, guid: d0a8d7e54506a72459cd4bd6a094d723, type: 3}
   - {fileID: 427057064457217514, guid: 77edd411ce475394181ed987e5064498, type: 3}
+  - {fileID: 8899394386505720966, guid: b4bca91cbb7430d4d9f640820d1575d8, type: 3}
   SpawnTime: 5
   CutTime: 60
   CutTimer: 0
