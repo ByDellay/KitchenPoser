@@ -99,6 +99,7 @@ public class ButtonManager : MonoBehaviour
     {
         arm1Inventario.SetActive(true);
         arm1Outventario.SetActive(true);
+        GetComponent<GameManager>().UpdateItemCount();
     }
     public void OutArmario1()
     {

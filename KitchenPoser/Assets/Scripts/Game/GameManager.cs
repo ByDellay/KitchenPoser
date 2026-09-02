@@ -50,6 +50,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI meatCount;
     public TextMeshProUGUI abacaxiCount;
     public TextMeshProUGUI tomateCount;
+    public TextMeshProUGUI farinhaCount;
+
+
 
     public int TotalFails = 0;
 
@@ -127,6 +130,7 @@ public class GameManager : MonoBehaviour
         meatCount.text = inventory[Alimentos.ItemType.Carne].ToString();
         abacaxiCount.text = inventory[Alimentos.ItemType.Abacaxi].ToString();
         tomateCount.text = inventory[Alimentos.ItemType.Tomate].ToString();
+        farinhaCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
     }
 
     public void AddItem(Alimentos.ItemType type) // Adicionador de item
