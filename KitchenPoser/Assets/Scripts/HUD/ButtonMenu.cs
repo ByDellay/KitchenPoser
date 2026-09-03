@@ -12,6 +12,9 @@ public class ButtonMenu : MonoBehaviour
 
     [Header("outro")]
     [SerializeField] GameObject Creditos;
+    [SerializeField] GameObject KP;
+    [SerializeField] GameObject JoaquimGustavo;
+    [SerializeField] GameObject Nomes;
 
     private void Awake()
     {
@@ -30,20 +33,26 @@ public class ButtonMenu : MonoBehaviour
         Debug.Log("Abrindo os creditos");
         Creditos.SetActive(true);
         ButtonCreditClose.gameObject.SetActive(true);
+        JoaquimGustavo.SetActive(true);
+        Nomes.SetActive(true);
 
         ButtonPlay.gameObject.SetActive(false);
         ButtonCredit.gameObject.SetActive(false);
         ButtonQuit.gameObject.SetActive(false);
+        KP.SetActive(false);
     }
     private void OnButtonCreditCloseClick()
     {
         Debug.Log("Fechando os creditos");
         Creditos.SetActive(false);
         ButtonCreditClose.gameObject.SetActive(false);
+        JoaquimGustavo.SetActive(false);
+        Nomes.SetActive(false);
 
         ButtonPlay.gameObject.SetActive(true);
         ButtonCredit.gameObject.SetActive(true);
         ButtonQuit.gameObject.SetActive(true);
+        KP.SetActive(true);
     }
 
     private void OnButtonQuitClick()

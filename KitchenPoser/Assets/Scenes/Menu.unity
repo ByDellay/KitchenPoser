@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &62267563
 Transform:
   m_ObjectHideFlags: 0
@@ -255,6 +255,9 @@ MonoBehaviour:
   ButtonCreditClose: {fileID: 1678144472}
   ButtonQuit: {fileID: 978737068}
   Creditos: {fileID: 1445561703}
+  KP: {fileID: 326249734}
+  JoaquimGustavo: {fileID: 62267562}
+  Nomes: {fileID: 1847467737}
 --- !u!114 &243921880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,12 +493,12 @@ GameObject:
   m_Component:
   - component: {fileID: 326249735}
   m_Layer: 5
-  m_Name: CreditsTexts
+  m_Name: KitchenPoser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &326249735
 RectTransform:
   m_ObjectHideFlags: 0
@@ -892,7 +895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &978737068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,7 +1174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1328260400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1369,7 +1372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1445561704
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1461,7 +1464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1560567142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,7 +1666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1678144472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1763,7 +1766,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -249.4, y: -179.5}
+  m_AnchoredPosition: {x: -249.4, y: -174.2}
   m_SizeDelta: {x: 277, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1847467737
@@ -1783,7 +1786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1847467738
 RectTransform:
   m_ObjectHideFlags: 0

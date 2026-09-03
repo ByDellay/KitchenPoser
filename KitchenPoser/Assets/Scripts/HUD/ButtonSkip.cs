@@ -10,6 +10,7 @@ public class ButtonSkip : MonoBehaviour
     public GameObject storyBoard2; // Pagina 2
     public GameObject storyBoard3;
     public GameObject storyBoard4;
+    public GameObject tutorial;
 
     private void Awake()
     {
@@ -32,6 +33,11 @@ public class ButtonSkip : MonoBehaviour
         {
             storyBoard3.SetActive(false); // Vai pra proxima
             storyBoard4.SetActive(true); // Proxima
+        }
+        else if (storyBoard4.activeSelf)
+        {
+            storyBoard4.SetActive(false);
+            tutorial.SetActive(true);
         }
         else
         {
