@@ -832,6 +832,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
       propertyPath: stopAction
       value: 2
       objectReference: {fileID: 0}
@@ -1141,7 +1145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &558490340
 Transform:
   m_ObjectHideFlags: 0
@@ -1907,7 +1911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &747062806
 Transform:
   m_ObjectHideFlags: 0
@@ -3850,7 +3854,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 23.6, y: -27.2}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1705194341
 MonoBehaviour:
@@ -3916,7 +3920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 0cc28045344dbe74caae09508adf3e63, type: 3}
+  m_Sprite: {fileID: -6649469326185182970, guid: a1f122d1ab5dd8942b8fdd96a4d4ce3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5092,9 +5096,10 @@ MonoBehaviour:
   - {fileID: 3220746514187522637, guid: cde8cba5ae609b64bbfd2f3c6a5d8a58, type: 3}
   - {fileID: 5130144375929357662, guid: 7b2ce1243e9feca409393cd1280e5761, type: 3}
   - {fileID: 1345453867863968788, guid: 7effbe4b8d5dc5049a94cb28cf90716f, type: 3}
-  - {fileID: 3779533154256410254, guid: d0a8d7e54506a72459cd4bd6a094d723, type: 3}
   - {fileID: 427057064457217514, guid: 77edd411ce475394181ed987e5064498, type: 3}
   - {fileID: 8899394386505720966, guid: b4bca91cbb7430d4d9f640820d1575d8, type: 3}
+  - {fileID: 8128379726931139325, guid: 34fa3e3f9af429d4cb6dc50312c349ec, type: 3}
+  - {fileID: 3779533154256410254, guid: d0a8d7e54506a72459cd4bd6a094d723, type: 3}
   SpawnTime: 5
   CutTime: 60
   CutTimer: 0
