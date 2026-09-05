@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class ButtonMenu : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class ButtonMenu : MonoBehaviour
     [SerializeField] GameObject Creditos;
     public AudioClip ClickSFX;
     public AudioSource AudioSource;
+
+    int FadeTime = 1;
+    public Animator CrossFade;
 
 
     public void PlaySound()
@@ -32,7 +36,9 @@ public class ButtonMenu : MonoBehaviour
     private void OnButtonPlayClick()
     {
         AudioSource.PlayOneShot(ClickSFX);
-        SceneManager.LoadScene("StoryBoard");
+
+        StartCoroutine(LoadNewScene("StoryBoard"));
+        //SceneManager.LoadScene("StoryBoard");
     }
     private void OnButtonCreditClick()
     {
@@ -61,5 +67,14 @@ public class ButtonMenu : MonoBehaviour
     {
         AudioSource.PlayOneShot(ClickSFX);
         Application.Quit(); // Fecha o execut�vel buildado, n�o da pra ver direto da unity, mas se voce buildar o executavel >provavelmente funciona<
+    }
+
+    IEnumerator LoadNewScene(string Scene)
+    {
+        CrossFade.SetTrigger("Start");
+
+        yield return new WaitForSeconds(FadeTime);
+
+        SceneManager.LoadScene(Scene);
     }
 }
