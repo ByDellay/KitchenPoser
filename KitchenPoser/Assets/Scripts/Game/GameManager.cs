@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     //Timer
     [Min(10f)]public float MaxTime; // Tempo de espera para liberar o skip
     private float _Timer; // Contador do tempo
-    [SerializeField]private Button SkipScene; // Botao que pula a "cena"
 
     [Header("Inventory")]
 
@@ -58,7 +57,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        SkipScene.onClick.AddListener(ChangeScene); // Adiciona o ouvinte
         Instance = this;
 
         // Inicializa todos alimentos com 0
@@ -72,11 +70,6 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         _Timer += Time.deltaTime; // Contador de tempo
-
-        if (_Timer >= MaxTime) // O tempo ja passou o suficiente?
-        {
-           SkipScene.gameObject.SetActive(true); // Ativa o bota de skip
-        }
 
         if (OnBreak == true)
         {
