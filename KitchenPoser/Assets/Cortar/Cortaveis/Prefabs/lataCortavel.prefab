@@ -180,5 +180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientesGrav
   Particle: {fileID: 0}
   Type: 9
+  SpawnSFX: {fileID: 8300000, guid: 384af0444b39c3d479907afd96ed0f37, type: 3}
   SpriteCortado: {fileID: 4809433466814646006, guid: 48ab8f5ee77509e4bb0c5b83d76f80f2, type: 3}
   ParticulaCorte: {fileID: 0}

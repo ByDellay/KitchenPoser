@@ -19,7 +19,7 @@ public class ButtonSkip : MonoBehaviour
 
     private void OnButtonSkipClick()
     {
-        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f);
+        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f, 1f);
 
         if (storyBoard1.activeSelf) // Se estiver na primeira pagina
         {

@@ -18,12 +18,6 @@ public class ButtonMenu : MonoBehaviour
     int FadeTime = 1;
     public Animator CrossFade;
 
-
-    public void PlaySound()
-    {
-        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f);
-    }
-
     private void Awake()
     {
         ButtonPlay.onClick.AddListener(OnButtonPlayClick);
@@ -34,14 +28,14 @@ public class ButtonMenu : MonoBehaviour
 
     private void OnButtonPlayClick()
     {
-        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f);
+        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f, 1f);
 
         StartCoroutine(LoadNewScene("StoryBoard"));
         //SceneManager.LoadScene("StoryBoard");
     }
     private void OnButtonCreditClick()
     {
-        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f);
+        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f, 1f);
         Debug.Log("Abrindo os creditos");
         Creditos.SetActive(true);
         ButtonCreditClose.gameObject.SetActive(true);
@@ -52,7 +46,7 @@ public class ButtonMenu : MonoBehaviour
     }
     private void OnButtonCreditCloseClick()
     {
-        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f);
+        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f, 1f);
         Debug.Log("Fechando os creditos");
         Creditos.SetActive(false);
         ButtonCreditClose.gameObject.SetActive(false);
@@ -64,7 +58,7 @@ public class ButtonMenu : MonoBehaviour
 
     private void OnButtonQuitClick()
     {
-        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f);
+        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f, 1f);
         Application.Quit(); // Fecha o execut�vel buildado, n�o da pra ver direto da unity, mas se voce buildar o executavel >provavelmente funciona<
     }
 

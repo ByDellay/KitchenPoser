@@ -9,6 +9,8 @@ public class IngredientesGrav : MonoBehaviour
     public Alimentos.ItemType Type;
     bool AlreadyCutted = false;
 
+    [SerializeField] private AudioClip SpawnSFX;
+    //[SerializeField] private AudioClip CutSFX;
 
     // For�a m�xima que o objeto pode receber pra subir
     int MaxForceV = 1100;
@@ -31,9 +33,6 @@ public class IngredientesGrav : MonoBehaviour
     public Sprite SpriteCortado;
     public ParticleSystem ParticulaCorte;
     SpriteRenderer sr;
-
-
-
 
     void Start()
     {
@@ -69,7 +68,7 @@ public class IngredientesGrav : MonoBehaviour
         RigidBody.AddForce(force);
         RigidBody.angularVelocity = RandomRotation;
 
-        
+        AudioManager.Instance.AudioPlaySFX(SpawnSFX, transform, 1f, Random.Range(0.5f, 1.5f));
     }
 
     void Update()
