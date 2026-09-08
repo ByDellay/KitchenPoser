@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class ButtonSkip : MonoBehaviour
 {
+    [SerializeField] private AudioClip ClickSFX;
 
     [SerializeField] private Button ButtonSkip01; //Botão que pula pro proximo
     public GameObject storyBoard1; // Pagina 1
@@ -18,6 +19,8 @@ public class ButtonSkip : MonoBehaviour
 
     private void OnButtonSkipClick()
     {
+        AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f);
+
         if (storyBoard1.activeSelf) // Se estiver na primeira pagina
         {
             storyBoard1.SetActive(false); // Vai pra proxima
