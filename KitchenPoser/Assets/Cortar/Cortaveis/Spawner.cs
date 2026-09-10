@@ -14,6 +14,8 @@ public class Spawner : MonoBehaviour
     public Transform leftSpawn;
     public Transform rightSpawn;
 
+    public bool Acabou = false;
+
     public float _CutTimerText;
     public TextMeshProUGUI timerShow;
 
@@ -28,15 +30,17 @@ public class Spawner : MonoBehaviour
         _CutTimerText -= Time.deltaTime;
         timerShow.text = _CutTimerText.ToString("F0");
 
-        if (_SpawnTimer >= SpawnTime) // O tempo ja passou o suficiente?
+        if ((_SpawnTimer >= SpawnTime) && Acabou == false) // O tempo ja passou o suficiente?
         {
             Spawnar();
             _SpawnTimer = 0f;
         }
 
-        if (CutTimer >= CutTime) // O tempo ja passou o suficiente?
+        if ((CutTimer >= CutTime) && Acabou == false)// O tempo ja passou o suficiente?
         {
-            GameManager.Instance.ChangeScene(); // Troca de cena
+            Acabou = true;
+            //GameManager.Instance.ChangeScene(); // Troca de cena
+            TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
             DeleteChildrens();
         }
     }

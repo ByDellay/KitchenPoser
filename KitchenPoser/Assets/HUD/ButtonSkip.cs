@@ -38,7 +38,8 @@ public class ButtonSkip : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Game"); // Começa o jogo
+            //SceneManager.LoadScene("Game"); // Começa o jogo
+            TransitionsFade.Instance.CallCoroutine_LoadNewScene("Game");
         }
     }
 }

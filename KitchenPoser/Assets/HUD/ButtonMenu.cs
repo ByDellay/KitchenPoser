@@ -15,8 +15,8 @@ public class ButtonMenu : MonoBehaviour
     [SerializeField] GameObject Creditos;
     [SerializeField] private AudioClip ClickSFX;
 
-    int FadeTime = 1;
-    public Animator CrossFade;
+    //int FadeTime = 1;
+    //public Animator CrossFade;
 
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class ButtonMenu : MonoBehaviour
     {
         AudioManager.Instance.AudioPlaySFX(ClickSFX, transform, 1f, 1f);
 
-        StartCoroutine(LoadNewScene("StoryBoard"));
+        TransitionsFade.Instance.CallCoroutine_LoadNewScene("StoryBoard");
         //SceneManager.LoadScene("StoryBoard");
     }
     private void OnButtonCreditClick()
@@ -62,12 +62,12 @@ public class ButtonMenu : MonoBehaviour
         Application.Quit(); // Fecha o execut�vel buildado, n�o da pra ver direto da unity, mas se voce buildar o executavel >provavelmente funciona<
     }
 
-    IEnumerator LoadNewScene(string Scene)
+    /*IEnumerator LoadNewScene(string Scene)
     {
         CrossFade.SetTrigger("Start");
 
         yield return new WaitForSeconds(FadeTime);
 
         SceneManager.LoadScene(Scene);
-    }
+    }*/
 }
