@@ -182,6 +182,7 @@ MonoBehaviour:
   Particle: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
   Type: 0
   SpawnSFX: {fileID: 8300000, guid: 384af0444b39c3d479907afd96ed0f37, type: 3}
+  CutSFX: {fileID: 8300000, guid: 30b4c75ab9d9ce64492b10a5a5536ca9, type: 3}
   SpriteCortado: {fileID: 2709076841682391727, guid: ff64875bf6bb97d47ab275116ab50edd, type: 3}
   ParticulaCorte: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
 --- !u!61 &6359174878451815744

@@ -10,7 +10,7 @@ public class IngredientesGrav : MonoBehaviour
     bool AlreadyCutted = false;
 
     [SerializeField] private AudioClip SpawnSFX;
-    //[SerializeField] private AudioClip CutSFX;
+    [SerializeField] private AudioClip CutSFX;
 
     // For�a m�xima que o objeto pode receber pra subir
     int MaxForceV = 1100;
@@ -68,6 +68,10 @@ public class IngredientesGrav : MonoBehaviour
         RigidBody.AddForce(force);
         RigidBody.angularVelocity = RandomRotation;
 
+        
+    }
+    private void OnBecameVisible()
+    {
         AudioManager.Instance.AudioPlaySFX(SpawnSFX, transform, 1f, Random.Range(0.5f, 1.5f));
     }
 
@@ -97,6 +101,8 @@ public class IngredientesGrav : MonoBehaviour
                 sr.sprite = SpriteCortado;
                 Instantiate(ParticulaCorte, transform.position + new Vector3(0f, 0f, -0.5f), Quaternion.identity); //spawna as particulas levemente a frente do ingrediente quando cortado
 
+                AudioManager.Instance.AudioPlaySFX(CutSFX, transform, 1f, Random.Range(0.5f, 1.5f));
+
                 StartCoroutine(Squish());
                
             }
@@ -106,7 +112,8 @@ public class IngredientesGrav : MonoBehaviour
                 GameManager.Instance.TotalFails++;
                 GameObject.FindWithTag("MainCamera").GetComponent<ScreenShake>().DoScreenShake(); // Chama o evento que treme a tela
                 GameManager.Instance.NoBreak();
-                //cortar = desabilitado por 3 segundos (tem que criar isso ainda)
+
+                AudioManager.Instance.AudioPlaySFX(CutSFX, transform, 1f, Random.Range(0.5f, 1.5f));
             }
         }
     }
