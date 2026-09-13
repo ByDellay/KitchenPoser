@@ -88,7 +88,8 @@ public class GameManager : MonoBehaviour
         if (TotalFails >= 3)
         {
             TotalFails = 0;
-            ChangeScene();
+            GameManager.Instance.NoBreak();
+            TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
             Debug.Log(TotalFails);
 
         }
