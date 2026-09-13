@@ -28,7 +28,10 @@ public class Spawner : MonoBehaviour
         _SpawnTimer += Time.deltaTime; // Contador de tempo
         CutTimer += Time.deltaTime; // Contador de tempo
         _CutTimerText -= Time.deltaTime;
-        timerShow.text = _CutTimerText.ToString("F0");
+        if (_CutTimerText > 0)
+        {
+            timerShow.text = _CutTimerText.ToString("F0");
+        }
 
         if ((_SpawnTimer >= SpawnTime) && Acabou == false) // O tempo ja passou o suficiente?
         {
@@ -39,7 +42,7 @@ public class Spawner : MonoBehaviour
         if ((CutTimer >= CutTime) && Acabou == false)// O tempo ja passou o suficiente?
         {
             Acabou = true;
-            //GameManager.Instance.ChangeScene(); // Troca de cena
+            GameManager.Instance.NoBreak();
             TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
             DeleteChildrens();
         }
@@ -55,10 +58,10 @@ public class Spawner : MonoBehaviour
             
                 if (Filho.CompareTag("ObjetoCortavel"))
                 {
-                    Destroy(Filho.gameObject);
+                    Destroy(Filho.gameObject, 70f);
                 }else if (Filho.CompareTag("ObjetoDuro"))
                 {
-                    Destroy(Filho.gameObject);
+                    Destroy(Filho.gameObject, 70f);
                 }
             }
     }
