@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviour
 
     public void SubtractItem(Alimentos.ItemType type) // Adicionador de item
     {
-        if (type > 0)
+        if (type >= 0)
         {
             inventory[type]--; // Adiciona 1 
         }
