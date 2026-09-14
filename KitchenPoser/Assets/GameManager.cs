@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
     {
         inventory[type]++; // Adiciona 1 
         ScoreText.text = type + ": " + inventory[type]; // Adiciona ao tipo
-        Debug.Log(type + ": " + inventory[type]); // Printa qual foi o tipo adicionado
+        //Debug.Log(type + ": " + inventory[type]); // Printa qual foi o tipo adicionado
     }
 
     public void SubtractItem(Alimentos.ItemType type) // Adicionador de item
