@@ -17,6 +17,6 @@ public class 原材料リスト : MonoBehaviour
         //int queijo = GameManager.Instance.GetItemCount(Alimentos.ItemType.Queijo);
         int tomate = GameManager.Instance.GetItemCount(Alimentos.ItemType.Tomate);
 
-        リスト.text = $"Voce coletou: \n Abacaxi: {abacaxi} \n Carne: {carne} \n Peixe: {peixe} \n Tomate: {tomate}";
+        リスト.text = $"Alimentos coletados hoje: \n\n\n\n Abacaxi: {abacaxi} \n Carne: {carne} \n Peixe: {peixe} \n Tomate: {tomate} \n Farinha: {farinha}";
     }
 }
