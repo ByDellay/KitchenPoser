@@ -8,9 +8,19 @@ public class InventoryButtonManager : MonoBehaviour
 
     [SerializeField] private Button ThisIngredientButton;
 
+    [SerializeField] private GameObject IngredientIcon;
+    [SerializeField] private float IngredientIconOffset = 3f;
+
+    private List<GameObject> IngredientsOnHand = new List<GameObject>();
+
     void Start()
     {
         ThisIngredientButton.onClick.AddListener(CallAddOnHand);
+    }
+
+    void Update()
+    {
+        FollowMouse();
     }
 
     public void CallAddOnHand()
@@ -24,6 +34,19 @@ public class InventoryButtonManager : MonoBehaviour
         GameManager.Instance.SubtractItem(_Type);
         GameManager.Instance.UpdateItemCount();
 
-        //_ThisIngredient.GetComponent<InventoryIngredient>().DefineType(_Type);
+        GameObject Ingredient = Instantiate(IngredientIcon);
+
+        IngredientsOnHand.Add(Ingredient);
+    }
+
+    void FollowMouse()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
+
+            for (int i = 0; i < IngredientsOnHand.Count; i++)
+            {
+                IngredientsOnHand[i].transform.position = mousePos + Vector3.right * i * IngredientIconOffset;
+            }
     }
 }

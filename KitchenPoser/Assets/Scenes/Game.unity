@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 178092559}
   - component: {fileID: 178092558}
   - component: {fileID: 178092557}
+  - component: {fileID: 178092560}
   m_Layer: 5
   m_Name: AbacaxiInventory
   m_TagString: Untagged
@@ -299,6 +300,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178092555}
   m_CullTransparentMesh: 1
+--- !u!114 &178092560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178092555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e33c7fecbff0a4ab88277f66089b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryButtonManager
+  Type: 0
+  ThisIngredientButton: {fileID: 178092557}
+  IngredientIcon: {fileID: 8226981245607395998, guid: 2069a23175ecc0b489d0269eb1c84b58, type: 3}
+  IngredientIconOffset: 30
 --- !u!1 &263911531
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +544,7 @@ GameObject:
   - component: {fileID: 371198387}
   - component: {fileID: 371198386}
   - component: {fileID: 371198385}
+  - component: {fileID: 371198388}
   m_Layer: 5
   m_Name: TomacoInventory
   m_TagString: Untagged
@@ -636,6 +654,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371198383}
   m_CullTransparentMesh: 1
+--- !u!114 &371198388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371198383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e33c7fecbff0a4ab88277f66089b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryButtonManager
+  Type: 8
+  ThisIngredientButton: {fileID: 371198385}
+  IngredientIcon: {fileID: 4811090734389276414, guid: 9d1142cdb4313434089cf3d5f5a03ad3, type: 3}
+  IngredientIconOffset: 30
 --- !u!1 &377808354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,7 +1547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &681381963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,7 +1696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0.003921569, a: 1}
+  m_Color: {r: 0.0066429065, g: 0.0066429065, b: 0.01132071, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1714,7 +1748,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1921623677}
   - {fileID: 2043529951}
@@ -2407,6 +2441,7 @@ GameObject:
   - component: {fileID: 1082276013}
   - component: {fileID: 1082276012}
   - component: {fileID: 1082276011}
+  - component: {fileID: 1082276014}
   m_Layer: 5
   m_Name: MeatInventory
   m_TagString: Untagged
@@ -2516,6 +2551,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082276009}
   m_CullTransparentMesh: 1
+--- !u!114 &1082276014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082276009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e33c7fecbff0a4ab88277f66089b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryButtonManager
+  Type: 2
+  ThisIngredientButton: {fileID: 1082276011}
+  IngredientIcon: {fileID: 3252112998654698228, guid: 159f4649e2edbf549ae6cd139ff02355, type: 3}
+  IngredientIconOffset: 30
 --- !u!1 &1115595577
 GameObject:
   m_ObjectHideFlags: 0
@@ -3721,6 +3772,7 @@ GameObject:
   - component: {fileID: 1705194343}
   - component: {fileID: 1705194342}
   - component: {fileID: 1705194341}
+  - component: {fileID: 1705194344}
   m_Layer: 5
   m_Name: FarinhaInventory
   m_TagString: Untagged
@@ -3830,6 +3882,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705194339}
   m_CullTransparentMesh: 1
+--- !u!114 &1705194344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705194339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e33c7fecbff0a4ab88277f66089b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryButtonManager
+  Type: 3
+  ThisIngredientButton: {fileID: 1705194341}
+  IngredientIcon: {fileID: 5327290119363446813, guid: 34c542c8d392acc41a2f0a646809c55f, type: 3}
+  IngredientIconOffset: 30
 --- !u!1 &1724772271
 GameObject:
   m_ObjectHideFlags: 0
@@ -4102,6 +4170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryButtonManager
   Type: 6
   ThisIngredientButton: {fileID: 1758143317}
+  IngredientIcon: {fileID: 2375262441203786608, guid: 6e0fe1f682199814e964c54b96f519b4, type: 3}
+  IngredientIconOffset: 30
 --- !u!1 &1810609440
 GameObject:
   m_ObjectHideFlags: 0
