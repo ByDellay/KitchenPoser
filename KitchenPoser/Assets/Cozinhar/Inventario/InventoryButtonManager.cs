@@ -4,10 +4,8 @@ using UnityEngine.UI;
 
 public class InventoryButtonManager : MonoBehaviour
 {
-    Stack<GameObject> OnHandIngredients = new Stack<GameObject>();
     public Alimentos.ItemType Type;
 
-    public GameObject ThisIngredient;
     [SerializeField] private Button ThisIngredientButton;
 
     void Start()
@@ -17,15 +15,15 @@ public class InventoryButtonManager : MonoBehaviour
 
     public void CallAddOnHand()
     {
-        AddOnHand(ThisIngredient);
+        AddOnHand(Type);
     }
 
-    public void AddOnHand(GameObject _ThisIngredient)
+    public void AddOnHand(Alimentos.ItemType _Type)
     {
-        OnHandIngredients.Push(_ThisIngredient);
-        GameManager.Instance.SubtractItem(Type);
+        GameManager.Instance.OnHandIngredients.Push(_Type);
+        GameManager.Instance.SubtractItem(_Type);
         GameManager.Instance.UpdateItemCount();
 
-        _ThisIngredient.GetComponent<InventoryIngredient>().DefineType(Type);
+        //_ThisIngredient.GetComponent<InventoryIngredient>().DefineType(_Type);
     }
 }

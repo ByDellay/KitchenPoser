@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]private Button MeatButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
     [SerializeField]private Button AbacaxiButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
     [SerializeField]private Button TomateButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
-
+    
     [Header("Minigames")]
     [SerializeField] public GameObject cortar; // "Cena" Cortar
     private bool OnCortar = true;
@@ -42,6 +42,9 @@ public class GameManager : MonoBehaviour
     public TrailRenderer Trail;
 
     [Header("Inventory")]
+
+    public Stack<Alimentos.ItemType> OnHandIngredients = new Stack<Alimentos.ItemType>();
+
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
         new Dictionary<Alimentos.ItemType, int>();
@@ -136,12 +139,13 @@ public class GameManager : MonoBehaviour
 
     public void SubtractItem(Alimentos.ItemType type) // Adicionador de item
     {
-        if (type >= 0)
+        if (type >= 0 && inventory[type] > 0)
         {
-            inventory[type]--; // Adiciona 1 
+            inventory[type]--;
+
+            ScoreText.text = type + ": " + inventory[type];
+            Debug.Log(type + ": " + inventory[type]);
         }
-        ScoreText.text = type + ": " + inventory[type]; // Adiciona ao tipo
-        Debug.Log(type + ": " + inventory[type]); // Printa qual foi o tipo adicionado
     }
 
     public int GetItemCount(Alimentos.ItemType type)
