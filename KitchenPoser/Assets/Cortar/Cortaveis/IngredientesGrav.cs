@@ -34,6 +34,7 @@ public class IngredientesGrav : MonoBehaviour
     public ParticleSystem ParticulaCorte;
     SpriteRenderer sr;
 
+    public GameObject vinheta;
     void Start()
     {
         GameObject Spawner = GameObject.FindWithTag("Spawner");
@@ -112,7 +113,7 @@ public class IngredientesGrav : MonoBehaviour
                 GameManager.Instance.TotalFails++;
                 GameObject.FindWithTag("MainCamera").GetComponent<ScreenShake>().DoScreenShake(); // Chama o evento que treme a tela
                 GameManager.Instance.NoBreak();
-
+                
                 AudioManager.Instance.AudioPlaySFX(CutSFX, transform, 1f, Random.Range(0.5f, 1.5f));
             }
         }
