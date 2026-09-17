@@ -2390,6 +2390,10 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6395180197765313514, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7311985160669720675, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
       propertyPath: m_Name
       value: Particula Corte
