@@ -1382,6 +1382,7 @@ MonoBehaviour:
   abacaxiCount: {fileID: 930093377}
   tomateCount: {fileID: 1173318784}
   farinhaCount: {fileID: 936880946}
+  vinheta: {fileID: 2126465884102544443}
   TotalFails: 0
 --- !u!4 &651514248
 Transform:
@@ -4338,7 +4339,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4587899422462061784}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1894340848
@@ -5111,7 +5113,7 @@ GameObject:
   - component: {fileID: 3759159606046921720}
   m_Layer: 0
   m_Name: VinhetaAnimator
-  m_TagString: Untagged
+  m_TagString: VinhetaTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5146,13 +5148,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126465884102544443}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8923430120022763479}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1894340847}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7710919320885683571
 SpriteRenderer:
@@ -5256,4 +5258,3 @@ SceneRoots:
   - {fileID: 1130245073}
   - {fileID: 1921370391}
   - {fileID: 1903094633}
-  - {fileID: 4587899422462061784}

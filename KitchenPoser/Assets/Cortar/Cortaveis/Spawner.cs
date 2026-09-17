@@ -18,6 +18,7 @@ public class Spawner : MonoBehaviour
 
     public float _CutTimerText;
     public TextMeshProUGUI timerShow;
+    
 
     private void Start()
     {
@@ -73,6 +74,8 @@ public class Spawner : MonoBehaviour
 
         //instancia o prefab na cena
         GameObject Comida = Instantiate(Alimentos[i], transform);
+
+        
 
         //gera um valor aleatorio e armazena em uma variavel
         float newX = Random.Range(leftSpawn.position.x, rightSpawn.position.x);

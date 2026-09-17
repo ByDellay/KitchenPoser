@@ -54,6 +54,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI tomateCount;
     public TextMeshProUGUI farinhaCount;
 
+    [Header("Other")]
+    public GameObject vinheta;
+
 
 
     public int TotalFails = 0;
@@ -80,12 +83,13 @@ public class GameManager : MonoBehaviour
             _unBreakTimer += Time.deltaTime; //botar dentro da fuñçao
         }
 
-        if (_unBreakTimer >= unBreakTime) // O tempo ja passou o suficiente?
+        if (_unBreakTimer >= unBreakTime) // O tempo ja passou o suficiente? acabou o nobreak
         {
             OnBreak = false;
             Trail.GetComponent<MouseTrail>().onBreak = false;
             _unBreakTimer = 0f;
             unbreakable.SetActive(OnBreak);
+            vinheta.SetActive(false);
         }
 
         if (TotalFails >= 3)

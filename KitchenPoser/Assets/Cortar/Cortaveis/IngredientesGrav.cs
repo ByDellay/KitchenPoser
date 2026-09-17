@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class IngredientesGrav : MonoBehaviour
 {
@@ -74,6 +75,7 @@ public class IngredientesGrav : MonoBehaviour
     private void OnBecameVisible()
     {
         AudioManager.Instance.AudioPlaySFX(SpawnSFX, transform, 1f, Random.Range(0.5f, 1.5f));
+        vinheta = GameObject.FindWithTag("VinhetaTag"); //encontra a vinheta e define ela
     }
 
     void Update()
@@ -113,6 +115,7 @@ public class IngredientesGrav : MonoBehaviour
                 GameManager.Instance.TotalFails++;
                 GameObject.FindWithTag("MainCamera").GetComponent<ScreenShake>().DoScreenShake(); // Chama o evento que treme a tela
                 GameManager.Instance.NoBreak();
+                vinheta.SetActive(true);
                 
                 AudioManager.Instance.AudioPlaySFX(CutSFX, transform, 1f, Random.Range(0.5f, 1.5f));
             }
