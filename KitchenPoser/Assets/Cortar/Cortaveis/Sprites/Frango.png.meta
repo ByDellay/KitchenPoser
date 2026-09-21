@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fccbd5c25e07a33419237e62b67ec67c
+guid: 21a4e86ad6a91eb48aa4b23525c0ca71
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3072126494502789424
-    second: 10 MIL HORAS (2)_0
+      213: 7883235494808194168
+    second: "130 Sem T\xEDtulo_20260921155822_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 145
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 10 MIL HORAS (2)_0
+      name: "130 Sem T\xEDtulo_20260921155822_0"
       rect:
         serializedVersion: 2
-        x: 666
-        y: 273
-        width: 588
-        height: 588
+        x: 0
+        y: 0
+        width: 404
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 031a7e915c262aa20800000000000000
-      internalID: 3072126494502789424
+      spriteID: 87c0bc45ae0e66d60800000000000000
+      internalID: 7883235494808194168
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      10 MIL HORAS (2)_0: 3072126494502789424
+      "130 Sem T\xEDtulo_20260921155822_0": 7883235494808194168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
