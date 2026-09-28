@@ -6,6 +6,8 @@ public class CookRecipeButton : MonoBehaviour
     public Alimentos.RecipeType Type;
     public Button ButtonCook;
 
+    //public ingrediente, vbai ter um pra cada
+
 
     void Start()
     {
@@ -17,7 +19,10 @@ public class CookRecipeButton : MonoBehaviour
         switch (Type)
         {
             case Alimentos.RecipeType.PaoDeQueijo:
-                Debug.Log("PãoDequeijop!!!!");
+                //Se tiver o suficiente no inventario do item que pede aqui em cima
+                Debug.Log("PãoDequeijop!!!!");//Cozinha (Add no inventario de receitas)
+                //Diminui a quantidade correta no inventtario
+                //toca um som, game feel etc
                 break;
 
             case Alimentos.RecipeType.Coxinha:
