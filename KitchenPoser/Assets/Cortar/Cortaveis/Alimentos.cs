@@ -15,4 +15,19 @@ public class Alimentos : MonoBehaviour
         Tomate,
         Lixo
     }
+
+    public enum RecipeType
+    {
+        BaiaoDeDois,
+        Burrito,
+        Chester,
+        Coxinha,
+        PaoDeQueijo,
+        PeixeFrito,
+        PeixeNoAbacaxi,
+        PicanhaInvertida,
+        PratoFeito,
+        Pizza,
+        Sushi,
+    }
 }

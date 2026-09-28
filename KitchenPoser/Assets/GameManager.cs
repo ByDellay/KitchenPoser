@@ -54,6 +54,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI tomateCount;
     public TextMeshProUGUI farinhaCount;
 
+    public Dictionary<Alimentos.RecipeType, int> recipesCount =
+        new Dictionary<Alimentos.RecipeType, int>();
+
     [Header("Other")]
     public GameObject vinheta;
 
@@ -70,6 +73,12 @@ public class GameManager : MonoBehaviour
                  System.Enum.GetValues(typeof(Alimentos.ItemType)))
         {
             inventory[item] = 0;
+        }
+
+        foreach (Alimentos.RecipeType item in
+                 System.Enum.GetValues(typeof(Alimentos.RecipeType)))
+        {
+            recipesCount[item] = 0;
         }
     }
 
