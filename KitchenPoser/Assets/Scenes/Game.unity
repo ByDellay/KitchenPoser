@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 337332841}
   - component: {fileID: 337332842}
   m_Layer: 0
-  m_Name: Square
+  m_Name: IconeReceita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -958,6 +958,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 3
   ButtonCook: {fileID: 503416441}
+  AbacaxiDecrease: 0
+  ArrozDecrease: 0
+  CarneDecrease: 0
+  FarinhaDecrease: 0
+  FeijaoDecrease: 0
+  FrangoDecrease: 6
+  PeixeDecrease: 0
+  QueijoDecrease: 0
+  TomateDecrease: 0
 --- !u!114 &503416441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5745,7 +5754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2874509119644761314, guid: 9bcdba51038962849a6028fcb5e03732, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.98
+      value: -19.24
       objectReference: {fileID: 0}
     - target: {fileID: 2874509119644761314, guid: 9bcdba51038962849a6028fcb5e03732, type: 3}
       propertyPath: m_LocalPosition.z
