@@ -43,8 +43,6 @@ public class GameManager : MonoBehaviour
 
     [Header("Inventory")]
 
-    public Stack<Alimentos.ItemType> OnHandIngredients = new Stack<Alimentos.ItemType>();
-
     // invent�rio
     public Dictionary<Alimentos.ItemType, int> inventory =
         new Dictionary<Alimentos.ItemType, int>();
@@ -56,6 +54,9 @@ public class GameManager : MonoBehaviour
 
     public Dictionary<Alimentos.RecipeType, int> recipesCount =
         new Dictionary<Alimentos.RecipeType, int>();
+
+    public Alimentos.RecipeType CurrentRecipe = 0;
+    public Button Fogao;
 
     [Header("Other")]
     public GameObject vinheta;
@@ -80,6 +81,8 @@ public class GameManager : MonoBehaviour
         {
             recipesCount[item] = 0;
         }
+
+        Fogao.onClick.AddListener(CallCookRecipe);
     }
 
     public void Update()
@@ -108,6 +111,15 @@ public class GameManager : MonoBehaviour
             TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
             Debug.Log(TotalFails);
 
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            foreach (Alimentos.ItemType item in
+                 System.Enum.GetValues(typeof(Alimentos.ItemType)))
+            {
+                AddItem(item);
+            }
         }
     }
 
@@ -157,7 +169,7 @@ public class GameManager : MonoBehaviour
             inventory[type] -= Amount;
 
             ScoreText.text = type + ": " + inventory[type];
-            Debug.Log(type + ": " + inventory[type]);
+            //Debug.Log(type + ": " + inventory[type]);
         }
     }
 
@@ -166,6 +178,11 @@ public class GameManager : MonoBehaviour
         return inventory[type];
     }
 
+
+    public void CallCookRecipe()
+    {
+        CookRecipeButton.Instance.CookRecipe();
+    }
     // evento para abrir o menu, tem que fazer ainda, por favor faz acabar eu quero morrer
     /*public void AbriuMenu()
     {

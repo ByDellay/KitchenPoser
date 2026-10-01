@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class CookRecipeButton : MonoBehaviour
 {
+    public static CookRecipeButton Instance; // Define a instancia (que é ele mesmo)
     public Alimentos.RecipeType Type;
     public Button ButtonCook;
 
@@ -23,22 +24,30 @@ public class CookRecipeButton : MonoBehaviour
 
     void Start()
     {
-        ButtonCook.onClick.AddListener(CookRecipe);
+          Instance = this;
+          ButtonCook.onClick.AddListener(SelectRecipe);
     }
 
-    private void CookRecipe()
+    private void SelectRecipe()
     {
-        int AbacaxiInv = GameManager.Instance.inventory[Alimentos.ItemType.Abacaxi];
-        int ArrozInv = GameManager.Instance.inventory[Alimentos.ItemType.Arroz];
-        int CarneInv = GameManager.Instance.inventory[Alimentos.ItemType.Carne];
+          Debug.Log(GameManager.Instance.CurrentRecipe);
+          GameManager.Instance.CurrentRecipe = Type;
+          Debug.Log(GameManager.Instance.CurrentRecipe);
+    }
 
-        int FarinhaInv = GameManager.Instance.inventory[Alimentos.ItemType.Farinha];
-        int FeijaoInv = GameManager.Instance.inventory[Alimentos.ItemType.Feijao];
-        int FrangoInv = GameManager.Instance.inventory[Alimentos.ItemType.Frango];
-
-        int PeixeInv = GameManager.Instance.inventory[Alimentos.ItemType.Peixe];
-        int QueijoInv = GameManager.Instance.inventory[Alimentos.ItemType.Queijo];
-        int TomateInv = GameManager.Instance.inventory[Alimentos.ItemType.Tomate];
+    public void CookRecipe()
+    {
+          int AbacaxiInv = GameManager.Instance.inventory[Alimentos.ItemType.Abacaxi];
+          int ArrozInv = GameManager.Instance.inventory[Alimentos.ItemType.Arroz];
+          int CarneInv = GameManager.Instance.inventory[Alimentos.ItemType.Carne];
+  
+          int FarinhaInv = GameManager.Instance.inventory[Alimentos.ItemType.Farinha];
+          int FeijaoInv = GameManager.Instance.inventory[Alimentos.ItemType.Feijao];
+          int FrangoInv = GameManager.Instance.inventory[Alimentos.ItemType.Frango];
+  
+          int PeixeInv = GameManager.Instance.inventory[Alimentos.ItemType.Peixe];
+          int QueijoInv = GameManager.Instance.inventory[Alimentos.ItemType.Queijo];
+          int TomateInv = GameManager.Instance.inventory[Alimentos.ItemType.Tomate];
 
        ///////////////////////////////////////////////////////////////////////////////
        
@@ -62,6 +71,7 @@ public class CookRecipeButton : MonoBehaviour
             GameManager.Instance.SubtractItem(Alimentos.ItemType.Tomate, TomateDecrease);
 
             GameManager.Instance.recipesCount[Type] ++;
+            Debug.Log(Type);
        }
        else
        {

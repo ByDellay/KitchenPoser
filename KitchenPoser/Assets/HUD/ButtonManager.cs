@@ -30,14 +30,14 @@ public class ButtonManager : MonoBehaviour
     {
         if (CookBookClose.activeSelf)
         {
-            Debug.Log("clicou no livro");
+            //Debug.Log("clicou no livro");
             CookBookClose.SetActive(false);
             CookBookOpen.SetActive(true);
             fundoEscuro.SetActive(true);
         }
         else
         {
-            Debug.Log("desativou o livro");
+            //Debug.Log("desativou o livro");
             CookBookClose.SetActive(true);
             CookBookOpen.SetActive(false);
             fundoEscuro.SetActive(false);

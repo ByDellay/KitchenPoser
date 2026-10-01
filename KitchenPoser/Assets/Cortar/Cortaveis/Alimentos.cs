@@ -18,6 +18,7 @@ public class Alimentos : MonoBehaviour
 
     public enum RecipeType
     {
+        Null,
         BaiaoDeDois,
         Burrito,
         Chester,
