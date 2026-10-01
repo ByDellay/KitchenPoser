@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class CookRecipeButton : MonoBehaviour
 {
-    public static CookRecipeButton Instance; // Define a instancia (que é ele mesmo)
     public Alimentos.RecipeType Type;
     public Button ButtonCook;
 
@@ -24,15 +23,14 @@ public class CookRecipeButton : MonoBehaviour
 
     void Start()
     {
-          Instance = this;
+          //Instance = this;
           ButtonCook.onClick.AddListener(SelectRecipe);
     }
 
     private void SelectRecipe()
     {
-          Debug.Log(GameManager.Instance.CurrentRecipe);
           GameManager.Instance.CurrentRecipe = Type;
-          Debug.Log(GameManager.Instance.CurrentRecipe);
+          Debug.Log("Receita atual: " + GameManager.Instance.CurrentRecipe);
     }
 
     public void CookRecipe()
@@ -71,7 +69,7 @@ public class CookRecipeButton : MonoBehaviour
             GameManager.Instance.SubtractItem(Alimentos.ItemType.Tomate, TomateDecrease);
 
             GameManager.Instance.recipesCount[Type] ++;
-            Debug.Log(Type);
+            Debug.Log("Receita Feita: " + Type);
        }
        else
        {

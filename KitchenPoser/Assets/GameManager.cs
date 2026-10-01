@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
     public Alimentos.RecipeType CurrentRecipe = 0;
     public Button Fogao;
 
+    public CookRecipeButton[] RecipeButtons;
+
     [Header("Other")]
     public GameObject vinheta;
 
@@ -181,7 +183,22 @@ public class GameManager : MonoBehaviour
 
     public void CallCookRecipe()
     {
-        CookRecipeButton.Instance.CookRecipe();
+        if (CurrentRecipe == 0)
+        {
+            Debug.Log("Não conseguiu cozinhar");
+            return;
+        }
+        foreach (CookRecipeButton Recipe in RecipeButtons)
+        {   
+            if (Recipe.Type == CurrentRecipe)
+            {
+                Recipe.CookRecipe();
+                Debug.Log("Receita escolhida: " + Recipe.Type);
+                CurrentRecipe = 0;
+
+                return;
+            }
+        }
     }
     // evento para abrir o menu, tem que fazer ainda, por favor faz acabar eu quero morrer
     /*public void AbriuMenu()

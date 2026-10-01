@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 34036607}
   - component: {fileID: 34036608}
   m_Layer: 0
-  m_Name: GameManager (1)
+  m_Name: ButtonManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc089eaf471e164390d9fc9dbd2c5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Type: 5
+  Type: 6
   ButtonCook: {fileID: 317943106}
   AbacaxiDecrease: 0
   ArrozDecrease: 0
@@ -2309,6 +2309,9 @@ MonoBehaviour:
   farinhaCount: {fileID: 936880946}
   CurrentRecipe: 0
   Fogao: {fileID: 221661}
+  RecipeButtons:
+  - {fileID: 503416440}
+  - {fileID: 317943105}
   vinheta: {fileID: 2126465884102544443}
   TotalFails: 0
 --- !u!4 &651514248
