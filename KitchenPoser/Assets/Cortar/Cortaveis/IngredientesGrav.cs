@@ -36,6 +36,8 @@ public class IngredientesGrav : MonoBehaviour
     SpriteRenderer sr;
 
     public GameObject vinheta;
+
+    public DayCount DC;
     void Start()
     {
         GameObject Spawner = GameObject.FindWithTag("Spawner");
@@ -105,6 +107,8 @@ public class IngredientesGrav : MonoBehaviour
                 Instantiate(ParticulaCorte, transform.position + new Vector3(0f, 0f, -0.5f), Quaternion.identity); //spawna as particulas levemente a frente do ingrediente quando cortado
 
                 AudioManager.Instance.AudioPlaySFX(CutSFX, transform, 1f, Random.Range(0.5f, 1.5f));
+
+                DC.alimentosCount++;
 
                 StartCoroutine(Squish());
                
