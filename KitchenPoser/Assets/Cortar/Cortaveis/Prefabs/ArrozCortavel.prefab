@@ -82,12 +82,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4041206806790262700, guid: 6649b958fe57bb44ea13273d3e5c597b, type: 3}
+  m_Sprite: {fileID: 6412382897839117338, guid: 1e98f5e318bab4944affe6a3f7b375e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.72, y: 5.15}
+  m_Size: {x: 3.4, y: 3.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -131,8 +131,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.431718, y: 2.418502}
-    newSize: {x: 4.72, y: 5.15}
+    oldSize: {x: 3.4, y: 3.41}
+    newSize: {x: 3.4, y: 3.41}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -182,6 +182,7 @@ MonoBehaviour:
   Type: 1
   SpawnSFX: {fileID: 8300000, guid: 384af0444b39c3d479907afd96ed0f37, type: 3}
   CutSFX: {fileID: 8300000, guid: 35ed4ca4e92532b4f868d8230c9c3b31, type: 3}
-  SpriteCortado: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
+  SpriteCortado: {fileID: 5527026697805241641, guid: 2a53f24c836d3614d92fd1c0ff23235b, type: 3}
   ParticulaCorte: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
   vinheta: {fileID: 0}
+  DC: {fileID: 0}

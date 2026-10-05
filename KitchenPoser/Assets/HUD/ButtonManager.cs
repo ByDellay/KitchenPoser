@@ -49,13 +49,13 @@ public class ButtonManager : MonoBehaviour
     {
         if (page1.activeSelf)
         {
-            Debug.Log("mudou pagina");
+//            Debug.Log("mudou pagina");
             page1.SetActive(false);
             page2.SetActive(true);
         }
         else if(page2.activeSelf) 
         {
-            Debug.Log("mudou pagina");
+//            Debug.Log("mudou pagina");
             page2.SetActive(false);
             page3.SetActive(true);
         }

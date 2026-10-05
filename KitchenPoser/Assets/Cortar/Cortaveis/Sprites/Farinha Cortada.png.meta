@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: a1f122d1ab5dd8942b8fdd96a4d4ce3b
+guid: a1d6ea17d9c3670449c548fb874091d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6649469326185182970
-    second: "130 Sem T\xEDtulo_20260903111636_0"
+      213: -3155426465688739684
+    second: "130 Sem T\xEDtulo_20261004104605_0"
+  - first:
+      213: -2754747850431018274
+    second: "130 Sem T\xEDtulo_20261004104605_1"
+  - first:
+      213: 5303582519710498297
+    second: "130 Sem T\xEDtulo_20261004104605_2"
+  - first:
+      213: 731752443820953311
+    second: "130 Sem T\xEDtulo_20261004104605_3"
+  - first:
+      213: -3555979213692919370
+    second: "130 Sem T\xEDtulo_20261004104605_4"
+  - first:
+      213: -5647900214149703414
+    second: "130 Sem T\xEDtulo_20261004104605_5"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 145
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,56 +111,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "130 Sem T\xEDtulo_20260903111636_0"
+      name: "130 Sem T\xEDtulo_20261004104605_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 350
-        height: 400
+        y: 234
+        width: 436
+        height: 430
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +130,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60940e3d0e658b3a0800000000000000
-      internalID: -6649469326185182970
+      spriteID: c90a1cdf85ca534d0800000000000000
+      internalID: -3155426465688739684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "130 Sem T\xEDtulo_20261004104605_1"
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 471
+        width: 49
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edac941ec6b25c9d0800000000000000
+      internalID: -2754747850431018274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "130 Sem T\xEDtulo_20261004104605_2"
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 418
+        width: 51
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fdb05cb33c1a9940800000000000000
+      internalID: 5303582519710498297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "130 Sem T\xEDtulo_20261004104605_3"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 218
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdec87d78f4b72a00800000000000000
+      internalID: 731752443820953311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "130 Sem T\xEDtulo_20261004104605_4"
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 0
+        width: 420
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1292bdebf96aec0800000000000000
+      internalID: -3555979213692919370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "130 Sem T\xEDtulo_20261004104605_5"
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 145
+        width: 48
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0911c8dda0ae91b0800000000000000
+      internalID: -5647900214149703414
       vertices: []
       indices: 
       edges: []
@@ -174,7 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "130 Sem T\xEDtulo_20260903111636_0": -6649469326185182970
+      "130 Sem T\xEDtulo_20261004104605_0": -3155426465688739684
+      "130 Sem T\xEDtulo_20261004104605_1": -2754747850431018274
+      "130 Sem T\xEDtulo_20261004104605_2": 5303582519710498297
+      "130 Sem T\xEDtulo_20261004104605_3": 731752443820953311
+      "130 Sem T\xEDtulo_20261004104605_4": -3555979213692919370
+      "130 Sem T\xEDtulo_20261004104605_5": -5647900214149703414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
