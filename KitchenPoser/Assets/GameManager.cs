@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
         new Dictionary<Alimentos.RecipeType, int>();
 
     public Alimentos.RecipeType CurrentRecipe = 0;
+    [SerializeField] private Image CurrentRecipeImage;
+    [SerializeField] private GameObject CurrentRecipeObject;
     public Button Fogao;
 
     public CookRecipeButton[] RecipeButtons;
@@ -180,6 +182,12 @@ public class GameManager : MonoBehaviour
         return inventory[type];
     }
 
+    public void ShowRecipeImage(Sprite SpriteImage)
+    {
+        CurrentRecipeObject.SetActive(true);
+        CurrentRecipeImage.sprite = SpriteImage
+    }
+
 
     public void CallCookRecipe()
     {
@@ -196,16 +204,10 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Receita escolhida: " + Recipe.Type);
                 CurrentRecipe = 0;
 
+                CurrentRecipeObject.SetActive(false);
+
                 return;
             }
         }
     }
-    // evento para abrir o menu, tem que fazer ainda, por favor faz acabar eu quero morrer
-    /*public void AbriuMenu()
-    {
-        {
-            print("abriu");
-            .Invoke();
-        }
-    }*/
 }
