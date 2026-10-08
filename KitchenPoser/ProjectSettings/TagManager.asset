@@ -9,6 +9,7 @@ TagManager:
   - ObjetoCortavel
   - Undefined
   - VinhetaTag
+  - GameManager
   layers:
   - Default
   - TransparentFX

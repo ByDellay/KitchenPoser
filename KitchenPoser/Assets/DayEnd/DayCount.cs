@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class DayCount : MonoBehaviour
@@ -10,16 +11,18 @@ public class DayCount : MonoBehaviour
 
     public int alimentosCount;
     // mostrar na tela a quantidade de alimentos coletados
+    public TextMeshProUGUI alimentosColetados;
+    public TextMeshProUGUI receitasFeitas;
 
-    void Start()
+    public void Start()
     {
-        
+        alimentosColetados.text = alimentosCount.ToString();
     }
-
     public void encerrarCozinhar()
     {  
         cozinhar.SetActive(false);
         dayEnd.SetActive(true);
+        alimentosColetados.text = alimentosCount.ToString();
     }
 
     public void encerrarDia()
@@ -27,11 +30,6 @@ public class DayCount : MonoBehaviour
         dayEnd.SetActive(false);
         cortar.SetActive(true);
         Debug.Log("clicou");
-    }
-
-    void Update()
-    {
-        
     }
 }
 // TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection(); <- trocar de cena

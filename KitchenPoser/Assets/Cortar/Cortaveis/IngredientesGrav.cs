@@ -36,8 +36,9 @@ public class IngredientesGrav : MonoBehaviour
     SpriteRenderer sr;
 
     public GameObject vinheta;
+    GameObject gameManager;
 
-    public DayCount DC;
+    DayCount DC;
     void Start()
     {
         GameObject Spawner = GameObject.FindWithTag("Spawner");
@@ -50,6 +51,10 @@ public class IngredientesGrav : MonoBehaviour
         RigidBody = GetComponent<Rigidbody2D>();
 
         sr = GetComponent<SpriteRenderer>();
+
+        gameManager = GameObject.FindWithTag("GameManager");
+        DC = gameManager.GetComponent<DayCount>();
+        //fazer isso aqui definir o gamemanager tambem
 
         // Escolhe uma for�a vertical aleat�ria
         float RandomForce = Random.Range(MinForceV, MaxForceV);

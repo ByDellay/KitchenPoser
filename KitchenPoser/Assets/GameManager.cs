@@ -52,6 +52,21 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI tomateCount;
     public TextMeshProUGUI farinhaCount;
 
+    public TextMeshProUGUI arrozCount;
+    public TextMeshProUGUI feijaoCount;
+    public TextMeshProUGUI frangoCount;
+    public TextMeshProUGUI queijoCount;
+
+    /*Abacaxi,
+    Arroz,
+    Carne,
+    Farinha,
+    Feijao,  
+    Frango, 
+    Peixe,
+    Queijo,
+    Tomate, */
+
     public Dictionary<Alimentos.RecipeType, int> recipesCount =
         new Dictionary<Alimentos.RecipeType, int>();
 
@@ -157,6 +172,11 @@ public class GameManager : MonoBehaviour
         abacaxiCount.text = inventory[Alimentos.ItemType.Abacaxi].ToString();
         tomateCount.text = inventory[Alimentos.ItemType.Tomate].ToString();
         farinhaCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
+        arrozCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
+        feijaoCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
+        //frangoCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
+        //queijoCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
+        // coisar isso aqui depois
     }
 
     public void AddItem(Alimentos.ItemType type) // Adicionador de item
@@ -185,7 +205,7 @@ public class GameManager : MonoBehaviour
     public void ShowRecipeImage(Sprite SpriteImage)
     {
         CurrentRecipeObject.SetActive(true);
-        CurrentRecipeImage.sprite = SpriteImage
+        CurrentRecipeImage.sprite = SpriteImage;
     }
 
 
