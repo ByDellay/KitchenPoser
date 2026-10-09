@@ -10,6 +10,7 @@ public class DayCount : MonoBehaviour
     public int day;
 
     public int alimentosCount;
+    public int receitasCount;
     // mostrar na tela a quantidade de alimentos coletados
     public TextMeshProUGUI alimentosColetados;
     public TextMeshProUGUI receitasFeitas;
@@ -23,6 +24,7 @@ public class DayCount : MonoBehaviour
         cozinhar.SetActive(false);
         dayEnd.SetActive(true);
         alimentosColetados.text = alimentosCount.ToString();
+        receitasFeitas.text = receitasCount.ToString();
     }
 
     public void encerrarDia()

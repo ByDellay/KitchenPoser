@@ -80,7 +80,8 @@ public class GameManager : MonoBehaviour
     [Header("Other")]
     public GameObject vinheta;
 
-
+    public GameObject gameManager;
+    DayCount DC;
 
     public int TotalFails = 0;
 
@@ -102,6 +103,8 @@ public class GameManager : MonoBehaviour
         }
 
         Fogao.onClick.AddListener(CallCookRecipe);
+
+        DC = gameManager.GetComponent<DayCount>();
     }
 
     public void Update()
@@ -224,7 +227,8 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Receita escolhida: " + Recipe.Type);
                 CurrentRecipe = 0;
 
-                CurrentRecipeObject.SetActive(false);
+                DC.receitasCount++;
+                //CurrentRecipeObject.SetActive(false);
 
                 return;
             }
