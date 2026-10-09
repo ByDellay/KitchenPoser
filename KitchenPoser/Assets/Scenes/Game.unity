@@ -3954,7 +3954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &558490340
 Transform:
   m_ObjectHideFlags: 0
@@ -4397,6 +4397,7 @@ MonoBehaviour:
   - {fileID: 317943105}
   - {fileID: 525235937}
   vinheta: {fileID: 2126465884102544443}
+  gameManager: {fileID: 651514246}
   TotalFails: 0
 --- !u!4 &651514248
 Transform:
@@ -4430,6 +4431,7 @@ MonoBehaviour:
   dayEnd: {fileID: 1445096639}
   day: 0
   alimentosCount: 0
+  receitasCount: 0
   alimentosColetados: {fileID: 121347564}
   receitasFeitas: {fileID: 717341437}
 --- !u!1 &658632701
@@ -4951,7 +4953,7 @@ GameObject:
   - component: {fileID: 717341438}
   - component: {fileID: 717341437}
   m_Layer: 0
-  m_Name: quantidade alimentos
+  m_Name: quantidade receitas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
