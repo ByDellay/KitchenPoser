@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6370218938916466221}
   - component: {fileID: 5434511352500725978}
   - component: {fileID: 4729801440063838918}
+  - component: {fileID: 6697020368150074299}
   m_Layer: 0
   m_Name: QueijoCortavel
   m_TagString: ObjetoCortavel
@@ -127,7 +128,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.083586216, y: -0.113487005}
+  m_Offset: {x: 0.015635014, y: -0.18857336}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -137,7 +138,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.2515192, y: 1.1795993}
+  m_Size: {x: 2.4499617, y: 1.0294266}
   m_EdgeRadius: 0
 --- !u!50 &5434511352500725978
 Rigidbody2D:
@@ -185,3 +186,49 @@ MonoBehaviour:
   SpriteCortado: {fileID: 5779455321701438536, guid: 27fec96a76a41654ea857396e8cdb332, type: 3}
   ParticulaCorte: {fileID: 5722243214325066244, guid: 94afac21a6610194387bbeebdcfe4c86, type: 3}
   vinheta: {fileID: 0}
+--- !u!61 &6697020368150074299
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631672770754538838}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.33788872, y: 0.43979156}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.615, y: 1.47}
+    newSize: {x: 5.19, y: 4.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.231266, y: 0.3544314}
+  m_EdgeRadius: 0
