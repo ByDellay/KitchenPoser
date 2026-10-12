@@ -175,8 +175,8 @@ public class GameManager : MonoBehaviour
         abacaxiCount.text = inventory[Alimentos.ItemType.Abacaxi].ToString();
         tomateCount.text = inventory[Alimentos.ItemType.Tomate].ToString();
         farinhaCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
-        arrozCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
-        feijaoCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
+        arrozCount.text = inventory[Alimentos.ItemType.Arroz].ToString();
+        feijaoCount.text = inventory[Alimentos.ItemType.Feijao].ToString();
         //frangoCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
         //queijoCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
         // coisar isso aqui depois

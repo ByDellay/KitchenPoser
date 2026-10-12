@@ -23,6 +23,7 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         _CutTimerText = CutTime;
+        DeleteChildrens();
     }
     void Update()
     {
@@ -45,24 +46,21 @@ public class Spawner : MonoBehaviour
             Acabou = true;
             GameManager.Instance.NoBreak();
             TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
-            DeleteChildrens();
         }
     }
 
     public void DeleteChildrens()
     {
-        int Filhos = transform.childCount;
-
             for (int i = this.transform.childCount - 1; i >= 0; i--)
             {
                 Transform Filho = this.transform.GetChild(i);
             
                 if (Filho.CompareTag("ObjetoCortavel"))
                 {
-                    Destroy(Filho.gameObject, 70f);
+                    Destroy(Filho.gameObject);
                 }else if (Filho.CompareTag("ObjetoDuro"))
                 {
-                    Destroy(Filho.gameObject, 70f);
+                    Destroy(Filho.gameObject);
                 }
             }
     }

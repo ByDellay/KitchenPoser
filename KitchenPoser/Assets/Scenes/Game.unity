@@ -3954,7 +3954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &558490340
 Transform:
   m_ObjectHideFlags: 0
@@ -4434,6 +4434,8 @@ MonoBehaviour:
   receitasCount: 0
   alimentosColetados: {fileID: 121347564}
   receitasFeitas: {fileID: 717341437}
+  gameManager: {fileID: 651514246}
+  spawner: {fileID: 2135021810}
 --- !u!1 &658632701
 GameObject:
   m_ObjectHideFlags: 0
@@ -6693,7 +6695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &990714478
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10168,7 +10170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1445096640
 Transform:
   m_ObjectHideFlags: 0
@@ -10558,7 +10560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1622930067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12359,14 +12361,14 @@ RectTransform:
   - {fileID: 793664135}
   - {fileID: 221660}
   - {fileID: 1297843679}
+  - {fileID: 1810609443}
+  - {fileID: 681381965}
   - {fileID: 1481870831}
+  - {fileID: 1034095282}
   - {fileID: 1149061479}
   - {fileID: 1052528234}
-  - {fileID: 681381965}
   - {fileID: 1343025281}
-  - {fileID: 1810609443}
   - {fileID: 1917568611}
-  - {fileID: 1034095282}
   m_Father: {fileID: 747062806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -13090,7 +13092,7 @@ MonoBehaviour:
   - {fileID: 7631672770754538838, guid: 7244a13917187bb43af020e1d9eef02e, type: 3}
   - {fileID: 3220746514187522637, guid: d438c188730c1c543a53d432311a3484, type: 3}
   SpawnTime: 5
-  CutTime: 180
+  CutTime: 60
   CutTimer: 0
   leftSpawn: {fileID: 1520510665}
   rightSpawn: {fileID: 494192471}

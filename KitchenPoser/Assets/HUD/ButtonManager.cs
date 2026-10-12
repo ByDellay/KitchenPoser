@@ -114,11 +114,4 @@ public class ButtonManager : MonoBehaviour
     }
 
 
-    public void OnFavorite()
-    {
-
-
-    }
-
-
 }
