@@ -17,6 +17,7 @@ public class DayCount : MonoBehaviour
     // mostrar na tela a quantidade de alimentos coletados
     public TextMeshProUGUI alimentosColetados;
     public TextMeshProUGUI receitasFeitas;
+    public TextMeshProUGUI faltamDias;
 
     [Header("scripts")]
     public GameObject gameManager;
@@ -26,6 +27,7 @@ public class DayCount : MonoBehaviour
     {
         alimentosColetados.text = alimentosCount.ToString();
         receitasFeitas.text = receitasCount.ToString();
+        day = 3;
     }
     public void encerrarCozinhar()
     {  
@@ -33,6 +35,24 @@ public class DayCount : MonoBehaviour
         dayEnd.SetActive(true);
         alimentosColetados.text = alimentosCount.ToString();
         receitasFeitas.text = receitasCount.ToString();
+        
+        //perdao eu tava com muita preguiça pra pensar entao fiz desse jeito mesmo
+        if(day == 3)
+        {
+            faltamDias.text = "Faltam 3 dias para a entrevista...";
+        }
+        else if (day == 2)
+        {
+            faltamDias.text = "Faltam 2 dias para a entrevista...";
+        }
+        else if (day == 1)
+        {
+            faltamDias.text = "Falta 1 dias para a entrevista...";
+        }
+        else
+        {
+            faltamDias.text = "Hoje é o dia da entrevista.";
+        }
     }
 
     public void encerrarDia()
@@ -46,11 +66,19 @@ public class DayCount : MonoBehaviour
 
         gameManager.GetComponent<GameManager>().TotalFails = 0;
 
-        day++;
-        dayEnd.SetActive(false);
-        cortar.SetActive(true);
-        Debug.Log("ENCERROU O DIA");
-        Debug.Log(day);
+        day--;
+
+        if (day == 0)
+        {
+
+        }
+        else
+        {
+            dayEnd.SetActive(false);
+            cortar.SetActive(true);
+            Debug.Log("ENCERROU O DIA");
+            Debug.Log(day);
+        }
     }
 }
 // TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection(); <- trocar de cena
