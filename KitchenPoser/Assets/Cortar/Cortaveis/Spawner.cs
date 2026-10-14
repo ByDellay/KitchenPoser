@@ -65,6 +65,15 @@ public class Spawner : MonoBehaviour
             }
     }
 
+    public void ReiniciarCiclo()
+    {
+        _SpawnTimer = 0f;
+        CutTimer = 0f;
+        _CutTimerText = CutTime;
+        Acabou = false;
+
+    }
+
     void Spawnar()
     {
         SpawnTime = Random.Range(0.2f, 1.2f);

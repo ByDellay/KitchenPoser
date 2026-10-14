@@ -47,35 +47,35 @@ public class DayCount : MonoBehaviour
         }
         else if (day == 1)
         {
-            faltamDias.text = "Falta 1 dias para a entrevista...";
+            faltamDias.text = "Falta 1 dia para a entrevista...";
         }
         else
         {
-            faltamDias.text = "Hoje é o dia da entrevista.";
+            faltamDias.text = "O dia da entrevista chegou.";
         }
     }
 
     public void encerrarDia()
     {
-        
+
         // spawner.GetComponent<Spawner>().DeleteChildrens(); nao funciona pq os filhos estao desativados e essa funçao so pega quando ta ativado
-        spawner.GetComponent<Spawner>().CutTime = 60;
-        spawner.GetComponent<Spawner>().CutTimer = 0;
-        spawner.GetComponent<Spawner>()._CutTimerText = 60;
-        spawner.GetComponent<Spawner>().Acabou = false;
+        spawner.GetComponent<Spawner>().ReiniciarCiclo();
 
         gameManager.GetComponent<GameManager>().TotalFails = 0;
 
-        day--;
+        
 
-        if (day == 0)
+        if (day <= 0)
         {
 
         }
         else
         {
+            day--;
             dayEnd.SetActive(false);
-            cortar.SetActive(true);
+
+            gameManager.GetComponent<GameManager>()
+                .IniciarCicloDeCorte();
             Debug.Log("ENCERROU O DIA");
             Debug.Log(day);
         }

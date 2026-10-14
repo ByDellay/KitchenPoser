@@ -155,19 +155,37 @@ public class GameManager : MonoBehaviour
     {
         TotalFails = 0;
 
-        if (GameObject.FindWithTag("Spawner") != null)
+        GameObject spawnerObject = GameObject.FindWithTag("Spawner");
+
+        if (spawnerObject != null)
         {
-            GameObject.FindWithTag("Spawner").GetComponent<Spawner>().DeleteChildrens(); // Chama o evento que limpa os filhos do spawner
-            GameObject.FindWithTag("Spawner").GetComponent<Spawner>().SpawnTime = 5f;
-            GameObject.FindWithTag("Spawner").GetComponent<Spawner>().CutTime = 35f;
+            Spawner spawnerScript = spawnerObject.GetComponent<Spawner>();
+
+            spawnerScript.DeleteChildrens();
+            spawnerScript.SpawnTime = 5f;
+            spawnerScript.CutTime = 60f;
         }
 
-        OnCortar = !OnCortar;
-        cortar.SetActive(OnCortar);
-        OnCozinhar = !OnCozinhar;
-        cozinhar.SetActive(OnCozinhar);
+        // Define diretamente a próxima fase.
+        cortar.SetActive(false);
+        cozinhar.SetActive(true);
+
+        // Mantém os booleanos sincronizados.
+        OnCortar = false;
+        OnCozinhar = true;
+
         UpdateItemCount();
     }
+
+    public void IniciarCicloDeCorte()
+    {
+        OnCortar = true;
+        OnCozinhar = false;
+
+        cozinhar.SetActive(false);
+        cortar.SetActive(true);
+    }
+
     public void UpdateItemCount() // Atualiza a qantidade de itens no inventario
     {
         fishCount.text = inventory[Alimentos.ItemType.Peixe].ToString();
