@@ -7,11 +7,13 @@ public class DayCount : MonoBehaviour
     public GameObject cortar;
     public GameObject cozinhar;
     public GameObject dayEnd;
+    public GameObject final;
 
     [Header("variaveis")]
     public int day;
     public int alimentosCount;
     public int receitasCount;
+    public int receitasCountFinal;
 
     [Header("UI")]
     // mostrar na tela a quantidade de alimentos coletados
@@ -22,6 +24,10 @@ public class DayCount : MonoBehaviour
     [Header("scripts")]
     public GameObject gameManager;
     public GameObject spawner;
+
+    [Header("final")]
+    public TextMeshProUGUI receitasCozinhadasFinal;
+    public TextMeshProUGUI scoreFinal;
 
     public void Start()
     {
@@ -67,6 +73,18 @@ public class DayCount : MonoBehaviour
 
         if (day <= 0)
         {
+            dayEnd.SetActive(false);
+            final.SetActive(true);
+
+            receitasCozinhadasFinal.text = $"total de receitas cozinhadas: {receitasCountFinal.ToString()}";
+            if (receitasCountFinal <= 4) //botar mais aqui
+            {
+                scoreFinal.text = "seu desempenho foi terrivel";
+            }
+            else
+            {
+
+            }
 
         }
         else
