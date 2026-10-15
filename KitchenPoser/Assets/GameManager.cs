@@ -246,6 +246,7 @@ public class GameManager : MonoBehaviour
                 CurrentRecipe = 0;
 
                 DC.receitasCount++;
+                DC.receitasCountFinal++;
                 //CurrentRecipeObject.SetActive(false);
 
                 return;
