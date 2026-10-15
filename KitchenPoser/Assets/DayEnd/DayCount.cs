@@ -90,7 +90,7 @@ public class DayCount : MonoBehaviour
                 scoreFinal.text = "seu desempenho foi bom";
 
             }
-            else if(receitasCountFinal == 4)
+            else if(receitasCountFinal >= 4)
             {
              scoreFinal.text = "seu desempenho foi perfeito";
 
