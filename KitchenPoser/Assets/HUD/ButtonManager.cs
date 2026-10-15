@@ -90,27 +90,36 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
+    public GameObject Outventario;
     public GameObject arm1Inventario;
-    public GameObject arm1Outventario;
     public GameObject arm2Inventario;
+    public GameObject arm3Inventario;
 
-
+    public void OutArmario()
+    {
+        arm1Inventario.SetActive(false);
+        Outventario.SetActive(false);
+        arm2Inventario.SetActive(false);
+        arm3Inventario.SetActive(false);
+    }
     public void OnArmario1()
     {
         arm1Inventario.SetActive(true);
-        arm1Outventario.SetActive(true);
+        Outventario.SetActive(true);
         GameManager.Instance.UpdateItemCount();
     }
-    public void OutArmario1()
-    {
-        arm1Inventario.SetActive(false);
-        arm1Outventario.SetActive(false);
-        arm2Inventario.SetActive(false);
-    }
+    
     public void OnArmario2()
     {
         arm2Inventario.SetActive(true);
-        arm1Outventario.SetActive(true);
+        Outventario.SetActive(true);
+        GameManager.Instance.UpdateItemCount();
+    }
+    public void onArmario3()
+    {
+        arm3Inventario.SetActive(true);
+        Outventario.SetActive(true);
+        GameManager.Instance.UpdateItemCount();
     }
 
 

@@ -71,6 +71,8 @@ public class DayCount : MonoBehaviour
         }
         else
         {
+            alimentosCount = 0;
+            receitasCount = 0;
             day--;
             dayEnd.SetActive(false);
 
