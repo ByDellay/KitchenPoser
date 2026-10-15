@@ -17,6 +17,8 @@ public class ButtonManager : MonoBehaviour
     public GameObject page1;
     public GameObject page2;
     public GameObject page3;
+    public GameObject page4;
+    public GameObject page5;
 
     [Header("Favorite")]
     public GameObject FavoriteButton;
@@ -59,10 +61,30 @@ public class ButtonManager : MonoBehaviour
             page2.SetActive(false);
             page3.SetActive(true);
         }
+        else if (page3.activeSelf)
+        {
+            page3.SetActive(false);
+            page4.SetActive(true);
+        }
+        else if (page4.activeSelf)
+        {
+            page4.SetActive(false);
+            page5.SetActive(true);
+        }
     }
     public void PageChangeLeft()
     {
-        if (page3.activeSelf)
+        if (page5.activeSelf)
+        {
+            page5.SetActive(false);
+            page4.SetActive(true);
+        }
+        else if (page4.activeSelf)
+        {
+            page4.SetActive(false);
+            page3.SetActive(true);
+        }
+        else if (page3.activeSelf)
         {
             page3.SetActive(false);
             page2.SetActive(true);
@@ -79,7 +101,7 @@ public class ButtonManager : MonoBehaviour
         {
             pageChangeLeft.SetActive(false);
         }
-        else if (page3.activeSelf)
+        else if (page5.activeSelf)
         {
             pageChangeRight.SetActive(false);
         }

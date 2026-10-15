@@ -77,12 +77,22 @@ public class DayCount : MonoBehaviour
             final.SetActive(true);
 
             receitasCozinhadasFinal.text = $"total de receitas cozinhadas: {receitasCountFinal.ToString()}";
-            if (receitasCountFinal <= 4) //botar mais aqui
+            if (receitasCountFinal <= 1) //botar mais aqui
             {
                 scoreFinal.text = "seu desempenho foi terrivel";
             }
-            else
+            else if (receitasCountFinal == 2)
             {
+                scoreFinal.text = "seu desempenho foi mediano";
+            }
+            else if (receitasCountFinal == 3)
+            {
+                scoreFinal.text = "seu desempenho foi bom";
+
+            }
+            else if(receitasCountFinal == 4)
+            {
+             scoreFinal.text = "seu desempenho foi perfeito";
 
             }
 
