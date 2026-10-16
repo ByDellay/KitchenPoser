@@ -8,6 +8,9 @@ public class CookRecipeButton : MonoBehaviour
 
     //public ingrediente, vbai ter um pra cada
 
+/*cada uma das variáveis abaixo é um valor inteiro definido no inspector.
+eles são usados na função CookRecipe, naquele if com muitos "&&".
+*/
     [SerializeField] private int AbacaxiDecrease;
     [SerializeField] private int ArrozDecrease;
     [SerializeField] private int CarneDecrease;
@@ -23,18 +26,27 @@ public class CookRecipeButton : MonoBehaviour
 
     void Start()
     {
-          //Instance = this;
-          ButtonCook.onClick.AddListener(SelectRecipe);
+          //Instance = this; 
+         
+/*Adiciona o ouvinte do botão (isso a gente ja usou)
+*/
+ ButtonCook.onClick.AddListener(SelectRecipe);
     }
 
     private void SelectRecipe()
     {
-          GameManager.Instance.CurrentRecipe = Type;
+          GameManager.Instance.CurrentRecipe = Type; //Avisa pro game manager que a receita atual é a mesma desse script
+
           Debug.Log("Receita atual: " + GameManager.Instance.CurrentRecipe);
     }
 
     public void CookRecipe()
     {
+/*Aqui define uma variável que pega a quantidade de cada ingrediente que tu possui no invetario, só pra não ter que escrever:
+
+GameManager.Instance.inventory[Alimentos.ItemType] em CADA IF.
+*/
+
           int AbacaxiInv = GameManager.Instance.inventory[Alimentos.ItemType.Abacaxi];
           int ArrozInv = GameManager.Instance.inventory[Alimentos.ItemType.Arroz];
           int CarneInv = GameManager.Instance.inventory[Alimentos.ItemType.Carne];
@@ -49,6 +61,9 @@ public class CookRecipeButton : MonoBehaviour
 
        ///////////////////////////////////////////////////////////////////////////////
        
+
+/*Esse if gigante só confere as quantidades pra não acabar ficando com ingrediente negativo
+*/
        if (AbacaxiInv >= AbacaxiDecrease && ArrozInv >= ArrozDecrease
             && CarneInv >= CarneDecrease && FarinhaInv >= FarinhaDecrease
             && FeijaoInv >= FeijaoDecrease && FrangoInv >= FrangoDecrease
@@ -56,7 +71,8 @@ public class CookRecipeButton : MonoBehaviour
             && TomateInv >= TomateDecrease)
        {
 
-            GameManager.Instance.SubtractItem(Alimentos.ItemType.Abacaxi, AbacaxiDecrease);
+          /*Diminui de todos os itens(colocar 0 no inspector caso nao tenha na receita)
+*/ GameManager.Instance.SubtractItem(Alimentos.ItemType.Abacaxi, AbacaxiDecrease);
             GameManager.Instance.SubtractItem(Alimentos.ItemType.Arroz, ArrozDecrease);
             GameManager.Instance.SubtractItem(Alimentos.ItemType.Carne, CarneDecrease);
 
@@ -68,7 +84,11 @@ public class CookRecipeButton : MonoBehaviour
             GameManager.Instance.SubtractItem(Alimentos.ItemType.Queijo, QueijoDecrease);
             GameManager.Instance.SubtractItem(Alimentos.ItemType.Tomate, TomateDecrease);
 
-            GameManager.Instance.recipesCount[Type] ++;
+           /*Aqui é onde ele adiciona +1 no
+inventário de receitas, ou não, caso não tenha ingrediente o bastante no if gigante dali de cima
+
+*/
+ GameManager.Instance.recipesCount[Type] ++;
             Debug.Log("Receita Feita: " + Type);
        }
        else
