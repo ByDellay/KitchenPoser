@@ -67,15 +67,21 @@ public class GameManager : MonoBehaviour
     Queijo,
     Tomate, */
 
+//Inventário de receitas definido:
     public Dictionary<Alimentos.RecipeType, int> recipesCount =
         new Dictionary<Alimentos.RecipeType, int>();
 
-    public Alimentos.RecipeType CurrentRecipe = 0;
+    public Alimentos.RecipeType CurrentRecipe = 0; //Define qual a receita atual, última escolhida no livro
     [SerializeField] private Image CurrentRecipeImage;
     [SerializeField] private GameObject CurrentRecipeObject;
     public Button Fogao;
 
-    public CookRecipeButton[] RecipeButtons;
+    public CookRecipeButton[] RecipeButtons; /*Lista de scripts do
+ cozinhar(Adicionar o script a lista pelo
+ inspector a cada nova receita adicionada no livro, se nao ele nao funciona la na funcao
+ callcookrecipe().)
+
+*/
 
     [Header("Other")]
     public GameObject vinheta;
@@ -232,24 +238,24 @@ public class GameManager : MonoBehaviour
 
     public void CallCookRecipe()
     {
-        if (CurrentRecipe == 0)
+        if (CurrentRecipe == 0) //SE a receita atual não for nenhuma
         {
             Debug.Log("Não conseguiu cozinhar");
-            return;
+            return; //Nada acontece(no caso printa, o certo seria um som, etc..)
         }
-        foreach (CookRecipeButton Recipe in RecipeButtons)
+        foreach (CookRecipeButton Recipe in RecipeButtons) //Pra cada script de receita na lista de scripts de receita:
         {   
-            if (Recipe.Type == CurrentRecipe)
+            if (Recipe.Type == CurrentRecipe) //Se o tipo desse script for o mesmo da receita que foi clicada da última vez(receita atual)
             {
-                Recipe.CookRecipe();
+                Recipe.CookRecipe(); //Chama a funcao do script que tem a receita correta
                 Debug.Log("Receita escolhida: " + Recipe.Type);
-                CurrentRecipe = 0;
+                CurrentRecipe = 0; //nenhuma receita selecionada
 
                 DC.receitasCount++;
                 DC.receitasCountFinal++;
                 //CurrentRecipeObject.SetActive(false);
 
-                return;
+                return; //Para o foreach
             }
         }
     }
