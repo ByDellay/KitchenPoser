@@ -5,6 +5,7 @@ public class CookRecipeButton : MonoBehaviour
 {
     public Alimentos.RecipeType Type;
     public Button ButtonCook;
+    public Sprite RecipeImage;
 
     //public ingrediente, vbai ter um pra cada
 
@@ -30,12 +31,13 @@ eles são usados na função CookRecipe, naquele if com muitos "&&".
          
 /*Adiciona o ouvinte do botão (isso a gente ja usou)
 */
- ButtonCook.onClick.AddListener(SelectRecipe);
+        ButtonCook.onClick.AddListener(SelectRecipe);
     }
 
     private void SelectRecipe()
     {
           GameManager.Instance.CurrentRecipe = Type; //Avisa pro game manager que a receita atual é a mesma desse script
+          GameManager.Instance.ShowRecipeImage(RecipeImage);
 
           Debug.Log("Receita atual: " + GameManager.Instance.CurrentRecipe);
     }

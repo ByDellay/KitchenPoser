@@ -72,8 +72,8 @@ public class GameManager : MonoBehaviour
         new Dictionary<Alimentos.RecipeType, int>();
 
     public Alimentos.RecipeType CurrentRecipe = 0; //Define qual a receita atual, última escolhida no livro
-    [SerializeField] private Image CurrentRecipeImage;
-    [SerializeField] private GameObject CurrentRecipeObject;
+    public SpriteRenderer CurrentRecipeSprite; 
+    public GameObject CurrentRecipeObject;
     public Button Fogao;
 
     public CookRecipeButton[] RecipeButtons; /*Lista de scripts do
@@ -90,6 +90,8 @@ public class GameManager : MonoBehaviour
     DayCount DC;
 
     public int TotalFails = 0;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
     private void Awake()
     {
@@ -137,11 +139,11 @@ public class GameManager : MonoBehaviour
             TotalFails = 0;
             GameManager.Instance.NoBreak();
             TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
-            Debug.Log(TotalFails);
+            //Debug.Log(TotalFails);
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) //APAGAR ISSO AQUI QUANDO BUILDAR!!!
         {
             foreach (Alimentos.ItemType item in
                  System.Enum.GetValues(typeof(Alimentos.ItemType)))
@@ -203,7 +205,7 @@ public class GameManager : MonoBehaviour
         feijaoCount.text = inventory[Alimentos.ItemType.Feijao].ToString();
         frangoCount.text = inventory[Alimentos.ItemType.Frango].ToString();
         queijoCount.text = inventory[Alimentos.ItemType.Farinha].ToString();
-        // coisar isso aqui depois
+        // coisar isso aqui depois (oque é)
     }
 
     public void AddItem(Alimentos.ItemType type) // Adicionador de item
@@ -231,8 +233,8 @@ public class GameManager : MonoBehaviour
 
     public void ShowRecipeImage(Sprite SpriteImage)
     {
+        CurrentRecipeSprite.sprite = SpriteImage;
         CurrentRecipeObject.SetActive(true);
-        CurrentRecipeImage.sprite = SpriteImage;
     }
 
 
@@ -240,6 +242,7 @@ public class GameManager : MonoBehaviour
     {
         if (CurrentRecipe == 0) //SE a receita atual não for nenhuma
         {
+            CurrentRecipeObject.SetActive(false);
             Debug.Log("Não conseguiu cozinhar");
             return; //Nada acontece(no caso printa, o certo seria um som, etc..)
         }
@@ -253,7 +256,7 @@ public class GameManager : MonoBehaviour
 
                 DC.receitasCount++;
                 DC.receitasCountFinal++;
-                //CurrentRecipeObject.SetActive(false);
+                CurrentRecipeObject.SetActive(false);
 
                 return; //Para o foreach
             }

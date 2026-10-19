@@ -50,6 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Mouses e cia
+    uniqueID: 3123133549
+    locked: 0
   - name: Transitions
     uniqueID: 1230069095
     locked: 0
