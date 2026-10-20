@@ -1063,10 +1063,6 @@ MonoBehaviour:
   page3: {fileID: 1672453760}
   page4: {fileID: 727929521}
   page5: {fileID: 1839444863}
-  FavoriteButton: {fileID: 0}
-  receita1Fav: {fileID: 0}
-  receita2Fav: {fileID: 0}
-  receita3Fav: {fileID: 0}
   Outventario: {fileID: 1052528230}
   arm1Inventario: {fileID: 681381962}
   arm2Inventario: {fileID: 1303838427}
@@ -7791,7 +7787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &558490340
 Transform:
   m_ObjectHideFlags: 0
@@ -8741,10 +8737,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   MaxTime: 10
   ScoreText: {fileID: 945503182}
-  FishButton: {fileID: 0}
-  MeatButton: {fileID: 0}
-  AbacaxiButton: {fileID: 0}
-  TomateButton: {fileID: 0}
   cortar: {fileID: 558490339}
   cozinhar: {fileID: 747062805}
   ChangedScene: 0
@@ -9766,7 +9758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &747062806
 Transform:
   m_ObjectHideFlags: 0

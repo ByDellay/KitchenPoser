@@ -19,15 +19,6 @@ public class ButtonManager : MonoBehaviour
     public GameObject page3;
     public GameObject page4;
     public GameObject page5;
-
-    [Header("Favorite")]
-    public GameObject FavoriteButton;
-    public GameObject receita1Fav;
-    public GameObject receita2Fav;
-    public GameObject receita3Fav;
-
-
-
     public void BookStateClick()
     {
         if (CookBookClose.activeSelf)

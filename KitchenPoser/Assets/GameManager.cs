@@ -20,11 +20,6 @@ public class GameManager : MonoBehaviour
 
     //score
     [SerializeField]private TMP_Text ScoreText; // Decide o texto usado para contar na tela a quantidade de pontos Score;
-    [SerializeField]private Button FishButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
-    [SerializeField]private Button MeatButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
-    [SerializeField]private Button AbacaxiButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
-    [SerializeField]private Button TomateButton; // Decide o texto usado para contar na tela a quantidade de pontos Score;
-    
     [Header("Minigames")]
     [SerializeField] public GameObject cortar; // "Cena" Cortar
     private bool OnCortar = true;
