@@ -855,9 +855,9 @@ Transform:
   m_GameObject: {fileID: 26626389}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 114.02103, y: 156.15001, z: -4050}
-  m_LocalScale: {x: 113.09245, y: 78.21411, z: 45}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 105.2, y: 164.8, z: -4050}
+  m_LocalScale: {x: 67, y: 67, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 910281749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -908,8 +908,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
-  m_Color: {r: 0.6886792, g: 0.21764861, b: 0.21764861, a: 1}
+  m_Sprite: {fileID: -1453343921611585702, guid: 80a44e6596611974b9e99f7c782a7785, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2098,9 +2098,9 @@ Transform:
   m_GameObject: {fileID: 84849356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 116.4, y: 156.15, z: -4050}
-  m_LocalScale: {x: 53.3, y: 55.753098, z: 21.208311}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 117, y: 150, z: -4050}
+  m_LocalScale: {x: 67, y: 67, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1105805679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2188,8 +2188,8 @@ Transform:
   m_GameObject: {fileID: 93053238}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 116.79, y: 153.04, z: -4050}
-  m_LocalScale: {x: 126.968895, y: 83.45886, z: 45}
+  m_LocalPosition: {x: 117, y: 150, z: -4050}
+  m_LocalScale: {x: 67, y: 67, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1317567337}
@@ -3634,7 +3634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 11
   ButtonCook: {fileID: 257574013}
-  RecipeImage: {fileID: 0}
+  RecipeImage: {fileID: -7002472015311995401, guid: 67449430c6908444c8e8f360578e735d, type: 3}
   AbacaxiDecrease: 2
   ArrozDecrease: 7
   CarneDecrease: 0
@@ -4086,9 +4086,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 651514249}
-        m_TargetAssemblyTypeName: DayCount, Assembly-CSharp
-        m_MethodName: encerrarDia
+      - m_Target: {fileID: 1094083483}
+        m_TargetAssemblyTypeName: TransitionsFade, Assembly-CSharp
+        m_MethodName: CallCoroutine_LoadNextDay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4326,7 +4326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 6
   ButtonCook: {fileID: 317943106}
-  RecipeImage: {fileID: 5964537627954135248, guid: fdf5429ddaee32646831ffd17d995cbb, type: 3}
+  RecipeImage: {fileID: -1453343921611585702, guid: 80a44e6596611974b9e99f7c782a7785, type: 3}
   AbacaxiDecrease: 0
   ArrozDecrease: 0
   CarneDecrease: 0
@@ -4716,8 +4716,8 @@ Transform:
   m_GameObject: {fileID: 337332840}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 114.02103, y: 156.15001, z: -4050}
-  m_LocalScale: {x: 113.09245, y: 78.21411, z: 45}
+  m_LocalPosition: {x: 117, y: 150, z: -4050}
+  m_LocalScale: {x: 67, y: 67, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1142167135}
@@ -4769,8 +4769,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
-  m_Color: {r: 0.6886792, g: 0.21764861, b: 0.21764861, a: 1}
+  m_Sprite: {fileID: -5612160816986496556, guid: cb647a1b64abf8a4a952a8c783a26e55, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6028,8 +6028,8 @@ Transform:
   m_GameObject: {fileID: 448423892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 116.79, y: 153.04, z: -4050}
-  m_LocalScale: {x: 126.968895, y: 83.45886, z: 45}
+  m_LocalPosition: {x: 117, y: 150, z: -4050}
+  m_LocalScale: {x: 67, y: 67, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082405696}
@@ -6081,8 +6081,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
-  m_Color: {r: 0.745283, g: 0.2917853, b: 0.2917853, a: 1}
+  m_Sprite: {fileID: -7002472015311995401, guid: 67449430c6908444c8e8f360578e735d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6228,6 +6228,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449750652}
   m_CullTransparentMesh: 1
+--- !u!1 &460194051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 460194053}
+  - component: {fileID: 460194052}
+  m_Layer: 0
+  m_Name: falsity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &460194052
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460194051}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 6615600115113142126, guid: 8ef6abd4d3b4725418969919aef57b4e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12.73, y: 7.11}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &460194053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460194051}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.47, y: 7.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472757053
 GameObject:
   m_ObjectHideFlags: 0
@@ -6838,7 +6928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 4
   ButtonCook: {fileID: 503416441}
-  RecipeImage: {fileID: 5779455321701438536, guid: 27fec96a76a41654ea857396e8cdb332, type: 3}
+  RecipeImage: {fileID: -5612160816986496556, guid: cb647a1b64abf8a4a952a8c783a26e55, type: 3}
   AbacaxiDecrease: 0
   ArrozDecrease: 0
   CarneDecrease: 0
@@ -7180,7 +7270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 7
   ButtonCook: {fileID: 525235938}
-  RecipeImage: {fileID: 0}
+  RecipeImage: {fileID: 5964537627954135248, guid: fdf5429ddaee32646831ffd17d995cbb, type: 3}
   AbacaxiDecrease: 7
   ArrozDecrease: 0
   CarneDecrease: 0
@@ -8633,7 +8723,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -12326,9 +12416,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 651514249}
-        m_TargetAssemblyTypeName: DayCount, Assembly-CSharp
-        m_MethodName: encerrarCozinhar
+      - m_Target: {fileID: 1094083483}
+        m_TargetAssemblyTypeName: TransitionsFade, Assembly-CSharp
+        m_MethodName: CallCoroutine_LoadEndDay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13439,6 +13529,17 @@ RectTransform:
   m_AnchoredPosition: {x: 8.300005, y: 12.444005}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1094083483 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3551459429853254374, guid: 2ec36e6d524318d4e94a24f84f00ace5, type: 3}
+  m_PrefabInstance: {fileID: 1921370391}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c8c78b932743c4ebeec92d9c99c1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TransitionsFade
 --- !u!1 &1094509594
 GameObject:
   m_ObjectHideFlags: 0
@@ -22523,8 +22624,8 @@ Transform:
   m_GameObject: {fileID: 2092614093}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 116.79, y: 153.04, z: -4050}
-  m_LocalScale: {x: 126.968895, y: 83.45886, z: 45}
+  m_LocalPosition: {x: 117, y: 150, z: -4050}
+  m_LocalScale: {x: 67, y: 67, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 965516610}
@@ -23801,3 +23902,4 @@ SceneRoots:
   - {fileID: 212055490259933748}
   - {fileID: 1115595578}
   - {fileID: 1975513051}
+  - {fileID: 460194053}

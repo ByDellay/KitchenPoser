@@ -30,6 +30,16 @@ public class TransitionsFade : MonoBehaviour
         StartCoroutine(LoadOtherGameSection());
     }
 
+    public void CallCoroutine_LoadEndDay()
+    {
+        StartCoroutine(LoadEndDay());
+    }
+
+    public void CallCoroutine_LoadNextDay()
+    {
+        StartCoroutine(LoadNextDay());
+    }
+
     public IEnumerator LoadNewScene(string Scene)
     {
         CrossFade.SetTrigger("Start");
@@ -48,5 +58,29 @@ public class TransitionsFade : MonoBehaviour
 
         CrossFade.SetBool("GoFadeIn", true);
         GameManager.Instance.ChangeScene(); // Troca de cena    
+    }
+
+    public IEnumerator LoadEndDay()
+    {
+        CrossFade.SetTrigger("Start");
+        CrossFade.SetBool("GoFadeIn", false);
+
+        yield return new WaitForSeconds(FadeTime);
+
+        CrossFade.SetBool("GoFadeIn", true);
+        DayCount.Instance.encerrarCozinhar();
+        //GameManager.Instance.ChangeScene(); // Troca de cena    
+    }
+
+    public IEnumerator LoadNextDay()
+    {
+        CrossFade.SetTrigger("Start");
+        CrossFade.SetBool("GoFadeIn", false);
+
+        yield return new WaitForSeconds(FadeTime);
+
+        CrossFade.SetBool("GoFadeIn", true);
+        DayCount.Instance.encerrarDia();
+        //GameManager.Instance.ChangeScene(); // Troca de cena    
     }
 }

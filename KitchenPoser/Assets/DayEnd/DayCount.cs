@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class DayCount : MonoBehaviour
 {
+    public static DayCount Instance;
     [Header("cenas")]
     public GameObject cortar;
     public GameObject cozinhar;
@@ -31,10 +32,12 @@ public class DayCount : MonoBehaviour
 
     public void Start()
     {
+        Instance = this;
         alimentosColetados.text = alimentosCount.ToString();
         receitasFeitas.text = receitasCount.ToString();
         day = 3;
     }
+
     public void encerrarCozinhar()
     {  
         cozinhar.SetActive(false);
@@ -111,4 +114,4 @@ public class DayCount : MonoBehaviour
         }
     }
 }
-// TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection(); <- trocar de cena
+// TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection(); <- trocar de cena (nao da pra chamar corrotina, só função publica)
