@@ -71,8 +71,10 @@ public class DayCount : MonoBehaviour
         spawner.GetComponent<Spawner>().ReiniciarCiclo();
 
         gameManager.GetComponent<GameManager>().TotalFails = 0;
+        GameManager.Instance.CurrentRecipeObject.SetActive(false);
 
-        
+
+
 
         if (day <= 0)
         {
