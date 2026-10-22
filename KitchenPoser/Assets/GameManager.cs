@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
     Tomate, */
 
 //Inventário de receitas definido:
+    [Header("Cozinhar")]
     public Dictionary<Alimentos.RecipeType, int> recipesCount =
         new Dictionary<Alimentos.RecipeType, int>();
 
@@ -71,7 +72,10 @@ public class GameManager : MonoBehaviour
     public GameObject CurrentRecipeObject;
     public Button Fogao;
 
-    public CookRecipeButton[] RecipeButtons; /*Lista de scripts do
+    public CookRecipeButton[] RecipeButtons; 
+
+    public ParticleSystem SuccessCookParticle;
+    /*Lista de scripts do
  cozinhar(Adicionar o script a lista pelo
  inspector a cada nova receita adicionada no livro, se nao ele nao funciona la na funcao
  callcookrecipe().)
@@ -252,6 +256,8 @@ public class GameManager : MonoBehaviour
                 DC.receitasCount++;
                 DC.receitasCountFinal++;
                 CurrentRecipeObject.SetActive(false);
+
+                Instantiate(SuccessCookParticle, transform.position + new Vector3(0f, 0f, -0.5f), Quaternion.identity);
 
                 return; //Para o foreach
             }
