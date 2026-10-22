@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; 
 
 public class CookRecipeButton : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class CookRecipeButton : MonoBehaviour
     public Button ButtonCook;
     public Sprite RecipeImage;
     public bool CanCook = false;
+    public bool AlreadyCooked = false;
 
     //public ingrediente, vbai ter um pra cada
 
@@ -28,10 +30,10 @@ eles são usados na função CookRecipe, naquele if com muitos "&&".
 
     void Start()
     {
-          //Instance = this; 
+        //Instance = this; 
          
-/*Adiciona o ouvinte do botão (isso a gente ja usou)
-*/
+        /*Adiciona o ouvinte do botão (isso a gente ja usou)
+        */
         ButtonCook.onClick.AddListener(SelectRecipe);
     }
 
@@ -75,9 +77,13 @@ GameManager.Instance.inventory[Alimentos.ItemType] em CADA IF.
        {
 
         CanCook = true;
+        AlreadyCooked = true;
 
-          /*Diminui de todos os itens(colocar 0 no inspector caso nao tenha na receita)
-*/ GameManager.Instance.SubtractItem(Alimentos.ItemType.Abacaxi, AbacaxiDecrease);
+        ButtonCook.interactable = false;
+        ButtonCook.GetComponentInChildren<TextMeshProUGUI>().text = "Feito!";
+
+            //Diminui de todos os itens(colocar 0 no inspector caso nao tenha na receita)
+            GameManager.Instance.SubtractItem(Alimentos.ItemType.Abacaxi, AbacaxiDecrease);
             GameManager.Instance.SubtractItem(Alimentos.ItemType.Arroz, ArrozDecrease);
             GameManager.Instance.SubtractItem(Alimentos.ItemType.Carne, CarneDecrease);
 
