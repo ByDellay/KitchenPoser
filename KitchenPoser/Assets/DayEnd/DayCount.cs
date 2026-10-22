@@ -35,7 +35,7 @@ public class DayCount : MonoBehaviour
         Instance = this;
         alimentosColetados.text = alimentosCount.ToString();
         receitasFeitas.text = receitasCount.ToString();
-        day = 3;
+        day = 2;
     }
 
     public void encerrarCozinhar()
@@ -46,11 +46,7 @@ public class DayCount : MonoBehaviour
         receitasFeitas.text = receitasCount.ToString();
         
         //perdao eu tava com muita preguiça pra pensar entao fiz desse jeito mesmo
-        if(day == 3)
-        {
-            faltamDias.text = "Faltam 3 dias para a entrevista...";
-        }
-        else if (day == 2)
+        if (day == 2)
         {
             faltamDias.text = "Faltam 2 dias para a entrevista...";
         }
