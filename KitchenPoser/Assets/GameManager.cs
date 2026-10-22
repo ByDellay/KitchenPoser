@@ -257,7 +257,13 @@ public class GameManager : MonoBehaviour
                 DC.receitasCountFinal++;
                 CurrentRecipeObject.SetActive(false);
 
-                Instantiate(SuccessCookParticle, transform.position + new Vector3(0f, 0f, -0.5f), Quaternion.identity);
+                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mousePos.z = 0;
+                
+                if (Recipe.CanCook == true)
+                {
+                    Instantiate(SuccessCookParticle, transform.position + mousePos, Quaternion.identity);
+                }
 
                 return; //Para o foreach
             }

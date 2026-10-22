@@ -6,6 +6,7 @@ public class CookRecipeButton : MonoBehaviour
     public Alimentos.RecipeType Type;
     public Button ButtonCook;
     public Sprite RecipeImage;
+    public bool CanCook = false;
 
     //public ingrediente, vbai ter um pra cada
 
@@ -73,6 +74,8 @@ GameManager.Instance.inventory[Alimentos.ItemType] em CADA IF.
             && TomateInv >= TomateDecrease)
        {
 
+        CanCook = true;
+
           /*Diminui de todos os itens(colocar 0 no inspector caso nao tenha na receita)
 */ GameManager.Instance.SubtractItem(Alimentos.ItemType.Abacaxi, AbacaxiDecrease);
             GameManager.Instance.SubtractItem(Alimentos.ItemType.Arroz, ArrozDecrease);
@@ -96,6 +99,7 @@ inventário de receitas, ou não, caso não tenha ingrediente o bastante no if g
        else
        {
             Debug.Log("Não conseguiu cozinhar");
+            CanCook = false;
        }
     }
 }

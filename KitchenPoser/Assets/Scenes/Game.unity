@@ -3631,6 +3631,7 @@ MonoBehaviour:
   Type: 11
   ButtonCook: {fileID: 257574013}
   RecipeImage: {fileID: -7002472015311995401, guid: 67449430c6908444c8e8f360578e735d, type: 3}
+  CanCook: 0
   AbacaxiDecrease: 2
   ArrozDecrease: 7
   CarneDecrease: 0
@@ -4323,6 +4324,7 @@ MonoBehaviour:
   Type: 6
   ButtonCook: {fileID: 317943106}
   RecipeImage: {fileID: -1453343921611585702, guid: 80a44e6596611974b9e99f7c782a7785, type: 3}
+  CanCook: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 0
   CarneDecrease: 0
@@ -5734,6 +5736,7 @@ MonoBehaviour:
   Type: 3
   ButtonCook: {fileID: 415296729}
   RecipeImage: {fileID: 0}
+  CanCook: 0
   AbacaxiDecrease: 1
   ArrozDecrease: 2
   CarneDecrease: 0
@@ -6925,6 +6928,7 @@ MonoBehaviour:
   Type: 4
   ButtonCook: {fileID: 503416441}
   RecipeImage: {fileID: -5612160816986496556, guid: cb647a1b64abf8a4a952a8c783a26e55, type: 3}
+  CanCook: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 0
   CarneDecrease: 0
@@ -7267,6 +7271,7 @@ MonoBehaviour:
   Type: 7
   ButtonCook: {fileID: 525235938}
   RecipeImage: {fileID: 5964537627954135248, guid: fdf5429ddaee32646831ffd17d995cbb, type: 3}
+  CanCook: 0
   AbacaxiDecrease: 7
   ArrozDecrease: 0
   CarneDecrease: 0
@@ -7549,6 +7554,7 @@ MonoBehaviour:
   Type: 8
   ButtonCook: {fileID: 546416401}
   RecipeImage: {fileID: 0}
+  CanCook: 0
   AbacaxiDecrease: 2
   ArrozDecrease: 0
   CarneDecrease: 10
@@ -8524,6 +8530,7 @@ MonoBehaviour:
   Type: 2
   ButtonCook: {fileID: 625866116}
   RecipeImage: {fileID: 0}
+  CanCook: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 3
   CarneDecrease: 3
@@ -8779,8 +8786,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651514246}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.71193, y: 1.60797, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10381,6 +10388,7 @@ MonoBehaviour:
   Type: 10
   ButtonCook: {fileID: 833901327}
   RecipeImage: {fileID: 0}
+  CanCook: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 0
   CarneDecrease: 2
@@ -13730,6 +13738,7 @@ MonoBehaviour:
   Type: 1
   ButtonCook: {fileID: 1105356626}
   RecipeImage: {fileID: 0}
+  CanCook: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 4
   CarneDecrease: 0
@@ -16059,6 +16068,7 @@ MonoBehaviour:
   Type: 9
   ButtonCook: {fileID: 1245456721}
   RecipeImage: {fileID: 0}
+  CanCook: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 6
   CarneDecrease: 0
