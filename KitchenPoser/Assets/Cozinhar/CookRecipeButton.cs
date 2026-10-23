@@ -73,11 +73,14 @@ GameManager.Instance.inventory[Alimentos.ItemType] em CADA IF.
             && CarneInv >= CarneDecrease && FarinhaInv >= FarinhaDecrease
             && FeijaoInv >= FeijaoDecrease && FrangoInv >= FrangoDecrease
             && PeixeInv >= PeixeDecrease && QueijoInv >= QueijoDecrease
-            && TomateInv >= TomateDecrease)
+            && TomateInv >= TomateDecrease && AlreadyCooked == false)
        {
 
         CanCook = true;
         AlreadyCooked = true;
+
+        GameManager.Instance.DC.receitasCount++;
+        GameManager.Instance.DC.receitasCountFinal++;
 
         ButtonCook.interactable = false;
         ButtonCook.GetComponentInChildren<TextMeshProUGUI>().text = "Feito!";

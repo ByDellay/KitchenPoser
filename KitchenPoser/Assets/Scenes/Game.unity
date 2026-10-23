@@ -2097,8 +2097,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 117, y: 150, z: -4050}
-  m_LocalScale: {x: 67, y: 67, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 65, y: 65, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1105805679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4862,7 +4862,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5612160816986496556, guid: cb647a1b64abf8a4a952a8c783a26e55, type: 3}
+  m_Sprite: {fileID: 5020007292766566720, guid: c82daa96f023b96469d79f7848a18de3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5985,9 +5985,9 @@ Transform:
   m_GameObject: {fileID: 429352070}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 156.82, y: 6.69, z: -4049.9998}
-  m_LocalScale: {x: 143.3877, y: 78.03382, z: 45}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 146.5, y: 11.7, z: -4050}
+  m_LocalScale: {x: 67, y: 67, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2059536799}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6038,8 +6038,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
-  m_Color: {r: 0.7924528, g: 0.19063722, b: 0.19063722, a: 1}
+  m_Sprite: {fileID: 6467540859380420823, guid: 30711396aa5856f43b08fd0acf3b20c5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7113,7 +7113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 4
   ButtonCook: {fileID: 503416441}
-  RecipeImage: {fileID: -5612160816986496556, guid: cb647a1b64abf8a4a952a8c783a26e55, type: 3}
+  RecipeImage: {fileID: 5020007292766566720, guid: c82daa96f023b96469d79f7848a18de3, type: 3}
   CanCook: 0
   AlreadyCooked: 0
   AbacaxiDecrease: 0
@@ -7778,7 +7778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 8
   ButtonCook: {fileID: 546416401}
-  RecipeImage: {fileID: 0}
+  RecipeImage: {fileID: -3209759135295002651, guid: 14eca94e7cf045a49b5470f26a359615, type: 3}
   CanCook: 0
   AlreadyCooked: 0
   AbacaxiDecrease: 2
@@ -9002,6 +9002,7 @@ MonoBehaviour:
   - {fileID: 625866115}
   - {fileID: 257574012}
   - {fileID: 1105356625}
+  - {fileID: 1029669061}
   SuccessCookParticle: {fileID: 973894286993960533, guid: a20a9d82aeaf9b5429b8deb47f0200f2, type: 3}
   vinheta: {fileID: 2126465884102544443}
   gameManager: {fileID: 651514246}
@@ -12492,7 +12493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &990714478
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12976,7 +12977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 5
   ButtonCook: {fileID: 1029669062}
-  RecipeImage: {fileID: 0}
+  RecipeImage: {fileID: 6467540859380420823, guid: 30711396aa5856f43b08fd0acf3b20c5, type: 3}
   CanCook: 0
   AlreadyCooked: 0
   AbacaxiDecrease: 0
@@ -16952,7 +16953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 9
   ButtonCook: {fileID: 1245456721}
-  RecipeImage: {fileID: 0}
+  RecipeImage: {fileID: -2286039563107356688, guid: 250fd96e92289fd4aab2bc0efa2b2e1b, type: 3}
   CanCook: 0
   AlreadyCooked: 0
   AbacaxiDecrease: 0
@@ -19690,7 +19691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1622930067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21133,9 +21134,9 @@ Transform:
   m_GameObject: {fileID: 1810397208}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 156.82, y: 6.69, z: -4049.9998}
-  m_LocalScale: {x: 143.3877, y: 78.03382, z: 45}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 139.8, y: 14.1, z: -4050}
+  m_LocalScale: {x: 70, y: 70, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 179387967}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21186,8 +21187,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
-  m_Color: {r: 0.7924528, g: 0.19063722, b: 0.19063722, a: 1}
+  m_Sprite: {fileID: -2286039563107356688, guid: 250fd96e92289fd4aab2bc0efa2b2e1b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -22379,7 +22380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1917568611
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23885,8 +23886,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
-  m_Color: {r: 0.745283, g: 0.2917853, b: 0.2917853, a: 1}
+  m_Sprite: {fileID: -3209759135295002651, guid: 14eca94e7cf045a49b5470f26a359615, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

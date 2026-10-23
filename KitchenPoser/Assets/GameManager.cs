@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
     public GameObject vinheta;
 
     public GameObject gameManager;
-    DayCount DC;
+    public DayCount DC;
 
     public int TotalFails = 0;
 
@@ -253,8 +253,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Receita escolhida: " + Recipe.Type);
                 CurrentRecipe = 0; //nenhuma receita selecionada
 
-                DC.receitasCount++;
-                DC.receitasCountFinal++;
+                
                 CurrentRecipeObject.SetActive(false);
 
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
