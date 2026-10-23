@@ -19,6 +19,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject page3;
     public GameObject page4;
     public GameObject page5;
+    public GameObject page6;
     public void BookStateClick()
     {
         if (CookBookClose.activeSelf)
@@ -62,10 +63,20 @@ public class ButtonManager : MonoBehaviour
             page4.SetActive(false);
             page5.SetActive(true);
         }
+        else if (page5.activeSelf)
+        {
+            page5.SetActive(false);
+            page6.SetActive(true);
+        }
     }
     public void PageChangeLeft()
     {
-        if (page5.activeSelf)
+        if (page6.activeSelf)
+        {
+            page6.SetActive(false);
+            page5.SetActive(true);
+        }
+        else if (page5.activeSelf)
         {
             page5.SetActive(false);
             page4.SetActive(true);
@@ -92,7 +103,7 @@ public class ButtonManager : MonoBehaviour
         {
             pageChangeLeft.SetActive(false);
         }
-        else if (page5.activeSelf)
+        else if (page6.activeSelf)
         {
             pageChangeRight.SetActive(false);
         }
@@ -107,6 +118,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject arm1Inventario;
     public GameObject arm2Inventario;
     public GameObject arm3Inventario;
+    public GameObject trofeisInventario;
 
     public void OutArmario()
     {
@@ -114,6 +126,12 @@ public class ButtonManager : MonoBehaviour
         Outventario.SetActive(false);
         arm2Inventario.SetActive(false);
         arm3Inventario.SetActive(false);
+        trofeisInventario.SetActive(false);
+    }
+    public void OnTrofeuVentario()
+    {
+        trofeisInventario.SetActive(true);
+        Outventario.SetActive(true);
     }
     public void OnArmario1()
     {
