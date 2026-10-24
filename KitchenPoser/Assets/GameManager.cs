@@ -261,6 +261,7 @@ public class GameManager : MonoBehaviour
                 
                 if (Recipe.CanCook == true)
                 {
+                    TrophyInvetory.Instance.TrophyAtivator(Recipe.Type);
                     Instantiate(SuccessCookParticle, transform.position + mousePos, Quaternion.identity);
                 }
 
