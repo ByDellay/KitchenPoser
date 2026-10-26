@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     private float _SpawnTimer; // Contador do tempo
     public float CutTime;
     public float CutTimer; // Contador do tempo
+    public float TrueEndMoment;
     public Transform leftSpawn;
     public Transform rightSpawn;
 
@@ -34,21 +35,44 @@ public class Spawner : MonoBehaviour
         {
             timerShow.text = _CutTimerText.ToString("F0");
         }
-
-        if ((_SpawnTimer >= SpawnTime) && Acabou == false) // O tempo ja passou o suficiente?
+        if (CutTimer <= 50)
         {
-            Spawnar();
-            _SpawnTimer = 0f;
+            if ((_SpawnTimer >= SpawnTime) && Acabou == false) // O tempo ja passou o suficiente?
+            {
+                Spawnar();
+                _SpawnTimer = 0f;
+            }
+        }
+        else if (CutTimer >= 55 && CutTimer <= 60)
+        {
+            if ((_SpawnTimer >= SpawnTime) && Acabou == false) // O tempo ja passou o suficiente?
+            {
+                Hush();
+                _SpawnTimer = 0f;
+            }
         }
 
         if ((CutTimer >= CutTime) && Acabou == false)// O tempo ja passou o suficiente?
         {
-            Acabou = true;
-            GameManager.Instance.NoBreak();
-            TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
+            TrueEndMoment += Time.deltaTime;
+            if (TrueEndMoment >= 5)
+            {
+                Acabou = true;
+                GameManager.Instance.NoBreak();
+                TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
+
+            }
         }
     }
 
+    public void TrueEnd()
+    {
+        //parar todos os timers
+        //parar de spawnar coisa
+        //tocar o animator do finish
+        //esperar um tempinho e tocar o fade out
+        //TODAS as coisas que forem terminar a cena de cortar devem ser chamadas por aqui
+    }
     public void DeleteChildrens()
     {
             for (int i = this.transform.childCount - 1; i >= 0; i--)
@@ -83,6 +107,23 @@ public class Spawner : MonoBehaviour
         GameObject Comida = Instantiate(Alimentos[i], transform);
 
         
+
+        //gera um valor aleatorio e armazena em uma variavel
+        float newX = Random.Range(leftSpawn.position.x, rightSpawn.position.x);
+
+        //atribui a nova posição para o inimigo
+        Comida.transform.position = new Vector2(newX, transform.position.y);
+    }
+
+    void Hush()
+    {
+        SpawnTime = 0.01f;
+        int i = Random.Range(0, Alimentos.Length);
+
+        //instancia o prefab na cena
+        GameObject Comida = Instantiate(Alimentos[i], transform);
+
+
 
         //gera um valor aleatorio e armazena em uma variavel
         float newX = Random.Range(leftSpawn.position.x, rightSpawn.position.x);

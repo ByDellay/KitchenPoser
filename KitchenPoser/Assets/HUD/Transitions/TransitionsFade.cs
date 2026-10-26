@@ -8,10 +8,11 @@ public class TransitionsFade : MonoBehaviour
     public static TransitionsFade Instance;
     int FadeTime = 2;
     public Animator CrossFade;
-    
+    public bool canNextDay;
 
     private void Awake()
     {
+        canNextDay = true;
         if (Instance == null)
         {
             Instance = this;
@@ -62,6 +63,7 @@ public class TransitionsFade : MonoBehaviour
 
     public IEnumerator LoadEndDay()
     {
+        canNextDay = true;
         CrossFade.SetTrigger("Start");
         CrossFade.SetBool("GoFadeIn", false);
 
@@ -74,13 +76,18 @@ public class TransitionsFade : MonoBehaviour
 
     public IEnumerator LoadNextDay()
     {
-        CrossFade.SetTrigger("Start");
-        CrossFade.SetBool("GoFadeIn", false);
+        if (canNextDay == true)
+        {
+            canNextDay = false;
+            CrossFade.SetTrigger("Start");
+            CrossFade.SetBool("GoFadeIn", false);
 
-        yield return new WaitForSeconds(FadeTime);
+            yield return new WaitForSeconds(FadeTime);
 
-        CrossFade.SetBool("GoFadeIn", true);
-        DayCount.Instance.encerrarDia();
+            CrossFade.SetBool("GoFadeIn", true);
+            DayCount.Instance.encerrarDia();
+        }
+
         //GameManager.Instance.ChangeScene(); // Troca de cena    
     }
 }

@@ -8,11 +8,6 @@ public class CurrentRecipeMouse : MonoBehaviour
     //public GameObject CurrentRecipeObject;
     public Vector3 Offset;
 
-    void Start()
-    {
-        Offset = new Vector3(0f, 0f, 0f);
-    }
-
     void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

@@ -8420,7 +8420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &558490340
 Transform:
   m_ObjectHideFlags: 0
@@ -10633,7 +10633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &747062806
 Transform:
   m_ObjectHideFlags: 0
@@ -25487,7 +25487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CurrentRecipeMouse
   SpriteRenderer: {fileID: 2125930253}
-  Offset: {x: 0, y: 0, z: 0}
+  Offset: {x: 1, y: -0.9, z: 0}
 --- !u!212 &2125930253
 SpriteRenderer:
   m_ObjectHideFlags: 0

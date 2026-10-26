@@ -52,15 +52,6 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI frangoCount;
     public TextMeshProUGUI queijoCount;
 
-    /*Abacaxi,
-    Arroz,
-    Carne,
-    Farinha,
-    Feijao,  
-    Frango, 
-    Peixe,
-    Queijo,
-    Tomate, */
 
 //Inventário de receitas definido:
     [Header("Cozinhar")]
@@ -90,7 +81,7 @@ public class GameManager : MonoBehaviour
 
     public int TotalFails = 0;
 
-//////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////// <- o comentario supremo
 
     private void Awake()
     {
