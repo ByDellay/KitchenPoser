@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     public SpriteRenderer CurrentRecipeSprite; 
     public GameObject CurrentRecipeObject;
     public Button Fogao;
+    public Animator FogaoTreme;
 
     public CookRecipeButton[] RecipeButtons; 
 
@@ -234,7 +235,7 @@ public class GameManager : MonoBehaviour
         {
             CurrentRecipeObject.SetActive(false);
             Debug.Log("Não conseguiu cozinhar");
-            Fogao.GetComponent<FogaoTremida>().DoShake();
+            FogaoTreme.SetTrigger("Trema");
 
             return; //Nada acontece(no caso printa, o certo seria um som, etc..)
         }

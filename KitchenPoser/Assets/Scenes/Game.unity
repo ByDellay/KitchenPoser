@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 221662}
   - component: {fileID: 221661}
   - component: {fileID: 221664}
+  - component: {fileID: 221665}
   m_Layer: 5
   m_Name: Fogao
   m_TagString: Untagged
@@ -324,6 +325,28 @@ MonoBehaviour:
     m_RotationOrder: 4
   OriginalPos: {x: 0, y: 0, z: 0}
   Vel: 20
+--- !u!95 &221665
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221659}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 294ca129ea456a3409a8bf19e119b898, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6295648
 GameObject:
   m_ObjectHideFlags: 0
@@ -8505,7 +8528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &558490340
 Transform:
   m_ObjectHideFlags: 0
@@ -9571,6 +9594,7 @@ MonoBehaviour:
   CurrentRecipeSprite: {fileID: 2125930253}
   CurrentRecipeObject: {fileID: 2125930250}
   Fogao: {fileID: 221661}
+  FogaoTreme: {fileID: 221665}
   RecipeButtons:
   - {fileID: 503416440}
   - {fileID: 317943105}
@@ -10718,7 +10742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &747062806
 Transform:
   m_ObjectHideFlags: 0
