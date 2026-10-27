@@ -109,6 +109,7 @@ inventário de receitas, ou não, caso não tenha ingrediente o bastante no if g
        {
             Debug.Log("Não conseguiu cozinhar");
             CanCook = false;
+            GameManager.Instance.Fogao.GetComponent<FogaoTremida>().DoShake();
        }
     }
 }

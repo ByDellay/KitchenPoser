@@ -234,6 +234,8 @@ public class GameManager : MonoBehaviour
         {
             CurrentRecipeObject.SetActive(false);
             Debug.Log("Não conseguiu cozinhar");
+            Fogao.GetComponent<FogaoTremida>().DoShake();
+
             return; //Nada acontece(no caso printa, o certo seria um som, etc..)
         }
         foreach (CookRecipeButton Recipe in RecipeButtons) //Pra cada script de receita na lista de scripts de receita:

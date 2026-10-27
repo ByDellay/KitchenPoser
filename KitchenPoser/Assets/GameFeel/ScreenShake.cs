@@ -19,7 +19,7 @@ public class ScreenShake : MonoBehaviour
 
         while (CurrentTime < Duration)
         {
-            Vector3 ShakeOffset = (Vector3)Random.insideUnitCircle * Curve.Evaluate(0.000001f);
+            Vector3 ShakeOffset = (Vector3)Random.insideUnitCircle * Curve.Evaluate(0.1f);
             transform.position = OriginalPos + ShakeOffset;
 
             CurrentTime += Time.deltaTime;
