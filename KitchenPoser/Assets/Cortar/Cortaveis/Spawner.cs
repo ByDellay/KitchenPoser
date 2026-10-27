@@ -19,6 +19,10 @@ public class Spawner : MonoBehaviour
 
     public float _CutTimerText;
     public TextMeshProUGUI timerShow;
+
+    public float waitEnd;
+
+
     
 
     private void Start()
@@ -28,9 +32,14 @@ public class Spawner : MonoBehaviour
     }
     void Update()
     {
-        _SpawnTimer += Time.deltaTime; // Contador de tempo
-        CutTimer += Time.deltaTime; // Contador de tempo
-        _CutTimerText -= Time.deltaTime;
+
+        if (Acabou == false)
+        {
+            _CutTimerText -= Time.deltaTime;
+            _SpawnTimer += Time.deltaTime; // Contador de tempo
+            CutTimer += Time.deltaTime; // Contador de tempo
+        }
+
         if (_CutTimerText > 0)
         {
             timerShow.text = _CutTimerText.ToString("F0");
@@ -57,16 +66,21 @@ public class Spawner : MonoBehaviour
             TrueEndMoment += Time.deltaTime;
             if (TrueEndMoment >= 5)
             {
-                Acabou = true;
-                GameManager.Instance.NoBreak();
-                TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
-
+                TrueEnd();
             }
         }
     }
 
     public void TrueEnd()
     {
+        waitEnd += Time.deltaTime;
+        GameManager.Instance.NoBreak();
+        if (waitEnd >= 5)
+        {
+            Acabou = true;
+            TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
+        }
+        //fazer com que cortar pedra 3x coise aqui
         //parar todos os timers
         //parar de spawnar coisa
         //tocar o animator do finish
