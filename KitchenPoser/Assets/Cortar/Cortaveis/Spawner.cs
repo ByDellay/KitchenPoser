@@ -5,6 +5,7 @@ public class Spawner : MonoBehaviour
 {
     // Prefab que ser� criado
     public GameObject[] Alimentos;
+    public static Spawner Instance;
 
     //spawn
     public float SpawnTime = 5f; // Tempo de espera entre cada spawner
@@ -29,6 +30,11 @@ public class Spawner : MonoBehaviour
     {
         _CutTimerText = CutTime;
         DeleteChildrens();
+
+        if (Instance == null)
+        {
+            Instance = this;
+        }
     }
     void Update()
     {
