@@ -253,78 +253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a533cafd0c793d4a86963572ec04ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FogaoTremida
-  Duration: 0.006
-  Curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -0.006668091
-      value: 1.0001831
-      inSlope: -0.0767466
-      outSlope: -0.0767466
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.17666668
-    - serializedVersion: 3
-      time: 0.12904008
-      value: 0.95626533
-      inSlope: 0.13507986
-      outSlope: 0.13507986
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.2404997
-      value: 1.0422966
-      inSlope: 0.018967152
-      outSlope: 0.018967152
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.4282011
-      value: 0.97472763
-      inSlope: -0.020470161
-      outSlope: -0.020470161
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.6776033
-      value: 1.0197074
-      inSlope: 0.061453983
-      outSlope: 0.061453983
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.8476989
-      value: 0.9923735
-      inSlope: -0.10197675
-      outSlope: -0.10197675
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0.050074983
-      outSlope: 0.050074983
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OriginalPos: {x: 0, y: 0, z: 0}
-  Vel: 20
 --- !u!95 &221665
 Animator:
   serializedVersion: 7
@@ -2413,7 +2341,7 @@ Transform:
   m_GameObject: {fileID: 93053238}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 117, y: 150, z: -4050}
+  m_LocalPosition: {x: 75, y: 150, z: -4050}
   m_LocalScale: {x: 67, y: 67, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2466,8 +2394,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
-  m_Color: {r: 0.745283, g: 0.2917853, b: 0.2917853, a: 1}
+  m_Sprite: {fileID: 2182231952190237284, guid: 6307d1aeafae05243bb65d443dd19967, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5775,7 +5703,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 6467540859380420823, guid: 30711396aa5856f43b08fd0acf3b20c5, type: 3}
+  m_Sprite: {fileID: 2182231952190237284, guid: 6307d1aeafae05243bb65d443dd19967, type: 3}
   m_Color: {r: 0.2981131, g: 0.2981131, b: 0.2981131, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10705,7 +10633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &727929522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20479,7 +20407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1622930067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23495,7 +23423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1917568611
 RectTransform:
   m_ObjectHideFlags: 0
