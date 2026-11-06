@@ -11285,7 +11285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 10
   ButtonCook: {fileID: 833901327}
-  RecipeImage: {fileID: 0}
+  RecipeImage: {fileID: 2182231952190237284, guid: 6307d1aeafae05243bb65d443dd19967, type: 3}
   CanCook: 0
   AlreadyCooked: 0
   AbacaxiDecrease: 0
