@@ -127,11 +127,11 @@ public class GameManager : MonoBehaviour
 
         if (TotalFails >= 3)
         {
-            TotalFails = 0;
-            GameManager.Instance.NoBreak();
-            TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
+            
+            //GameManager.Instance.NoBreak();
+            Spawner.Instance.TrueEnd();
+            //TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
             //Debug.Log(TotalFails);
-
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) //APAGAR ISSO AQUI QUANDO BUILDAR!!!
@@ -152,6 +152,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene()
     {
+        Spawner.Instance.TrueEndIsTrue = false;
         TotalFails = 0;
 
         GameObject spawnerObject = GameObject.FindWithTag("Spawner");

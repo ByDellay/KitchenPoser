@@ -20,15 +20,15 @@ public class Alimentos : MonoBehaviour
     {
         Null,
         BaiaoDeDois,
-        Burrito,
-        Chester,
-        Coxinha,
-        PaoDeQueijo,
-        PeixeFrito,
-        PeixeNoAbacaxi,
-        PicanhaInvertida,
-        PratoFeito,
-        Pizza,
-        Sushi,
+        Burrito,//
+        Chester,//
+        Coxinha,//
+        PaoDeQueijo,//
+        PeixeFrito,//
+        PeixeNoAbacaxi,//
+        PicanhaInvertida,//
+        PratoFeito,//
+        Pizza,//
+        Sushi,//
     }
 }

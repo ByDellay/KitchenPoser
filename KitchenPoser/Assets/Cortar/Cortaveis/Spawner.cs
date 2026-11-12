@@ -13,6 +13,7 @@ public class Spawner : MonoBehaviour
     public float CutTime;
     public float CutTimer; // Contador do tempo
     public float TrueEndMoment;
+    public bool TrueEndIsTrue;
     public Transform leftSpawn;
     public Transform rightSpawn;
 
@@ -28,6 +29,7 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
+        TrueEndIsTrue = false;
         _CutTimerText = CutTime;
         DeleteChildrens();
 
@@ -79,10 +81,12 @@ public class Spawner : MonoBehaviour
 
     public void TrueEnd()
     {
+        TrueEndIsTrue = true;
         waitEnd += Time.deltaTime;
         GameManager.Instance.NoBreak();
         if (waitEnd >= 5)
         {
+            GameManager.Instance.TotalFails = 0;
             Acabou = true;
             TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
         }
@@ -120,19 +124,23 @@ public class Spawner : MonoBehaviour
 
     void Spawnar()
     {
-        SpawnTime = Random.Range(0.2f, 1.2f);
-        int i = Random.Range(0, Alimentos.Length);
+        if (TrueEndIsTrue == false)
+        {
+            SpawnTime = Random.Range(0.2f, 1.2f);
+            int i = Random.Range(0, Alimentos.Length);
 
-        //instancia o prefab na cena
-        GameObject Comida = Instantiate(Alimentos[i], transform);
+            //instancia o prefab na cena
+            GameObject Comida = Instantiate(Alimentos[i], transform);
 
+
+
+            //gera um valor aleatorio e armazena em uma variavel
+            float newX = Random.Range(leftSpawn.position.x, rightSpawn.position.x);
+
+            //atribui a nova posição para o inimigo
+            Comida.transform.position = new Vector2(newX, transform.position.y);
+        }
         
-
-        //gera um valor aleatorio e armazena em uma variavel
-        float newX = Random.Range(leftSpawn.position.x, rightSpawn.position.x);
-
-        //atribui a nova posição para o inimigo
-        Comida.transform.position = new Vector2(newX, transform.position.y);
     }
 
     void Hush()
