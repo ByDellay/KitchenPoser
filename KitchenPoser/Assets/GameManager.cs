@@ -75,17 +75,24 @@ public class GameManager : MonoBehaviour
 */
 
     [Header("Other")]
-    public GameObject vinheta;
-
     public GameObject gameManager;
     public DayCount DC;
 
     public int TotalFails = 0;
 
-////////////////////////////////////////////////////////////////////////////////////////////////// <- o comentario supremo
+
+    [Header("Animation")]
+    public GameObject startAnim;
+    private Animator start;
+    public GameObject vinheta;
+    private float timer5segundos;
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////// <- o comentario supremo
 
     private void Awake()
     {
+        start = startAnim.GetComponent<Animator>();
         Instance = this;
 
         // Inicializa todos alimentos com 0
@@ -184,6 +191,11 @@ public class GameManager : MonoBehaviour
 
         cozinhar.SetActive(false);
         cortar.SetActive(true);
+
+
+        start.Play("Start");
+        
+
     }
 
     public void UpdateItemCount() // Atualiza a qantidade de itens no inventario
