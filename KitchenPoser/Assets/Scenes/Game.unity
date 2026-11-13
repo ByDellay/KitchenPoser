@@ -981,9 +981,9 @@ Transform:
   m_GameObject: {fileID: 32467050}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 156.82, y: 6.69, z: -4049.9998}
-  m_LocalScale: {x: 143.3877, y: 78.03382, z: 45}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 112.4, y: 14.1, z: -4050}
+  m_LocalScale: {x: 70, y: 70, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1420765843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1034,8 +1034,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
-  m_Color: {r: 0.7924528, g: 0.19063722, b: 0.19063722, a: 1}
+  m_Sprite: {fileID: 3514461363795139075, guid: 98369d1ad5ecab14baaa5f7b818f50ad, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1156,9 +1156,9 @@ Transform:
   m_GameObject: {fileID: 39273094}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 156.82, y: 6.69, z: -4049.9998}
-  m_LocalScale: {x: 143.3877, y: 78.03382, z: 45}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 109.4, y: 14.1, z: -4050}
+  m_LocalScale: {x: 70, y: 70, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1762538375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1209,7 +1209,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
+  m_Sprite: {fileID: -7296627813398178209, guid: 5ed9e5a1deb99ad48b99e9fa507066e9, type: 3}
   m_Color: {r: 0.7924528, g: 0.19063722, b: 0.19063722, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6267,7 +6267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 3
   ButtonCook: {fileID: 415296729}
-  RecipeImage: {fileID: 0}
+  RecipeImage: {fileID: -7296627813398178209, guid: 5ed9e5a1deb99ad48b99e9fa507066e9, type: 3}
   CanCook: 0
   AlreadyCooked: 0
   AbacaxiDecrease: 1
@@ -8456,7 +8456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &558490340
 Transform:
   m_ObjectHideFlags: 0
@@ -9287,7 +9287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 2
   ButtonCook: {fileID: 625866116}
-  RecipeImage: {fileID: 0}
+  RecipeImage: {fileID: 9192687251970799782, guid: a5aeb07103dd3e04dbdbb63c5a8bf294, type: 3}
   CanCook: 0
   AlreadyCooked: 0
   AbacaxiDecrease: 0
@@ -9407,9 +9407,9 @@ Transform:
   m_GameObject: {fileID: 647686225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 156.82, y: 6.69, z: -4049.9998}
-  m_LocalScale: {x: 143.3877, y: 78.03382, z: 45}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 109.4, y: 14.1, z: -4050}
+  m_LocalScale: {x: 70, y: 70, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1135446268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9460,8 +9460,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: d182ae7b33349d145bc5f1696e402338, type: 3}
-  m_Color: {r: 0.7924528, g: 0.19063722, b: 0.19063722, a: 1}
+  m_Sprite: {fileID: 9192687251970799782, guid: a5aeb07103dd3e04dbdbb63c5a8bf294, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10635,7 +10635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &727929522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10672,7 +10672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &747062806
 Transform:
   m_ObjectHideFlags: 0
@@ -15051,7 +15051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Type: 1
   ButtonCook: {fileID: 1105356626}
-  RecipeImage: {fileID: 0}
+  RecipeImage: {fileID: 3514461363795139075, guid: 98369d1ad5ecab14baaa5f7b818f50ad, type: 3}
   CanCook: 0
   AlreadyCooked: 0
   AbacaxiDecrease: 0
@@ -22679,7 +22679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1839444864
 RectTransform:
   m_ObjectHideFlags: 0
