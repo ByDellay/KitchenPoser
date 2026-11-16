@@ -1,5 +1,6 @@
-using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
@@ -24,11 +25,16 @@ public class Spawner : MonoBehaviour
 
     public float waitEnd;
 
+    public GameObject rushAnim;
+    private Animator rush;
+    public GameObject rushObj;
 
     
 
     private void Start()
     {
+        rush = rushAnim.GetComponent<Animator>();
+
         TrueEndIsTrue = false;
         _CutTimerText = CutTime;
         DeleteChildrens();
@@ -59,6 +65,11 @@ public class Spawner : MonoBehaviour
                 Spawnar();
                 _SpawnTimer = 0f;
             }
+        }
+        else if (CutTimer >= 53 && CutTimer <= 55)
+        {
+            rushObj.SetActive(true);
+            rush.Play("Rush");
         }
         else if (CutTimer >= 55 && CutTimer <= 60)
         {
@@ -119,6 +130,7 @@ public class Spawner : MonoBehaviour
         CutTimer = 0f;
         _CutTimerText = CutTime;
         Acabou = false;
+        rushObj.SetActive(false);
 
     }
 
@@ -147,6 +159,8 @@ public class Spawner : MonoBehaviour
     {
         SpawnTime = 0.01f;
         int i = Random.Range(0, Alimentos.Length);
+        rushObj.SetActive(true);
+        rush.Play("Rush");
 
         //instancia o prefab na cena
         GameObject Comida = Instantiate(Alimentos[i], transform);

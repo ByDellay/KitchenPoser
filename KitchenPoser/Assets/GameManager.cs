@@ -85,7 +85,6 @@ public class GameManager : MonoBehaviour
     public GameObject startAnim;
     private Animator start;
     public GameObject vinheta;
-    private float timer5segundos;
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////// <- o comentario supremo
