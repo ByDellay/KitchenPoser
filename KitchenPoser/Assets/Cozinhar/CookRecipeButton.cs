@@ -43,6 +43,7 @@ eles são usados na função CookRecipe, naquele if com muitos "&&".
           GameManager.Instance.ShowRecipeImage(RecipeImage);
 
           Debug.Log("Receita atual: " + GameManager.Instance.CurrentRecipe);
+          
     }
 
     public void CookRecipe()
