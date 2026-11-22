@@ -9612,6 +9612,10 @@ MonoBehaviour:
   CurrentRecipeObject: {fileID: 2125930250}
   Fogao: {fileID: 221661}
   FogaoTreme: {fileID: 221665}
+  FogaoSFXPadrao: {fileID: 8300000, guid: 3a2fefe8fd9eddc4baec0e2ecca1e681, type: 3}
+  FogaoSFXErro: {fileID: 8300000, guid: 0b932b842c27c6e4daf8afa25ceb86e0, type: 3}
+  FogaoSFXConfete: {fileID: 8300000, guid: c6bb533af167bad44a0f5a6da798e62c, type: 3}
+  FogaoSFXSucesso: {fileID: 8300000, guid: 0f3bfab25d93b594ebd7c6b1bd93eda4, type: 3}
   RecipeButtons:
   - {fileID: 1368179291}
   - {fileID: 488996710}

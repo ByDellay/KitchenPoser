@@ -63,6 +63,10 @@ public class GameManager : MonoBehaviour
     public GameObject CurrentRecipeObject;
     public Button Fogao;
     public Animator FogaoTreme;
+    [SerializeField] private AudioClip FogaoSFXPadrao;
+    [SerializeField] private AudioClip FogaoSFXErro;
+    [SerializeField] private AudioClip FogaoSFXConfete;
+    [SerializeField] private AudioClip FogaoSFXSucesso;
 
     public CookRecipeButton[] RecipeButtons; 
 
@@ -248,6 +252,7 @@ public class GameManager : MonoBehaviour
             CurrentRecipeObject.SetActive(false);
             Debug.Log("Não conseguiu cozinhar");
             FogaoTreme.SetTrigger("Trema");
+            AudioManager.Instance.AudioPlaySFX(FogaoSFXPadrao, transform, 0.18f, 1f);
 
             return; //Nada acontece(no caso printa, o certo seria um som, etc..)
         }
@@ -256,9 +261,10 @@ public class GameManager : MonoBehaviour
             if (Recipe.Type == CurrentRecipe) //Se o tipo desse script for o mesmo da receita que foi clicada da última vez(receita atual)
             {
                 Recipe.CookRecipe(); //Chama a funcao do script que tem a receita correta
-                Debug.Log("Receita escolhida: " + Recipe.Type);
+                //Debug.Log("Receita escolhida: " + Recipe.Type);
                 CurrentRecipe = 0; //nenhuma receita selecionada
 
+                AudioManager.Instance.AudioPlaySFX(FogaoSFXPadrao, transform, 0.18f, 1f);
                 
                 CurrentRecipeObject.SetActive(false);
 
@@ -268,7 +274,13 @@ public class GameManager : MonoBehaviour
                 if (Recipe.CanCook == true)
                 {
                     TrophyInvetory.Instance.TrophyAtivator(Recipe.Type);
+                    AudioManager.Instance.AudioPlaySFX(FogaoSFXSucesso, transform, 0.5f, 1f);
+                    AudioManager.Instance.AudioPlaySFX(FogaoSFXConfete, transform, 0.5f, 1f);
                     Instantiate(SuccessCookParticle, transform.position + mousePos, Quaternion.identity);
+                }
+                else
+                {
+                    AudioManager.Instance.AudioPlaySFX(FogaoSFXErro, transform, 0.5f, 1f);
                 }
 
                 return; //Para o foreach
