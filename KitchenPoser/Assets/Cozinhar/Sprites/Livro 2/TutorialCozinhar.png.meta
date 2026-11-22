@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: f94986f1dc1e5af409105c8dc34a5dec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5945290756908644680
+    second: TutorialCozinhar_0
+  - first:
+      213: -5511445773357241443
+    second: TutorialCozinhar_1
+  - first:
+      213: -2827432028220243510
+    second: TutorialCozinhar_2
+  - first:
+      213: 1682652237881916374
+    second: TutorialCozinhar_3
+  - first:
+      213: -6483749090444946686
+    second: TutorialCozinhar_4
+  - first:
+      213: 4052588461521972287
+    second: TutorialCozinhar_5
+  - first:
+      213: 7831653037287914529
+    second: TutorialCozinhar_6
+  - first:
+      213: -978553114984565729
+    second: TutorialCozinhar_7
+  - first:
+      213: -1799427562903107184
+    second: TutorialCozinhar_8
+  - first:
+      213: 7197914576951934031
+    second: TutorialCozinhar_9
+  - first:
+      213: 225324397560872579
+    second: TutorialCozinhar_10
+  - first:
+      213: 4410885437733761073
+    second: TutorialCozinhar_11
+  - first:
+      213: -9045012618801762598
+    second: TutorialCozinhar_12
+  - first:
+      213: -2581911856131299608
+    second: TutorialCozinhar_13
+  - first:
+      213: 3935707424014063601
+    second: TutorialCozinhar_14
+  - first:
+      213: 4729088788721164885
+    second: TutorialCozinhar_15
+  - first:
+      213: 3284368637403653965
+    second: TutorialCozinhar_16
+  - first:
+      213: -2836529999260416213
+    second: TutorialCozinhar_17
+  - first:
+      213: -2724296238065075648
+    second: TutorialCozinhar_18
+  - first:
+      213: -8125315278080512581
+    second: TutorialCozinhar_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TutorialCozinhar_0
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 112
+        width: 533
+        height: 855
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 849f3f3a17ae18250800000000000000
+      internalID: 5945290756908644680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1a356fee65492f54c95a0bac486cca7b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TutorialCozinhar_0: 5945290756908644680
+      TutorialCozinhar_1: -5511445773357241443
+      TutorialCozinhar_10: 225324397560872579
+      TutorialCozinhar_11: 4410885437733761073
+      TutorialCozinhar_12: -9045012618801762598
+      TutorialCozinhar_13: -2581911856131299608
+      TutorialCozinhar_14: 3935707424014063601
+      TutorialCozinhar_15: 4729088788721164885
+      TutorialCozinhar_16: 3284368637403653965
+      TutorialCozinhar_17: -2836529999260416213
+      TutorialCozinhar_18: -2724296238065075648
+      TutorialCozinhar_19: -8125315278080512581
+      TutorialCozinhar_2: -2827432028220243510
+      TutorialCozinhar_3: 1682652237881916374
+      TutorialCozinhar_4: -6483749090444946686
+      TutorialCozinhar_5: 4052588461521972287
+      TutorialCozinhar_6: 7831653037287914529
+      TutorialCozinhar_7: -978553114984565729
+      TutorialCozinhar_8: -1799427562903107184
+      TutorialCozinhar_9: 7197914576951934031
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
