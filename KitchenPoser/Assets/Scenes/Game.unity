@@ -459,8 +459,10 @@ MonoBehaviour:
   fundoEscuro: {fileID: 1810609440}
   CookBookClose: {fileID: 1297843675}
   CookBookOpen: {fileID: 1066119740}
+  OpenBookSFX: {fileID: 8300000, guid: 6c9f1b91cd9ab654b8992f032ce32d85, type: 3}
   pageChangeLeft: {fileID: 839748144}
   pageChangeRight: {fileID: 1295870826}
+  ChangePageSFX: {fileID: 8300000, guid: 2c2a3a27178b1f74fa0f37b17d4b5c4a, type: 3}
   page1: {fileID: 1666239924}
   page2: {fileID: 1356028632}
   page3: {fileID: 129777976}
@@ -469,9 +471,12 @@ MonoBehaviour:
   page6: {fileID: 549024693}
   Outventario: {fileID: 1052528230}
   arm1Inventario: {fileID: 681381962}
+  trofeisInventario: {fileID: 1396118669}
+  FechaArmarioSFX: {fileID: 8300000, guid: 8f61a3be80386734690ede4359c1668d, type: 3}
+  AbreArmarioSFX: {fileID: 8300000, guid: 26196477013f7c143b2458cea231599d, type: 3}
   arm2Inventario: {fileID: 1303838427}
   arm3Inventario: {fileID: 1515846918}
-  trofeisInventario: {fileID: 1396118669}
+  AbreGeladeiraSFX: {fileID: 8300000, guid: 0d129311bbe40334f9d8ff33a9393029, type: 3}
 --- !u!114 &34036609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1976,6 +1981,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 169184081}
   RecipeImage: {fileID: -1453343921611585702, guid: 80a44e6596611974b9e99f7c782a7785, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 0
@@ -3112,6 +3118,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 269210780}
   RecipeImage: {fileID: -7296627813398178209, guid: 5ed9e5a1deb99ad48b99e9fa507066e9, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 1
   ArrozDecrease: 2
@@ -5617,6 +5624,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 410707420}
   RecipeImage: {fileID: 7531245905264911495, guid: d268015acf944174ea602b0e884be3d9, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 4
@@ -6615,6 +6623,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 488996711}
   RecipeImage: {fileID: -2286039563107356688, guid: 250fd96e92289fd4aab2bc0efa2b2e1b, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 6
@@ -7742,7 +7751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &558490340
 Transform:
   m_ObjectHideFlags: 0
@@ -10900,7 +10909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &747062806
 Transform:
   m_ObjectHideFlags: 0
@@ -13429,7 +13438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &945503181
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14841,6 +14850,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 1034767973}
   RecipeImage: {fileID: -3209759135295002651, guid: 14eca94e7cf045a49b5470f26a359615, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 2
   ArrozDecrease: 0
@@ -19636,6 +19646,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 1332662771}
   RecipeImage: {fileID: -7002472015311995401, guid: 67449430c6908444c8e8f360578e735d, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 3
   ArrozDecrease: 5
@@ -20093,6 +20104,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 1368179292}
   RecipeImage: {fileID: 5964537627954135248, guid: fdf5429ddaee32646831ffd17d995cbb, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 7
   ArrozDecrease: 0
@@ -23955,6 +23967,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 1738785568}
   RecipeImage: {fileID: 9192687251970799782, guid: a5aeb07103dd3e04dbdbb63c5a8bf294, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 3
@@ -26462,6 +26475,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 1940558736}
   RecipeImage: {fileID: 2182231952190237284, guid: 6307d1aeafae05243bb65d443dd19967, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 0
@@ -26610,6 +26624,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 1960683224}
   RecipeImage: {fileID: 5020007292766566720, guid: c82daa96f023b96469d79f7848a18de3, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 0
@@ -27888,6 +27903,7 @@ MonoBehaviour:
   ButtonCook: {fileID: 2074316991}
   RecipeImage: {fileID: 6467540859380420823, guid: 30711396aa5856f43b08fd0acf3b20c5, type: 3}
   CanCook: 0
+  EscolherReceitaSFX: {fileID: 8300000, guid: 8022f29917b846d46b0cc62147a4ba19, type: 3}
   AlreadyCooked: 0
   AbacaxiDecrease: 0
   ArrozDecrease: 0

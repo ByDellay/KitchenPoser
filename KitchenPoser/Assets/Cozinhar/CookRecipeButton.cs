@@ -8,6 +8,7 @@ public class CookRecipeButton : MonoBehaviour
     public Button ButtonCook;
     public Sprite RecipeImage;
     public bool CanCook = false;
+    [SerializeField] private AudioClip EscolherReceitaSFX;
     public bool AlreadyCooked = false;
 
     //public ingrediente, vbai ter um pra cada
@@ -42,6 +43,7 @@ eles são usados na função CookRecipe, naquele if com muitos "&&".
           GameManager.Instance.CurrentRecipe = Type; //Avisa pro game manager que a receita atual é a mesma desse script
           GameManager.Instance.ShowRecipeImage(RecipeImage);
 
+          AudioManager.Instance.AudioPlaySFX(EscolherReceitaSFX, transform, 1f, 1f);
           Debug.Log("Receita atual: " + GameManager.Instance.CurrentRecipe);
           
     }

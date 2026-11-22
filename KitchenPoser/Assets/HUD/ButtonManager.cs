@@ -8,10 +8,12 @@ public class ButtonManager : MonoBehaviour
     public GameObject fundoEscuro;
     public GameObject CookBookClose;
     public GameObject CookBookOpen;
+    [SerializeField] private AudioClip OpenBookSFX;
 
     [Header("Buttons")]
     public GameObject pageChangeLeft;
     public GameObject pageChangeRight;
+    [SerializeField] private AudioClip ChangePageSFX;
 
     [Header("Pages")]
     public GameObject page1;
@@ -24,6 +26,7 @@ public class ButtonManager : MonoBehaviour
     {
         if (CookBookClose.activeSelf)
         {
+            AudioManager.Instance.AudioPlaySFX(OpenBookSFX, transform, 1f, 1f);
             //Debug.Log("clicou no livro");
             CookBookClose.SetActive(false);
             CookBookOpen.SetActive(true);
@@ -31,6 +34,7 @@ public class ButtonManager : MonoBehaviour
         }
         else
         {
+            AudioManager.Instance.AudioPlaySFX(OpenBookSFX, transform, 1f, 1f);
             //Debug.Log("desativou o livro");
             CookBookClose.SetActive(true);
             CookBookOpen.SetActive(false);
@@ -41,6 +45,7 @@ public class ButtonManager : MonoBehaviour
 
     public void PageChangeRight()
     {
+        AudioManager.Instance.AudioPlaySFX(ChangePageSFX, transform, 1f, 1f);
         if (page1.activeSelf)
         {
 //            Debug.Log("mudou pagina");
@@ -71,6 +76,7 @@ public class ButtonManager : MonoBehaviour
     }
     public void PageChangeLeft()
     {
+        AudioManager.Instance.AudioPlaySFX(ChangePageSFX, transform, 1f, 1f);
         if (page6.activeSelf)
         {
             page6.SetActive(false);
@@ -116,12 +122,18 @@ public class ButtonManager : MonoBehaviour
 
     public GameObject Outventario;
     public GameObject arm1Inventario;
+    public GameObject trofeisInventario;
+    [SerializeField] private AudioClip FechaArmarioSFX;
+    [SerializeField] private AudioClip AbreArmarioSFX;
+    ///////////////////////////////////////////////////////////
     public GameObject arm2Inventario;
     public GameObject arm3Inventario;
-    public GameObject trofeisInventario;
+    [SerializeField] private AudioClip AbreGeladeiraSFX;
+    
 
     public void OutArmario()
     {
+        AudioManager.Instance.AudioPlaySFX(FechaArmarioSFX, transform, 1f, 1f);
         arm1Inventario.SetActive(false);
         Outventario.SetActive(false);
         arm2Inventario.SetActive(false);
@@ -130,11 +142,13 @@ public class ButtonManager : MonoBehaviour
     }
     public void OnTrofeuVentario()
     {
+        AudioManager.Instance.AudioPlaySFX(AbreArmarioSFX, transform, 1f, 1f);
         trofeisInventario.SetActive(true);
         Outventario.SetActive(true);
     }
     public void OnArmario1()
     {
+        AudioManager.Instance.AudioPlaySFX(AbreArmarioSFX, transform, 1f, 1f);
         arm1Inventario.SetActive(true);
         Outventario.SetActive(true);
         GameManager.Instance.UpdateItemCount();
@@ -142,12 +156,14 @@ public class ButtonManager : MonoBehaviour
     
     public void OnArmario2()
     {
+        AudioManager.Instance.AudioPlaySFX(AbreGeladeiraSFX, transform, 1f, 1f);
         arm2Inventario.SetActive(true);
         Outventario.SetActive(true);
         GameManager.Instance.UpdateItemCount();
     }
     public void onArmario3()
     {
+        AudioManager.Instance.AudioPlaySFX(AbreGeladeiraSFX, transform, 1f, 1f);
         arm3Inventario.SetActive(true);
         Outventario.SetActive(true);
         GameManager.Instance.UpdateItemCount();
