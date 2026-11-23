@@ -28,8 +28,12 @@ public class Spawner : MonoBehaviour
     public GameObject rushAnim;
     private Animator rush;
     public GameObject rushObj;
+    public GameObject rushObj2;
+    public GameObject rushObj3;
+    public GameObject rushObj4;
 
-    
+
+
 
     private void Start()
     {
@@ -69,6 +73,9 @@ public class Spawner : MonoBehaviour
         else if (CutTimer >= 53 && CutTimer <= 55)
         {
             rushObj.SetActive(true);
+            rushObj2.SetActive(true);
+            rushObj3.SetActive(true);
+            rushObj4.SetActive(true);
             rush.Play("Rush");
         }
         else if (CutTimer >= 55 && CutTimer <= 60)
