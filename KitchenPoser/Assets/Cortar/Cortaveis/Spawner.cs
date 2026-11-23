@@ -32,12 +32,16 @@ public class Spawner : MonoBehaviour
     public GameObject rushObj3;
     public GameObject rushObj4;
 
+    public GameObject finishAnim;
+    private Animator finish;
+    public GameObject acabou;
 
 
 
     private void Start()
     {
         rush = rushAnim.GetComponent<Animator>();
+        finish = finishAnim.GetComponent<Animator>();
 
         TrueEndIsTrue = false;
         _CutTimerText = CutTime;
@@ -99,6 +103,8 @@ public class Spawner : MonoBehaviour
 
     public void TrueEnd()
     {
+        acabou.SetActive(true);
+        finish.Play("Finish");
         TrueEndIsTrue = true;
         waitEnd += Time.deltaTime;
         GameManager.Instance.NoBreak();
