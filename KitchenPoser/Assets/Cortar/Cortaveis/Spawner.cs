@@ -94,7 +94,7 @@ public class Spawner : MonoBehaviour
         if ((CutTimer >= CutTime) && Acabou == false)// O tempo ja passou o suficiente?
         {
             TrueEndMoment += Time.deltaTime;
-            if (TrueEndMoment >= 5)
+            if (TrueEndMoment >= 1)
             {
                 TrueEnd();
             }
@@ -104,7 +104,7 @@ public class Spawner : MonoBehaviour
     public void TrueEnd()
     {
         acabou.SetActive(true);
-        finish.Play("Finish");
+        finish.Play("FInish");
         TrueEndIsTrue = true;
         waitEnd += Time.deltaTime;
         GameManager.Instance.NoBreak();
