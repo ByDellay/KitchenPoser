@@ -13,7 +13,6 @@ public class Spawner : MonoBehaviour
     private float _SpawnTimer; // Contador do tempo
     public float CutTime;
     public float CutTimer; // Contador do tempo
-    public float TrueEndMoment;
     public bool TrueEndIsTrue;
     public Transform leftSpawn;
     public Transform rightSpawn;
@@ -93,22 +92,22 @@ public class Spawner : MonoBehaviour
 
         if ((CutTimer >= CutTime) && Acabou == false)// O tempo ja passou o suficiente?
         {
-            TrueEndMoment += Time.deltaTime;
-            if (TrueEndMoment >= 1)
-            {
-                TrueEnd();
-            }
+            TrueEnd();
         }
     }
 
     public void TrueEnd()
     {
-        acabou.SetActive(true);
-        finish.Play("FInish");
+        
         TrueEndIsTrue = true;
         waitEnd += Time.deltaTime;
-        GameManager.Instance.NoBreak();
-        if (waitEnd >= 5)
+        if (waitEnd >= 4)
+        {
+            acabou.SetActive(true);
+            finish.Play("FInish");
+            GameManager.Instance.NoBreak();
+        }
+        if (waitEnd >= 9)
         {
             GameManager.Instance.TotalFails = 0;
             Acabou = true;
