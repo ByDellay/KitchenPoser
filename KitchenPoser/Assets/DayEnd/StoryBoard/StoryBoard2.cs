@@ -63,7 +63,70 @@ public class StoryBoard2 : MonoBehaviour
     {
         if (fim)
         {
-            revelacao.SetActive(true);
+            if (revelacao == false)
+            {
+                revelacao.SetActive(true);
+
+            }
+            else if (fimEnding2 == false)
+            {
+                fimEnding2.SetActive(true);
+            }
+            else if (fimEnding3 == false)
+            {
+                fimEnding3.SetActive(true);
+            }
+        }
+
+        if (bad)
+        {
+            if (revelacao == false)
+            {
+                revelacao.SetActive(true);
+
+            }
+            else if (badEnding2 == false)
+            {
+                badEnding2.SetActive(true);
+            }
+            else if (badEnding3 == false)
+            {
+                badEnding3.SetActive(true);
+            }
+        }
+
+        if (good)
+        {
+            if (revelacao == false)
+            {
+                revelacao.SetActive(true);
+
+            }
+            else if (goodEnding2 == false)
+            {
+                goodEnding2.SetActive(true);
+            }
+            else if (goodEnding3 == false)
+            {
+                goodEnding3.SetActive(true);
+            }
+        }
+
+        if (perfect)
+        {
+            if (revelacao == false)
+            {
+                revelacao.SetActive(true);
+
+            }
+            else if (perfectEnding2 == false)
+            {
+                perfectEnding2.SetActive(true);
+            }
+            else if (perfectEnding3 == false)
+            {
+                perfectEnding3.SetActive(true);
+            }
         }
     }
 

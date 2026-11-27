@@ -101,13 +101,13 @@ public class Spawner : MonoBehaviour
         
         TrueEndIsTrue = true;
         waitEnd += Time.deltaTime;
-        if (waitEnd >= 4)
+        if (waitEnd >= 3)
         {
             acabou.SetActive(true);
             finish.Play("FInish");
             GameManager.Instance.NoBreak();
         }
-        if (waitEnd >= 9)
+        if (waitEnd >= 9.5)
         {
             GameManager.Instance.TotalFails = 0;
             Acabou = true;
@@ -143,6 +143,7 @@ public class Spawner : MonoBehaviour
         _CutTimerText = CutTime;
         Acabou = false;
         rushObj.SetActive(false);
+        waitEnd = 0;
 
     }
 
