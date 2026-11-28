@@ -131,7 +131,7 @@ public class IngredientesGrav : MonoBehaviour
                 {
                     child.gameObject.SetActive(true);
                 }
-                AudioManager.Instance.AudioPlaySFX(CutSFX, transform, 1f, Random.Range(0.5f, 1.5f));
+                AudioManager.Instance.AudioPlaySFX(CutSFX, transform, 1f, Random.Range(0.4f, 0.7f));
             }
         }
     }

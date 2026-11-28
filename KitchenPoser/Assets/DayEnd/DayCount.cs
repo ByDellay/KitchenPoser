@@ -8,6 +8,7 @@ public class DayCount : MonoBehaviour
     public GameObject cortar;
     public GameObject cozinhar;
     public GameObject dayEnd;
+    public GameObject storyBoard2;
     public GameObject final;
 
     [Header("variaveis")]
@@ -74,28 +75,11 @@ public class DayCount : MonoBehaviour
 
         if (day <= 0)
         {
+            // fazer transição maravilhosa aqui dellai por favor nao quero aprender corrotina perdao
             dayEnd.SetActive(false);
-            final.SetActive(true);
+            storyBoard2.SetActive(true);
 
-            receitasCozinhadasFinal.text = $"total de receitas cozinhadas: {receitasCountFinal.ToString()}";
-            if (receitasCountFinal <= 1) //botar mais aqui
-            {
-                scoreFinal.text = "seu desempenho foi terrivel";
-            }
-            else if (receitasCountFinal == 2)
-            {
-                scoreFinal.text = "seu desempenho foi mediano";
-            }
-            else if (receitasCountFinal == 3)
-            {
-                scoreFinal.text = "seu desempenho foi bom";
-
-            }
-            else if(receitasCountFinal >= 4)
-            {
-             scoreFinal.text = "seu desempenho foi perfeito";
-
-            }
+            
 
         }
         else
@@ -109,6 +93,29 @@ public class DayCount : MonoBehaviour
                 .IniciarCicloDeCorte();
             Debug.Log("ENCERROU O DIA");
             Debug.Log(day);
+        }
+    }
+
+    public void Resultado()
+    {
+        receitasCozinhadasFinal.text = $"receitas cozinhadas: {receitasCountFinal.ToString()}";
+        if (receitasCountFinal <= 3)
+        {
+            scoreFinal.text = "Final FIM DO MUNDO feito";
+        }
+        else if (receitasCountFinal == 6)
+        {
+            scoreFinal.text = "Final ruim feito";
+        }
+        else if (receitasCountFinal == 9)
+        {
+            scoreFinal.text = "Final bom feito";
+
+        }
+        else if (receitasCountFinal >= 11)
+        {
+            scoreFinal.text = "Final UTOPIA feito";
+
         }
     }
 }
