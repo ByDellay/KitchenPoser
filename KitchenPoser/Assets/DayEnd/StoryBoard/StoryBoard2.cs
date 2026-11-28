@@ -32,6 +32,7 @@ public class StoryBoard2 : MonoBehaviour
         bad = false;
         good = false;
         perfect = false;
+        FinalStoryBoard(); //temp
     }
 
     public void FinalStoryBoard()
@@ -61,73 +62,68 @@ public class StoryBoard2 : MonoBehaviour
     
     public void NextPanel()
     {
-        if (fim)
+        Debug.Log("foi");
+        if (revelacao.activeSelf == false)
         {
-            if (revelacao == false)
-            {
-                revelacao.SetActive(true);
-
-            }
-            else if (fimEnding2 == false)
-            {
-                fimEnding2.SetActive(true);
-            }
-            else if (fimEnding3 == false)
-            {
-                fimEnding3.SetActive(true);
-            }
+            revelacao.SetActive(true);
         }
-
-        if (bad)
+        else
         {
-            if (revelacao == false)
+            if (fim)
             {
-                revelacao.SetActive(true);
+                if (fimEnding2.activeSelf == false)
+                {
+                    fimEnding2.SetActive(true);
+                }
+                else if (fimEnding3.activeSelf == false)
+                {
+                    fimEnding3.SetActive(true);
+                }
+            }
 
-            }
-            else if (badEnding2 == false)
+            else if (bad)
             {
-                badEnding2.SetActive(true);
+                if (badEnding2.activeSelf == false)
+                {
+                    badEnding2.SetActive(true);
+                }
+                else if (badEnding3.activeSelf == false)
+                {
+                    badEnding3.SetActive(true);
+                }
             }
-            else if (badEnding3 == false)
+
+            else if (good)
             {
-                badEnding3.SetActive(true);
+                if (goodEnding2.activeSelf == false)
+                {
+                    goodEnding2.SetActive(true);
+                }
+                else if (goodEnding3.activeSelf == false)
+                {
+                    goodEnding3.SetActive(true);
+                }
             }
+            if (perfect)
+            {
+                if (perfectEnding2.activeSelf == false)
+                {
+                    perfectEnding2.SetActive(true);
+                }
+                else if (perfectEnding3.activeSelf == false)
+                {
+                    perfectEnding3.SetActive(true);
+                }
+            }
+
         }
+        
 
-        if (good)
-        {
-            if (revelacao == false)
-            {
-                revelacao.SetActive(true);
+        
 
-            }
-            else if (goodEnding2 == false)
-            {
-                goodEnding2.SetActive(true);
-            }
-            else if (goodEnding3 == false)
-            {
-                goodEnding3.SetActive(true);
-            }
-        }
+        
 
-        if (perfect)
-        {
-            if (revelacao == false)
-            {
-                revelacao.SetActive(true);
-
-            }
-            else if (perfectEnding2 == false)
-            {
-                perfectEnding2.SetActive(true);
-            }
-            else if (perfectEnding3 == false)
-            {
-                perfectEnding3.SetActive(true);
-            }
-        }
+        
     }
 
 
