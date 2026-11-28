@@ -121,7 +121,7 @@ public class IngredientesGrav : MonoBehaviour
             else if (hit != null && hit.gameObject == gameObject && AlreadyCutted == false && CompareTag("ObjetoDuro")) // se for um objeto duro
             {
                 AlreadyCutted = true;
-                GameManager.Instance.TotalFails++;
+                //GameManager.Instance.TotalFails++;
                 GameObject.FindWithTag("MainCamera").GetComponent<ScreenShake>().DoScreenShake(); // Chama o evento que treme a tela
                 GameManager.Instance.NoBreak();
                 Instantiate(ParticulaCorte, transform.position + new Vector3(0f, 0f, -0.5f), Quaternion.identity); //spawna as particulas levemente a frente do ingrediente quando cortado
