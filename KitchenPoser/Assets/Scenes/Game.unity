@@ -1179,10 +1179,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Proximo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c9b7de109fc90f841ba4be5d179f957a, type: 2}
+  m_sharedMaterial: {fileID: -8265847846871963398, guid: c9b7de109fc90f841ba4be5d179f957a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9808,7 +9808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &558490340
 Transform:
   m_ObjectHideFlags: 0
@@ -36029,7 +36029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1869437267
 Transform:
   m_ObjectHideFlags: 0
@@ -36067,6 +36067,7 @@ MonoBehaviour:
   revelacao: {fileID: 158327419}
   storyBoard: {fileID: 1869437266}
   finalFIM: {fileID: 610695522}
+  NextButton: {fileID: 1954434159}
   fimEnding: {fileID: 138777650}
   fimEnding2: {fileID: 1840717123}
   fimEnding3: {fileID: 30283245}
@@ -37694,8 +37695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 311.9, y: -201.9}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 347.3, y: -204.7}
+  m_SizeDelta: {x: 101.2, y: 37.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954434159
 MonoBehaviour:
@@ -37740,19 +37741,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1954434160}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1869437268}
-        m_TargetAssemblyTypeName: StoryBoard2, Assembly-CSharp
-        m_MethodName: NextPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1954434160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37773,7 +37762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 8165089037057209230, guid: b4dcfad7fa9a05748be661f5a622181b, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -39069,8 +39058,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2032283877
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: -3619661367672751132, guid: 0e4c6612664cea14ba507175d7523777, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

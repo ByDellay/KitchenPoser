@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StoryBoard2 : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class StoryBoard2 : MonoBehaviour
     public GameObject revelacao;
     public GameObject storyBoard;
     public GameObject finalFIM;
+
+    public Button NextButton;
 
     [Header("fim do mundo")]
     public GameObject fimEnding;
@@ -40,6 +43,7 @@ public class StoryBoard2 : MonoBehaviour
         perfect = false;
         acabouDeVez = false;
         FinalStoryBoard(); //temp
+        NextButton.onClick.AddListener(NextPanel);
     }
 
     public void FinalStoryBoard()
@@ -69,7 +73,6 @@ public class StoryBoard2 : MonoBehaviour
     
     public void NextPanel()
     {
-        Debug.Log("foi");
         if (revelacao.activeSelf == false)
         {
             revelacao.SetActive(true);
