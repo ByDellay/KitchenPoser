@@ -105,12 +105,12 @@ public class Spawner : MonoBehaviour
         {
             acabou.SetActive(true);
             finish.Play("FInish");
-            Acabou = true;
             GameManager.Instance.NoBreak();
         }
         if (waitEnd >= 9.5)
         {
             GameManager.Instance.TotalFails = 0;
+            Acabou = true;
             TransitionsFade.Instance.CallCoroutine_LoadOtherGameSection();
         }
         //fazer com que cortar pedra 3x coise aqui
