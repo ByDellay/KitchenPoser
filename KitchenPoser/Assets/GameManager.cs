@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public bool ChangedScene = false; // Cena trocou?
 
     public GameObject unbreakable;
-    public float unBreakTime = 3f; // Tempo de espera
+    public float unBreakTime; // Tempo de espera
     private float _unBreakTimer; // Contador do tempo
 
     public bool OnBreak = false; // Estado de quebrado (faca)
@@ -114,6 +114,7 @@ public class GameManager : MonoBehaviour
         Fogao.onClick.AddListener(CallCookRecipe);
 
         DC = gameManager.GetComponent<DayCount>();
+        unBreakTime = 5;
     }
 
     public void Update()
